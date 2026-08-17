@@ -1,0 +1,1281 @@
+DOSSIER DE CONSULTATION
+
+N°(17/2025)
+
+CONCEPTION, DEVELOPPEMENT ET MISE EN PLACE DU PORTAIL DE LA COMMUNEMAJEL BEL ABESS
+
+Date limite de réception des demandes d’éclaircissement (15avril 2026)
+
+Date et heure limites de réception des offres : 24avril 2026à10:00
+
+Dateet heure d’ouverture des plis :24 avril 2026à10:30
+
+SOMMAIRE
+
+SOMMAIRE2
+
+SECTION I:AVIS DE LA CONSULTATION N°(17/2026)5
+
+ARTICLE 1°:.Objet de la Demande de Consultation5
+
+ARTICLE 2°:.Condition de participation5
+
+ARTICLE 3°:.Source de Financement de la Prestation5
+
+ARTICLE 4°:.Réglementation de la Demande de Consultation5
+
+ARTICLE 5°:.Consultation et retraite de la Demande de Consultation5
+
+ARTICLE 6°:.Présentation de l’offre5
+
+ARTICLE 7°:.Ouverture des offres5
+
+ARTICLE 8°:.Durée de la validation des offres6
+
+ARTICLE 9°:.Additif à la Demande de Consultation6
+
+ARTICLE 10°:.Critères d’évaluation et choix du soumissionnaire6
+
+ARTICLE 11°:.Adresse6
+
+SECTION II:CONDITIONS DE LA CONSULTATION7
+
+ARTICLE 1°:.Objet de la consultation :7
+
+ARTICLE 2°:.Financement des prestations7
+
+ARTICLE 3°:.Conditions de participation7
+
+ARTICLE 4°:.Présentation des offres7
+
+1.En cas de participation via le système TUNEPS7
+
+2.En cas de participation hors ligne8
+
+3.Les Pièces administratives8
+
+4.L’offre technique8
+
+5.L’offre financière9
+
+ARTICLE 5°:.Validité des Offres9
+
+ARTICLE 6°:.Actualisation des prix9
+
+ARTICLE 7°:.Ouverture des plis10
+
+ARTICLE 8°:.Rejet Automatique des offres10
+
+ARTICLE 9°:.Choix du titulaire10
+
+     ARTICLE 10:Suite réservée aux offres-Résultat de la consultation……………………………..11
+
+SECTION III:CAHIER DES CLAUSES ADMINISTRATIVES PARTICULIERES12
+
+ARTICLE 1°:.Objet de la consultation :12
+
+ARTICLE 2°:.Cadre réglementaire12
+
+ARTICLE 3°:.Pièces Contractuelles13
+
+ARTICLE 4°:.Caractère des Prix13
+
+ARTICLE 5°:.Impôts et Taxes13
+
+ARTICLE 6°:.Délais de réalisation de la prestation13
+
+ARTICLE 7°:.Consistance de la Prestation14
+
+ARTICLE 8°:.Phases de mise en œuvre de la prestation14
+
+ARTICLE 9°:.Réception et validation des missions14
+
+1.Un avis favorable14
+
+2.Un avis favorable sous réserves :14
+
+3.Un avis défavorable :15
+
+ARTICLE 10°:.Réception provisoire15
+
+ARTICLE 11°:.Période de garantie15
+
+ARTICLE 12°:.Réception Définitive15
+
+ARTICLE 13°:.Mode de règlement des prestations15
+
+ARTICLE 14°:.Pénalités16
+
+ARTICLE 15°:.Force Majeure16
+
+ARTICLE 16°:.Assistance au maître d’ouvrage16
+
+ARTICLE 17°:.Défaillance et Résiliation16
+
+ARTICLE 18°:.Assurance16
+
+ARTICLE 19°:.Règlement des litiges17
+
+ARTICLE 20°:.Entrée en vigueur17
+
+ARTICLE 21°:.Domiciliation de remboursement17
+
+SECTION IV:TERMES DE REFERENCES18
+
+ARTICLE 1°:.Objet de la consultation18
+
+ARTICLE 2°:.Objectif de la prestation18
+
+ARTICLE 3°:.modules demandés19
+
+1.Constitution du portail:19
+
+2.Gestion des réclamations :19
+
+3.Suivi des conseils municipaux :19
+
+4.Suivi des budgets (prévisions, réalisations et statistiques) :19
+
+ARTICLE 4°:.Conception de l'architecture du portail19
+
+ARTICLE 5°:.Fonctionnalites du portail22
+
+ARTICLE 6°:.Gestionnaire du contenu & Sources22
+
+ARTICLE 7°:.Référencement22
+
+ARTICLE 8°:.Hebergement23
+
+ARTICLE 9°:.Assistance au démarrage23
+
+ARTICLE 10°:.Livrables23
+
+ARTICLE 11°:.Formation23
+
+ARTICLE 12°:.Contrat de maintenance24
+
+ARTICLE 13°:.Engagement de La commune24
+
+CONTRAT DE MAINTENANCE25
+
+ARTICLE 1°:.Objet du contrat25
+
+ARTICLE 2°:.Financement du contrat25
+
+ARTICLE 3°:.Obligations du Prestataire25
+
+Les visites de maintenance préventive25
+
+Les visites de maintenance curative25
+
+Interventions payantes et facturations supplémentaires25
+
+ARTICLE 4°:.Rapport de suivi26
+
+ARTICLE 5°:.Caractère des Prix26
+
+ARTICLE 6°:.Impôts et Taxes26
+
+ARTICLE 7°:.Paiement26
+
+ARTICLE 8°:.Validité et renouvellement du contrat26
+
+ARTICLE 9°:.Modification du contrat26
+
+SECTION V:ANNEXES27
+
+Annexe 01 : Fiche de renseignement Généraux sur le Soumissionnaire27
+
+Annexe 02 : Déclaration d’engagement28
+
+Annexe03 : L’Acte d’engagement (Soumission)31
+
+Annexe04 : Bordereau de Prix32
+
+Annexe 05 : Références du Soumissionnaire33
+
+Annexe 06 : Liste nomiNAtive de personnel technique à affecter pour la prestation34
+
+Annexe 07 : Modèle du Curriculum Vitae (CV)35
+
+AVIS DE LA CONSULTATION N°°( 17/2026)
+
+ARTICLE 1 : Objet de la Demande de Consultation
+
+La présente consultation a pour objet la désignation d’un bureau d'études ou d'un prestataire spécialisé dans le développement des sites Web et portails pour la conception, le développement, la mise en place et la maintenance d'un portail au profit de la communede Majel Bel Abess offrant un ensemble de service et pouvant être étoffé au fur et à mesure.
+
+ARTICLE 2 : Condition de participation
+
+Peuvent participer à cette consultation les bureaux d'études et les prestataires spécialisés dans le développement des sites Web et portails remplissant les conditions définies dans la Demande de Consultation et qui ne sont pas frappés par les dispositions d’incapacités et d’exclusions définies dans la Demande de Consultation.
+
+ARTICLE 3 : Source de Financement de la Prestation
+
+Cette prestation est financée par un Don de la Coopération financière allemande à travers la KfW (BMZ N° 201770130), dans le cadre du programme de Financement de l’infrastructure et de l’équipement de base dans les zones d’extension des communes (phase 2 du FICOL), rétrocédé par l’État Tunisien à la commune, à travers la Caisse des Prêts et de Soutien des Collectivités Locales CPSCL.
+
+ARTICLE 4 : Réglementation de la Demande de Consultation
+
+La désignation du prestataire sera conduite par une Consultation selon la réglementation tunisienne en vigueur (commandes publiques pour les études dans les domaines de l'informatique dont les montants, toutes taxes comprises, sont inférieurs à cent mille dinars),et en tenant compte des exigences minimales des « Directives pour la Passation des Marchés de Prestations de Conseils, Travaux de Génie Civil, Installations, Fournitures et Services Divers dans la Coopération financière aves des pays partenaires » de la KfW(https://www.kfw-entwicklungsbank.de/PDF/Download-Center/PDF-Dokumente-Richtlinien/Vergaberichtlinien-2019_FR.pdf).
+
+La Consultation sera aussi conduite par les procédures de passation des achats publics hors marchés à travers l’e-Bidding du système d’achat public en ligne TUNEPS.
+
+ARTICLE 5 : Consultation et retrait de la Demande de Consultation
+
+Les soumissionnaires éligibles et intéressés à concourir peuvent retirer le Dossier de Consultationpendant les horaires administratifs au siège de la commune à l’adresse indiquée ci-dessous ou en ligne du site web TUNEPS : https://www.tuneps.tn/index.do.
+
+ARTICLE 6 : Présentation de l’offre
+
+Le dossier de participation à la présente consultation, doit être transmis en ligne, via le système d’achat public en ligne TUNEPS ou par voie postale recommandée ou rapide-poste ou remis directement au bureau d’ordre contre récépissé à l’adresse ci-dessous mentionnée.
+
+Les offres doivent parvenir au plus tard à la date et heure limites mentionnées dans l’Avis.  Les offres parvenues en retard ne seront pas acceptées. Le cachet du Bureau d'ordre central de la commune fait foi.
+
+ARTICLE 7: Ouverture des offres
+
+L’ouverture des offres sera effectuée en séance non publique.
+
+ARTICLE 8 : Durée de la VALIDITEdes offres
+
+Les soumissionnaires resteront engagés pour leurs offres pendant une période de 60joursà partir du lendemain de la date limite de remise des offres.
+
+ARTICLE 9 : Additif à la Demande de Consultation
+
+1 : Demandes d’eclaircissement
+
+Au cas où certains soumissionnaires auraient des renseignements complémentaires à demander ou des doutes sur la signification exacte sur certaines parties de la présente Consultation, ils devraient en référer par écrit à la commune à l’adresse indiquée ci-dessous ou sur la plateforme TUNEPS vinght (20) calendaires avant l’expiration de la date limite de la réception des offres en vue d’obtenir les éclaircissements nécessaires.
+
+La commune donnera une réponse à toutes les demandes d’éclaircissements reçues dans les délais et la communiquera par écrit à tous les soumissionnaires qui ont retiré le dossier de Consultation et la publiera sur la plateforme TUNEPS, et ce dans un délai minimum de dix (10) jours  calendaires avant l’expiration de la date limite de réception des offres.
+
+2 : Additifs 
+
+La Commune se réserve le droit, en cas de nécessité, d'apporter toute modification ultérieure utile ou des éclaircissements au présent Avis de la Demande de Consultation et/ou à la Demande de Consultation qui s'y rapporte.
+
+Tout additif ainsi ajouté fait partie intégrante de la Demande de Consultation et sera communiqué par écrit à tous les soumissionnaires qui ont retiré le dossier de Consultation et publié sur la plateforme TUNEPS, et ce dans un délai minimum de (dix) (10) jours calendaires avant l’expiration de la date limite de réception des offres.
+
+ARTICLE 10 : Critères d’évaluation et choix du soumissionnaire
+
+L’évaluation des offres sera effectuée sur la base de l’offre du moins disant, et qui répond aux critères d’éligibilité, de qualification requis et conditions techniques exigées mentionnés ci-dessous. Si l’offre du moins disant s’avère non conforme au cahier des charges, il sera procédé à l’évaluation des offres concurrentes avec la même méthodologie et selon le classement financier croissant.
+
+ARTICLE 11 : Adresse
+
+L’adresse à laquelle il est fait référence ci-dessus est :
+
+Adresse :31 avenue 18 janvier
+
+Mr/Mme :Le secrétaire général de la commune de majel bel abbes   a M. Ahmed Mansouri
+
+Téléphone :77445110
+
+Télécopieur:  
+
+E-mail :……………………………………………………………..
+
+CONDITIONS DE LA CONSULTATION
+
+ARTICLE 1 : Objet de la consultation :
+
+La présente consultation a pour objet la désignation d’un bureau d'études ou d'un prestataire spécialisé dans le développement des sites Web et portails pour la conception, le développement, la mise en place et la maintenance d'un portail au profit de la commune Majel Bel Abess, offrant un ensemble de service et pouvant être étoffé au fur et à mesure.
+
+ARTICLE 2 : Financement des prestations
+
+Cette prestation est financée par un Don de la Coopération financière allemande à travers la KfW (BMZ N° 2017 70 130), dans le cadre du programme de Financement de l’infrastructure et de l’équipement de base dans les zones d’extension des communes (phase 2 du FICOL), rétrocédé par l’État Tunisien à la commune, à travers la Caisse des Prêts et de Soutien des Collectivités Locales CPSCL.
+
+ARTICLE 3 : Conditions de participation
+
+Peuvent participer à cette consultation les bureaux d'études et les prestataires spécialisés dans le développement des sites Web et portail remplissant les conditions définies dans la Demande de Consultation et qui ne sont pas frappés par les dispositions d’incapacités et d’exclusions définies dans la Demande de Consultation.
+
+ARTICLE 4 : Présentation des offres
+
+Le dossier de participation à la présente consultation, peuvent être transmises en ligne, via le système d’achat public en ligne TUNEPS ou par voie postale recommandée ou rapide-poste ou remise directement au bureau d’ordre contre récépissé à l’adressementionnée dans l’Avis.
+
+En cas d’une soumission en ligne, l’offre sera déposée sur la plateforme TUNEPS. En cas de soumission hors ligne, les offres doivent parvenir sous plis fermés et scellés par voie postale recommandée ou par rapide poste ou remises directement au bureau d’ordre central, contre accusés de réception, à l'adresse ci-dessous mentionnée.
+
+Les offres doivent parvenir au plus tard à la date et heure limites mentionnées dans l’Avis. Les offres parvenues en retard ne seront pas acceptées.
+
+participation via le système TUNEPS
+
+En cas de dépassement du volume maximum permis techniquement dont le système dispose pour chargement des dossiers, les soumissionnaires peuvent présenter une partie de leur offre hors ligne, par voie postale recommandée ou rapide-poste ou remise directement au bureau d’ordre à l’adresse et heure fixées dans l’Avis de la consultation contre récépissé au plus tard à la date et heure limite mentionnée dans l’avis.
+
+En cas de dépassement du volume maximuml’offre doit être présentée dans une enveloppe sur laquelle seront inscrites uniquement les mentions suivantes : 
+
+«A ne pas ouvrir- consultation N°°( 17/2026)
+
+Conception, développement et mise en place d'un portail au profit de la commune Majel Bel Abess.
+
+L’offre doit parvenir par voie postale recommandée au lieu et heure indiqués dans l'avis de la consultationou peut être remise directement au bureau d’ordre de la commune contre un accusé de réception. Toute offre parvenue après 10ː00 du 24 avril  2026  sera rejetée. Le cachet du Bureau d'ordre central fait foi
+
+Les Soumissionnaires doivent obligatoirement présentertoutes les pièces financières de l’offre et tous les éléments exigés relatif à l’évaluation technique et financière, en ligne sur le système TUNEPS.
+
+Aucune indication relative au soumissionnaire ne doit figurer sur cette enveloppe au risque de rejet de l’offre. Tous les documents de l’offre technique et de l’offre financière doivent être paraphés à chaque page, datés, et signés à la dernière page.
+
+Les Pièces administratives
+
+N° ordre
+
+Désignation
+
+Mode d’envoi
+
+Dépôt viaTUNEPS
+
+Dépôt sans TUNEPS
+
+A1
+
+Une attestation d’affiliation à un régime de sécurité sociale.
+
+oui
+
+Oui
+
+Exemplaire original ou copie conforme à l’originale
+
+A2
+
+Extrait du registre de commerce
+
+Oui
+
+En ligne avec QR code ou Hors ligne
+
+Oui
+
+Simple copie
+
+A3
+
+Une fiche de renseignements généraux
+
+Oui (Annexe 1)
+
+En ligne
+
+Oui (Annexe 1)
+
+Copie originale
+
+A4
+
+La Déclaration d’engagement
+
+Oui (Annexe 2)
+
+En ligne
+
+Oui (Annexe 2)
+
+Copie originale
+
+A5
+
+Les documents de la consultation paraphés à chaque page, datés et signés à la dernière page
+
+oui
+
+Oui
+
+*Les soumissionnaires doivent être affiliés à un régime de sécurité sociale et doivent régler leurs situations fiscales avant la date limite de réception des offres
+
+L-’offre technique
+
+N° ordre
+
+Désignation
+
+Mode d’envoi
+
+Dépôt via TUNEPS
+
+Dépôt sans TUNEPS
+
+T1
+
+La liste des références spécifiques avec les pièces justificatives
+
+Oui (Annexe 5)
+
+En ligne ou Hors ligne
+
+Oui (Annexe 5)
+
+Copie originale pour la liste.
+
+Simple copie pour les pièces justificatives.
+
+T2
+
+Liste nominative du personnel de l’équipe à engager pour la mission avec les pièces justificatives de leurs expériences en relation avec la présente consultation
+
+Oui (Annexe 6)
+
+En ligne
+
+Oui (Annexe 6)
+
+Copie originale
+
+T3
+
+Les CV détaillés du personnel affecté à la réalisation de la mission
+
+Oui (Annexe 7)
+
+En ligne ou Hors ligne
+
+Oui (Annexe 7)
+
+L’offre financière
+
+N° ordre
+
+Désignation
+
+Mode d’envoi
+
+Dépôt via TUNEPS
+
+Dépôt sans TUNEPS
+
+F1
+
+L’Acte d’engagement (Soumission) dûment rempli, daté, tamponné et signé par le soumissionnaire (Annexe 3).
+
+Oui
+
+En ligne
+
+non
+
+F2
+
+Le bordereau des prix dûment rempli, daté, tamponné et signé par le soumissionnaire (Annexe°4).
+
+Oui
+
+En ligne
+
+non
+
+F3
+
+Le contrat de maintenance
+
+Oui
+
+En ligne ou Hors ligne
+
+oui
+
+ARTICLE 5 : Validité des Offres
+
+Les offres resteront valables et sans changement pendant soixante (60) jours à compter du jour suivant la date limite fixée pour la réception des offres.
+
+ARTICLE 6 : Ouverture des plis
+
+Seules les offres qui parviennent dans les délais seront concernées par l’ouverture des plis.
+
+L’ouverture des plis techniques et financiers se fera en une seule étape par la commission d’ouverture des plis. Ladite séance n’est pas publique.
+
+ARTICLE 7 : Rejet Automatique des offres
+
+Les offres qui arrivent hors délai ainsi que les offres qui ne comprennent pas l’Acte d’engagement (soumission) et/ou le bordereau de prix seront rejetées automatiquement.
+
+ARTICLE 8 : Choix du titulaire
+
+L’évaluation des offres sera effectuée en deux étapes :
+
+Étape 1 : vérification et évaluation financière des offres: 
+
+La commission de dépouillement procède :
+
+A la vérification des pièces administratives et de leur conformité,
+
+A la vérification des pièces constitutives des offres financières, des montants et des calculs relatifs aux prix et rectifiera les erreurs le cas échéant,
+
+Au classement des offres en partant de l’offre la moins disante hors Taxes qui sera provisoirement retenue.
+
+Le montant qui sera pris en considération pour le classement des offres financières est égal au montant de l'offre de base (Conception, développement, mise en place du portail & Assistance & formation) augmenté de l'offre du contrat de la maintenance pour trois ans.
+
+Étape 2 : évaluation technique des offres.
+
+L’évaluation des offres sera effectuée sur la base de l’offre technique et financière (toutes taxes comprises) qui répond aux critères d’éligibilité, de qualification requis et conditions techniques exigées mentionnés ci-dessous :
+
+Le soumissionnaire doit justifier au minimum la réalisation de trois (03) portails (mis en ligne) et opérationnels dont au moins un (01) dans un organisme public.
+
+Lesdits portails doivent être réalisés durant les trois (03) dernières années (c'est à dire commencés à partir de 2022et achevés au plus tard en 2025 avant la date limite de remise des offres).
+
+Les projets doivent être présentés selon le modèle joint en annexe 05 avec une liste des URL.
+
+Chaque projet référencé doit être accompagné de tous les justificatifs nécessaires.
+
+Le soumissionnaire doit présenter une équipe comprenant un chef de projet et d'au moins deux autres intervenants.
+
+Le chef de projet doit avoir:
+
+Un niveau académique d'au moins BAC+5;
+
+Une expérience d'au moins cinq (05) ans dans le domaine de développement des portails informatiques;
+
+Dirigé la réalisation d'au moins cinq (05) projets dans le domaine de développement des portails et sites Webdont au moins un (01) dans un établissement public.
+
+Chaque membre de l'équipe (au moins deux) doit avoir:
+
+Un niveau académique d'au moins BAC+3;
+
+Une expérience d'au moins trois (03) ans dans le domaine de développement des portails et sites Web;
+
+Participé dans la réalisation d'au moins trois(03) projets dans le domaine de développement des portails et sites Web.
+
+La commission de dépouillement procède à l’évaluation technique de l’offre la moins disante. Cette phase consiste à étudier soigneusement les offres techniques et vérifier la conformité à toutes les dispositions du présent cahier des charges. La commune a le droit de demander des éclaircissements et / ou justificatifs pour complément d’information, si elle le juge nécessaire.
+
+La commission de dépouillement vérifiera la conformité technique de l’offre la moins disante aux conditions et exigences énoncées dans le cahier des charges.
+
+A l’issue de cette phase :
+
+Si l’offre la moins disante est techniquement conforme, elle sera retenue.
+
+Si non, le dépouillement technique se poursuit pour l’offre classée juste après et ainsi de suite jusqu’à l’obtention d’une offre conforme techniquement.
+
+Sera déclarée meilleure offre, l’offre la moins disante et techniquement conforme.
+
+ARTICLE 10: SUITE RÉSERVÉE AUX OFFRES - RÉSULTATS DE la CONSULTATION
+
+La Commune se réserve le droit de ne pas donner suite aux offres si aucune d'elles ne lui parait acceptable soit du point devue technique, soit en raison des prix et des délais proposés ou pour tout autre motif.Dans ce cas le marchésera déclaré infructueux et la Commune en avisera tous les soumissionnaires
+
+Aucun soumissionnaire ne peut prétendre être indemnisé si la Commune ne donne pas suite à la consultation pour quelque motif que ce soit.
+
+Après approbation des instances compétentes, le titulaire du contrat sera visé par la Commune.
+
+Fait à Kasserine, le 21/04/2026
+
+(Signature et cachet du Prestataire)
+
+ CAHIER DES CLAUSES ADMINISTRATIVES PARTICULIERES
+
+Entre les soussignées :
+
+La commune de Majel Bel Abess, représentée par son représentée par son secrétaire général chargé des affaires de la commune…………………………………., désignée ci-après par le terme Maître d’Ouvrage ou la commune.
+
+D’une part, Et le Soumissionnaire CDF Matricule fiscal 1388566R/A/M/000 chargé de la conception, le développement, la mise en place et la maintenance du portail, désigné ci-après par le terme le Prestataire, représenté par son gérant El Haj Ali Dhaou D’autre Part.
+
+ARTICLE 1 : Objet de la consultation :
+
+La présente consultation a pour objet la désignation d'un bureau d'études ou d’un prestataire spécialisé dans le développement des sites WEB et portails qui aura pour mission la conception, le développement, la mise en place et la maintenance d'un portail au profit de la commune Majel Bel Abess.
+
+Ce portail WEB devra comporter entre autres :
+
+Une page d’accueil avec le nom de la municipalité 
+
+L’organisation et le personnel clé de la municipalité, y compris les contactsimportants pour la population
+
+Une rubrique permettant aux citoyens d’introduire leurs requêtes
+
+Une rubrique permettant aux citoyens d’introduire leurs réclamations
+
+Une rubrique comportant l’ensemble des documents à produire pour construire les dossiers d'obtention de différentes autorisations.
+
+Une rubrique permettant la consultation des demandes de permis de bâtir
+
+Une rubrique permettant la consultation des taxes TIB et TNB dues.
+
+Une rubrique de «news» décrivant entre autres les projets municipaux en cours ainsi que les dates et objets des principaux événements organisés par la municipalité, les dates de réunions du conseil municipal...
+
+Une rubrique de réglementation générale municipale permettant aux citoyens de connaître leurs droits et leurs obligations vis-à-vis de la municipalité, le PAU...
+
+Un module de recherche universelle
+
+Les mentions légales et informations juridiques liées à l’utilisation et le contenu du portail web
+
+Le portail se présentera en langue Arabe avec un support en langue françaiseeten langue anglaise.
+
+ARTICLE 2 : Cadre réglementaire
+
+La présenteconsultation est soumise à l'ensemble des textes législatifs, administratifs et techniques en vigueur en Tunisie et notamment :
+
+au Cahier des Clauses Administratives Générales applicables aux marchés publics d’études approuvé par arrêté de M le premier ministre le 11 Octobre 1994, en ce qui concerne tous les articles non abrogés par les décrets susvisés ou par la présente convention. http://www.marchespublics.gov.tn/onmp/upload/documents/CCAG_Etudes.pdf;
+
+à toute réglementation régissant les domaines social, sanitaire et fiscal;
+
+aux règles de l'Art et aux normes et conventions en vigueur, notamment celles-ci liés à la cyber-sécurité et la protection des données à caractère personnelles, y compris:
+
+la loi N° 2000-83 du 09 août 2000 mettant en place un cadre de législation et de réglementation des échanges et du commerce électroniques ;
+
+la loi organique n° 2004-63 en date du 27 juillet 2004 portant sur la protection des données à caractère personnel;
+
+la Convention de l'Union africaine du 27 juin 2014sur la cyber-sécurité et la protection des données à caractère personnel.
+
+ARTICLE 3 : Pièces Contractuelles
+
+Les pièces contractuelles de la présente consultation sont :
+
+L’Acte d’engagement (soumission) –Annexe 3 ;
+
+La Déclaration d’engagement –Annexe 2
+
+Le bordereau des Prix– Annexe4 ; 
+
+Le CCAP – Section III ;
+
+Les Termes de références (TDR) –section IV
+
+En cas de divergence entre deux ou plusieurs pièces du contrat, ce sont les dispositions de la pièce portant numéro d'ordre le moins élevé dans l'énumération ci-dessus qui primeront les autres. Cependant en cas d’erreurs de prix, ce sont les prix en toutes lettres du bordereau des prix qui feront foi.
+
+ARTICLE 4 : Caractère des Prix
+
+Les prix cités dans le bordereau des prix, joint en annexe, sont réputés fermes et non révisables pendant toute la durée d’exécution du contrat, et ne pourront varier en aucune manière après la conclusion du contrat.
+
+Le Prestataire s'engage à ne pas demander des frais commerciaux additionnels tels que le paiement de licences ou autre chose à utiliser dans le cadre du présent projet. Les outils et utilitaires à utiliser par lui ou par la commune lors de l’exploitation doivent être fournis à la charge du Prestataire.
+
+ARTICLE 5 : Impôts et Taxes
+
+Le Prestataire se conformera aux lois et textes en vigueur en Tunisie concernant les impôts, taxes, etc.…Il doit indiquer, dans son offre, les montants hors taxes et toutes taxes comprises.
+
+Conformément aux dispositions de l’article 13 bis du code de la TVA, la commune bénéficie de la suspension de la TVA au titre des prestations d’études ou fournitures de biens et services fournies dans le cadre de la présente convention et qui seront payées par les subventions accordées par la Caisses des Prêts et de Soutien des Collectivités Locales (CPSCL).
+
+La commune se chargera au préalable des procédures nécessaires auprès du bureau de contrôle des impôts compétent pour l’obtention d’une attestation de suspension de la TVA et délivrera au titulaire du marché les documents nécessaires pour justifier son chiffre d’affaires sous le régime de suspension de la TVA.
+
+ARTICLE 6 : Délais de réalisation de la prestation
+
+La mission globale du titulaire démarrera le lendemain de la réception de bon de commande et s’achèvera à la réception et l’approbation des documents fournis par le Prestataire.
+
+Le délai global de la mission (phases 1 & 2) est de trente (30)jours ouvrables hors délai de validation du maître d'ouvrage.
+
+ARTICLE 7 : Consistance de la Prestation
+
+Les activités et les tâches, objet du présent cahier des charges, consistent à réaliser un ensemble de missions formulées comme suit :
+
+Conception, développement et la mise en place du portail de la commune,
+
+Présentation du portail lors d’une réunion de validationà la fin de la phase 2
+
+Formation et transfert de compétences,
+
+Assistance au démarrage,
+
+Maintenance du système
+
+ARTICLE 8 : Phases de mise en œuvre de la prestation
+
+L'exécution de la prestation sera réalisée en phases successives comme suit :
+
+Phase 1 : Analyse et Conception du portail (générale et détaillée);
+
+Phase 2 : Développement, hébergement, mise en ligne et tests de bon fonctionnement du portail,
+
+Phase 3 : Formation des équipes concernées de la commune, transfert de compétences et assistance technique au démarrage de l'exploitation réelle du portail dans toutes ses composantes pendant trois (03) mois.
+
+ARTICLE 9: Réception et validation des missions
+
+A l'issue de la réalisation de chaque phase, le Prestataire doit remettre à la Commune un rapport détaillé des actions réalisées. 
+
+La validation de chaque phase interviendra dans un délai de cinq (5) jours au maximum à partir de leur remise à la Commune et elle doit être conclue avec un procès-verbal dûment signé entre la Commune et le Prestataire.
+
+Passé ce délai, le Prestataire peut considérer de plein droit que le rapport remis ne suscite aucun commentaire de la part par la commune et que par conséquent il est validé par cette dernière.
+
+L'examen du rapport de chaque phase par la commune peut donner lieu aux trois (03) cas de figures suivants:
+
+Un avis favorable
+
+L'avis favorable de la commune signifie la réception des prestations relatives à la phase concernée conclue avec un Procès-verbal qui sera signé entre les deux parties.
+
+Un avis favorable sous réserves :
+
+L'avis favorable sous réserves signifie que le Prestataire est appelé à apporter les ajustements et les rectifications aux rapports ou aux codes sources conformément aux recommandations de la commune. Dans ce cas, le Prestataire est autorisé à poursuivre ses travaux pour la phase suivante et il aura un délai de cinq (5) jours pour soumettre le rapport ou le code source rectifié et il n'aura pas à payer des pénalités de retard dans l'achèvement de la phase concerné tant que le délai de cinq (5) jours n'est pas dépassé.
+
+Ce délai ne sera pas comptabilisé dans les délais de mise en œuvre du projet objet du présent cahier des charges.
+
+La commune effectue un réexamen du rapport ou du code source rectifié et si les réserves ont été levées, elle émettra un avis favorable.
+
+Un avis défavorable :
+
+L'avis défavorable de la commune signifie la non validation de la phase concernée. Cet avis défavorable sera prononcé dans le cas où les prestations ne sont pas réalisées conformément aux
+
+termes de référence et aux attentes de la commune.
+
+Dans ce cas, le Prestataire aura un délai de quinze (15) jours pour réaliser les prestations de la phase concernée et si ce délai est dépassé, il aura à payer des pénalités de retard.
+
+Ce délai sera comptabilisé dans les délais de mise en œuvre du projet objet du présent cahier des charges.
+
+ARTICLE 10 : Réception provisoire
+
+A l'issue de la 3ème phase d'exécution de la prestation et à la lumière des procès-verbaux établis entre les deux parties, la commune et le Prestataire signent le Procès-verbal de la réception provisoire.
+
+Le Prestataire doit remettre en plus de la documentation et des manuels d’utilisation, le code source intégral de la version mise en ligne en clair (non crypté) du portail sur support numérique.
+
+ARTICLE 11 : Période de garantie
+
+La période de garantie est au minimum d'une année. La date de début de cette période de garantie prend effet à partir de la date de signature du procès-verbal de la réception provisoire. Le titulaire aura, pendant cette période, une obligation de résultat pour :
+
+Corriger les erreurs et les anomalies de fonctionnement;
+
+Optimiser le système;
+
+Sécuriser le code source du système;
+
+Mettre à jour les documents.
+
+Au titre de cette garantie, le Prestataire exécute à sa charge les mises au point. Tout vice caché, détecté au cours ou après la période de garantie, doit être garanti sans réserve par le Prestataire.
+
+Le prestataire de service doit élaborer un rapport final contenant un résumé du travail réalisé, avec des recommandations futures.
+
+Le contrat de maintenance du portail prendra effet automatiquement le jour suivant la date de la réception définitive.
+
+ARTICLE 12 : Réception Définitive
+
+La réception définitive sera prononcée après l'expiration de la période de garantie à compter de la date de réception provisoire. Elle doit être sanctionnée par un Procès-verbal de réception définitive dûment signé par la commune et le Prestataire.
+
+Le Prestataire doit actualiser la documentation et les manuels d’utilisation et doit également livrer la version finale du code source en clair (non crypté) du portail sur support numérique.
+
+ARTICLE 13 : Mode de règlement des prestations
+
+Les paiements seront effectués en quatre tranches :
+
+10% à la réception de la phase1;
+
+40% à la réception de la phase2;
+
+40% à la réception de la phase3;
+
+10 % à la réception définitive. 
+
+Chaque paiement sera effectué par virement bancaire au compte courant mentionné dans l’Acte d’engagement (soumission) après la présentation du Prestataire des pièces suivantes :
+
+Une facture en quatre exemplaires originaux;
+
+Une copie de l’ordre de service da la phase;
+
+Une copie du rapport de la réception de la phase concernée
+
+ARTICLE 14 : Pénalités
+
+Une pénalité sera appliquée, sans mise en demeure préalable, en cas de dépassement des délais de livraison.
+
+Le titulaire du bon de commande subira une pénalité sur la base des dispositions suivantes :
+
+1/1000ème du montant initial de la commande par jour calendaire de retard.
+
+Le montant de cette pénalité sera plafonné à cinq pour cent (5%) du montant initial de commande.
+
+ARTICLE 15 : Force Majeure
+
+Les Parties ne seront pas responsables de l’inexécution de leurs obligations en cas de survenance d’un cas de force majeure, défini comme tout événement imprévisible, irrésistible et résultant de circonstances extérieures aux Parties, rendant impossible l’exécution du Contrat. En cas de survenance d’un cas de force majeure le Contrat sera suspendu jusqu’à disparition, extinction ou cessation du cas de force majeure.
+
+Au cas où l’une des parties verrait l'exécution de ses obligations affectée par un cas de force majeure, il devra notifier à l’autre partie l’incident ou la survenance du cas de force majeure. Ladite notification devra faire état des éléments constitutifs du cas de force majeure et doit être faite dans les quatorze (14) jours qui suivent la date à laquelle la partie concernée a eu (ou supposée avoir eu) connaissance de l'incident ou des circonstances qui forment la force majeure.
+
+ARTICLE 16 : Assistance au maître d’ouvrage
+
+Le Prestataire sera appelé à coordonner avec toute personne chargée par le Maître de l’ouvrage pour lui porter assistance technique.
+
+ARTICLE 17 : Défaillance et Résiliation
+
+Si une défaillance est dûment constatée dans l'exécution d'une mission et au cas où le Prestatairene remplit pas ses obligations, le maître d’ouvrage la mettrait en demeure, par lettre recommandée, d’y satisfaire dans un délai de cinq(05) jours.Passé ce délai, le maître d’ouvrage pourra résilier purement et simplement le marché ou faire exécuter les prestations objet de ce marché, suivant le procédé qu’il jugerait utile, aux frais du titulaire du marché.
+
+ARTICLE 18 : Assurance
+
+Le Prestataire est invité à souscrire à une assurance dont il lui reviendra d’assumer les coûts sans que la responsabilité de la Commune et/ou du projet ne soit recherchée à cet effet. En tout état de cause, le Prestataire est seule responsable des dommages causés aux tiers par ses propres négligences ainsi que des omissions faites dans l’exécution des tâches décrites dans le présent contrat. Par conséquent la Commune et/ou le projet ne serait en aucun cas être tenus responsable.
+
+ARTICLE 19 : Règlement des litiges
+
+Toute contestation ou litige entre les deux parties qui ne pourraient être réglées à l’amiable, seront soumises devant les juridictions compétentes.
+
+ARTICLE 20: Entrée en vigueur
+
+Le présent contrat entre en vigueur dès la notification du bon de commande au Prestataire retenue, après l’approbation de la commission des marchés compétente.
+
+ARTICLE 21 :Domiciliation de remboursement
+
+Tous remboursements, paiements de caution, de garantie ou autres ainsi que tous paiements d'assurances auxquels la Commune aurait droit seront effectués au crédit du compte spécial pour le fonds de disposition.
+
+Fait à .................., le......................................
+
+(Signature et cachet du Maire)
+
+Fait à Kasserine, le 21/04/2026
+
+(Signature et cachet du Prestataire)
+
+TERMES DE REFERENCES
+
+ARTICLE 1 : Objet de la consultation
+
+Dans le cadre de l’'amélioration de la relation entre l'administration et ses usagers, en l'occurrence, le citoyen, la tutelle et les partenaires (CPSCL, CFAD, FNVT, etc..) tout en assurant une meilleure transparence, accessibilité à l’information et la qualité de service, la commune Majel Bel Abess se propose de mettre en place un portail offrant un ensemble de service et pouvant être étoffé au fur et à mesure.
+
+Ce portail sera constitué de:
+
+Un BackOffice permettant l’administration et la mise à jour du portail, 
+
+Un FrontOffice accessible aux usagers et leur offrant des services communs et des services selon le profil de chacun.
+
+Un web service (peut être intégré au backoffice) pour l'échange des données avec la tutelle et les partenaires de la commune (CPSCL, CFAD, FNVT, Ministère de l'Intérieur, Ministère des Finances, etc..).
+
+A cet égard, la commune sollicite des propositions en vue de la fourniture des services d'un bureau d’études ou d’un prestataire spécialisé dans le développement des portails et des sites web, pour la conception et la réalisation d'un portail trilingue (arabe, françaiset anglais), sécurisé et évolutif.
+
+Pour pouvoir bénéficier des mises à jouren matière de fonctionnalités et surtout de sécurité, et de la multitude de modules/plugins de la communauté, le portail doit obligatoirement être à base d’un CMS Open-source, le Prestataire devra y proposer un thème configurable et des contenus facilement gérable et permettant d’offrir une visualisation des données (statistiques, graphiques, etc.) et (selon le type de données) d’une cartographie interactive. Le web services permettra de communiquer les données dans un format ouvert tel que JSON, XML, CSV ou KML et SHP pour le cas des données cartographiques.
+
+ARTICLE 2 : Objectif de la prestation
+
+Appliquer la stratégie nationale sur la e-gouvernance établie par la présidence du gouvernement (e-administration);
+
+Offrir aux citoyens et les partenaires un point d’accès unique et reconnu à l’information;
+
+Créer un espace d’échange et de partage avec les citoyens et les partenaires;
+
+Mettre en ligne des dossiers thématiques;
+
+Mettre en ligne des informations sur les différentes activités de la commune notamment:
+
+Structure des services (organigramme);
+
+Compétences allouées à la commune;
+
+Réglementations régissant les collectivités locales 
+
+Statistiques : ressources humaines, finances locales, environnements, aménagements du territoire et autres.
+
+Rendre publique les budgets communaux, le PIC, le PAI, et les marchés publics pour faciliter l’accès et le suivi de l’état d’avancement des projets locaux;
+
+Rendre publique l'ensemble des documents exigés par la réglementation en vigueur et en particulier par le système de l'évaluation des performances mis en place dans le cadre du PDUGL;
+
+Mettre à jour toute l’actualité concernant la commune, afin de la communiquer au moment opportun.
+
+Mettre en ligne les dates des concours prévus par la commune;
+
+Mettre en ligne la liste des documents à télécharger et qui concerne les prestations offertes par les communesavec mention des conditions d'obtention de la prestation, les délais, les références réglementaires et toutes informations nécessaires pour l'obtention des prestations.
+
+Créer une newsletter trimestrielle, qui récapitule et communique par thème les actions et les réalisations qui ont été établis par la commune;
+
+Publier les avis de consultation, appel d'offres et concours ainsi que leurs résultats;
+
+Etablir des liens vers des sites utiles, et pertinents en tant que sources complémentaires d’informations notamment : le CFAD, la CPSCL, le ministère chargé des affaires locales, le ministère des finances, etc.
+
+ARTICLE 3 : modules demandés
+
+La solution proposée est un CMS puissant et sécurisé qui permettra une gestion facile du contenu et des modules, la plateforme permettra la séparation entre le back office, le front office et les BD.
+
+Constitution du portail:
+
+Un BackOffice permettant l’administration et la mise à jour, 
+
+Un FrontOffice accessible aux internautes leur offrant des services communs et dynamiques.
+
+Un SGBD qui permet de gérer la BD du portail.
+
+Gestion des réclamations :
+
+Avec une interface d’affichage des statistiques sur le portail et qui donnera aussi la possibilité au citoyen de faire des réclamations via une interface personnalisée.
+
+Suivi des conseils municipaux :
+
+Avec une interface d’affichage des conseils, des PV, des actualités, des événements et toutes autres activités des membres ou comités du conseil sur le portail.
+
+Suivi des budgets (prévisions, réalisations et statistiques) :
+
+Avec une interface d’affichage des budgets sur le portail.
+
+Toutes les données affichées sur le portail doivent être exportables dans un format exploitable.
+
+ARTICLE 4 : Conception de l'architecture du portail
+
+Le portail doit contenir au moins les rubriques suivantes :
+
+Page d’accueil : Ensemble de panels (blocks) présentant les espaces importants du site dont obligatoirement les actualités et les E-Service.
+
+Bannière supérieure:
+
+logo avec nom de la commune;
+
+Drapeau, république tunisienne;
+
+Inscription, Authentification, Nom du connecté ;
+
+Bouton de choix de la langue (arabe, français, anglais)
+
+Menu des différentes rubriques du portail;
+
+Barre de news Défilante;
+
+Liens Externes;
+
+Moteur de recherche.
+
+Bannière au milieu :
+
+Actualités, Evénements, publications,…;
+
+E-Service fonctionnels (avec des statistiques);
+
+Espace citoyen (regroupe l’ensemble des services offerts aux citoyens, …);
+
+Calendrier d'événement Public;
+
+Annuaire de la société civile.
+
+Bannière Inférieure pour la page d’accueil (footer) :
+
+Liens Externe, lien mentions légales;
+
+Contact (Adresse, Téléphones/Fax, E-mails);
+
+Maps de localisation.
+
+Référence:
+
+Présentation avec galerie de photos;
+
+Organigramme:Module offrant une consultation dynamique des données. (Fiche employé avec les coordonnées, description des tâches de chaque service, etc...).;
+
+Législation;
+
+Réglementation;
+
+Compétences;
+
+Données cartographiques (Google Map, OpenstreetMap, bing map ..);
+
+Budget (avec visualisation des données);
+
+PIC/PAI (avec visualisation des données);
+
+Administration;
+
+Environnement;
+
+Règlements;
+
+Partenariat&Jumelage;
+
+Galerie de photos: insertion des albums de photos avec la possibilité de partage avec différents réseaux sociaux.
+
+Démarches administratives :
+
+Manuel de services &démarches;
+
+Imprimés et cahiers des charges.
+
+Espace de la gouvernance locale:
+
+Elaboration du programme participatif;
+
+Consultation publique;
+
+Publication des résultats (PAI, PIC, PGES, etc.).
+
+Espace E-Services:
+
+Gestion des plaintes
+
+Formulaire en ligne avec possibilité d'envoi en ligne, confirmation par retour de message, suivi du traitement de la plainte;
+
+Classement des plaintes par catégorie.
+
+Demande d'autorisation de bâtir
+
+Formulaire en ligne avec possibilité d'envoi en ligne, confirmation par retour de message, suivi du traitement de la demande;
+
+Calendrier de réunion de la commission.
+
+Accès à l'information en ligne
+
+Formulaire en ligne avec possibilité d'envoi en ligne, confirmation par retour de message, suivi du traitement de la demande.
+
+Calendrier: Gestion des dates des événements, des réunions du conseil municipal et de ses différents comités. Ce module est relié avec l’interface propre aux membres du conseil afin de les notifier sur les réunions par mail et sur le calendrier privé.
+
+Associations Civiles:
+
+Consultation et complément de leurs profils après enregistrement du Matricule, n° autorisation, date autorisation, nom de l'Association, Domaine d’intérêt, adresse de correspondance, adresse E-mail, Président, Tél Fixe, Fax, GSM président, Interlocuteur, Fonction Interlocuteur, GSM Interlocuteur, Nombre des membres ;
+
+Dépôt de demandes et réception des réponses avec possibilité de consultation de l'historique des demandes de l'Association et des réponses respectives de l'administration communale ;
+
+Une interface doit être développée pour le suivi des demandes reçues. Cette interface permet aussi de gérer les réponses aux demandes après réception des résultats auprès des services concernés. La réponse peut être sous forme papier, texte ou fichiers attachés. Dans cette espace, le citoyen pourra réserver en ligne la salle des fêtes, une place dans le Souk hebdomadaire, etc…
+
+Espace E-fonctionnaire
+
+Renforcement des capacités :
+
+Guides;
+
+Formation;
+
+Assistance technique.
+
+Financement :
+
+Dotations Non Affectées;
+
+Dotations Affectées;
+
+Subventions Exceptionnelles;
+
+Prêts.
+
+Espace Privé
+
+Actualités
+
+Sous forme de textes, d'images ou vidéo avec affichage:
+
+Nombre de visites;
+
+Nombre de partage ;
+
+Bouton de partage sur les réseaux sociaux. 
+
+Des tags pour chaque actualité;
+
+Visibilité du nom et de la date de l’Editeur;
+
+Délégation du rôle éditeur à plusieurs utilisateurs.
+
+Barre de news défilants
+
+Concours
+
+Avis d'appel à la concurrence:
+
+Plan Annuel de Passation des Marchés;
+
+Avis d'appel d'offres
+
+Résultats des désignations
+
+FAQ
+
+Liens Utiles
+
+Contact et annuaire des établissements : Une liste statique des données concernant les établissements qui rendent services aux citoyens.
+
+Les Contacts d'urgence: Police, Sécurité Civile, Médecins, Pharmacie en Service, STEG, SONEDE, etc.
+
+Contact et accès
+
+Newsletter
+
+Plan du Site
+
+Mentions légales et informations juridiques liées à l’utilisation du portail
+
+ARTICLE 5 : Fonctionnalites du portail
+
+Le portail à développer doit offrir les facilités suivantes : 
+
+Langue : accès automatique en arabe, support du français (et éventuellement autre langue choisie par le visiteur)avec actualisation de la page visitée avec un nouveau critère « langue » sans redirection forcée vers la page d’accueil.
+
+Ergonomie: prise en charge des différentes résolutions d’écran, indépendance du navigateur et de la plateforme.
+
+Convivialité : facilité d’utilisation, esthétique, graphisme avec identité graphique de la commune.
+
+Taille des caractères : normes WAI.
+
+Archivage des données du site: possibilité de les consulter selon le besoin des usagers.
+
+ARTICLE 6 : Gestionnaire du contenu & Sources
+
+Le CMS à utiliser doit être au moment de la mise en place du portail, dans sa dernière version stable.
+
+Les modules intégrés devront également être dans leur dernière version (moins de 6 mois s’il s’agit d’un module public).
+
+Les sources des fichiers graphiques doivent être fournies (PSD, AI etc…) ainsi que des fichiers CSS et JS dans le cas où le site utilise une version compressée.
+
+L’interface doit de préférence et pour des raisons d’évolutivité et de maintenance utiliser un framework CSS (bootstrap, foundation, HTML5 boilerplate, …).
+
+Pour des raisons de sécurité, le code source ne doit en aucun cas divulguer le type de CMS utilisé et encore moins sa version.
+
+Les éventuels commentaires présents dans les codes sources (HTML, CSS, JS) doivent utiliser un style professionnel et lisible (format javadoc, multi ligne etc…).
+
+L’utilisation d’un compte Google Analytics devra être faite sur site en présence d’un responsable technique de la commune.
+
+ARTICLE 7 : Référencement
+
+Les moteurs de recherche constituent le principal moyen d’accès à un site internet. Aussi il est impératif d’assurer un bon référencement permettant le meilleur emplacement au sein du moteur de recherche afin de générer un trafic ciblé sur le site et par là même une bonne visibilité auprès des internautes sur les principaux annuaires et moteurs de recherche les plus utilisés.
+
+Le Prestataire assistera la commune pour que l'hébergeur:
+
+Procède dès la mise en ligne du site au référencement manuel et automatique du site sur les principaux outils de recherche tunisiens et étrangers (annuaires et moteurs de recherches).L’effort de référencement doit être soutenu et suivi durant toute la vie du site WEB : l’objectif est de constater une progression dans la position ou de maintenir au moins la position déjà acquise.
+
+Apporte une solution complète, en termes d’audit, d’analyse, d’optimisation et de mesure d’efficacité du référencement. Il doit conforter ses analyses par la détection des visites de robots des moteurs de recherche sur le site et générer des rapports contenant la liste des robots venus dans une période donnée, le nombre de pages vues et la liste des pages avec date, heure adresse IP de l’agent et le nom, pour chaque robot.
+
+ARTICLE 8 : Hebergement
+
+Le Prestataire doit effectuer l’opération d’hébergement sur le serveur du fournisseur de service au plus tard le(Insère la date maximale souhaitée pour la mise en place du portail), à partir d’une machine client ayant une adresse IP fixe
+
+A l’achèvement des travaux de conception et de développement, le soumissionnaire doit héberger le site sur une adresse discrète et sécurisée pour tester le site, vérifier et valider le contenu, avant la diffusion finale au public.
+
+ARTICLE 9 : Assistance au démarrage
+
+Le Prestataire s’engage à effectuer les interventions nécessaires pour la mise à jour ou la maintenance du site en cas de besoin pour une période de trois(03) mois à partir de la date de mise en service du site sur internet.
+
+Lors de cette phase, l’équipe technique chargée de développement du portail, se charge d’assurer le bon fonctionnement et la correction des bugs détectés dans la solution, elle se charge aussi d’enrichir le contenu du portail, et d’accompagner sur place les différentes équipes (administrateurs et informaticiens) lors de l’utilisation de la solution. Elle se charge aussi de fournir une assistance en cas de blocage de mise à jour, d’administration, d’installation ou autre anomalie.
+
+Cette assistance peut être réalisée par téléphone ou en ligne si nécessaire par déplacement, dans un délai maximum de 24 heures, au siège de la commune.
+
+ARTICLE 10 : Livrables
+
+A la fin de chaque phase, le prestataire est tenu de rendre à la Commune un rapport :
+
+Rapport de diagnostic décrivant la situation de la commune en matière de connectivité réseau, matériels, logiciels et ressources humaines (IT) et comportant des recommandations concernant le matériel, le réseau et la connexion nécessaires ;
+
+Un rapport de conception du logiciel ;
+
+Un guide d’utilisation du logiciel ;
+
+Rapport d’assistance, de suivi et de la mise en place.
+
+ARTICLE 11 : Formation
+
+NB : Cet article est à adapter en fonction des capacités en ressources humaines de la Commune.
+
+Le Prestataire devra assurer la formation de deux (02) personnes désignées par la commune comme suit :
+
+Infographie : 4 jours
+
+Développement web : 4 jours
+
+Utilisation et mise à jour du portail : 5 jours
+
+Administration du portail et des éventuels modules fournis : 2 jours.
+
+ARTICLE 12 : Contrat de maintenance
+
+Un contrat de maintenance annuel et renouvelable pour une durée globale maximale de 3 ans sera signé après la réception définitive du projet conformément à la section suivante.
+
+ARTICLE 13 : Engagement de La commune
+
+La commune est tenue de fournir au prestataire toutes la documentation utile et nécessaire pour l’alimentation de la BD du portail, de préférence en format électronique et en deux langues –Arabe et Français- (Données générales sur la commune, l’organigramme, les formulaires, photos, la liste des liens utiles, etc...).
+
+La Commune est appelée aussi à désigner un responsable de l’opération qui aura le rôle d’interlocuteur chargé de la collection des données et des documents techniques auprès des différents intervenants.
+
+LU ET ACCEPTE PAR
+
+Fait à Kasserine, le 21/04/2026
+
+(Signature et cachet du Prestataire)
+
+ ANNEXES
+
+Annexe 01 : Fiche de renseignement Généraux sur le Soumissionnaire
+
+Nom ou raison sociale : Société CDF .
+
+Enregistré à Kasserine . sous le N° : B1337282015
+
+Date d’enregistrement : 16/02/2015
+
+Personne bénéficiant de procuration et signant les documents relatifs à l’Offre (Nom, prénom, fonction) El Haj Ali Dhaou : Gérant
+
+Adresse : Av.Habib Bourguiba, Résidence ElAnwar 2ème étage N°6 kasserine 1200
+
+Téléphone : 77 473 494  Fax : 77 473 494   E-mail : cdfdhajali@gmail.com
+
+Capital enregistré 10000dt
+
+Capital versé : 10000dt
+
+Nombre approximatif du personnel technique permanent 4
+
+Principales Références …………………………………………………………………………………………………………………………………..
+
+                                                                              Fait à Kasserine, le 21/04/2026
+
+ (Signature et cachet du Prestataire)
+
+Annexe 02 : Déclaration d’engagement
+
+Intitulé de la Candidature / l'Offre / Proposition / le Contrat : Conception, développement et mise en place du portail de la commune Majel Bel Abess
+
+À:………………………………………………………………..
+
+Nous reconnaissons et acceptons que la KfW ne finance les projets du Maître d’Ouvrage  qu'à ses propres conditions, qui sont déterminées par la Convention de Financement conclue avec le Maître d’Ouvrage. En conséquence, il ne peut exister de lien juridique entre la KfW et notre entreprise, notre Joint Venture ou nos sous-traitants aux termes du Contrat. Le Maître d’Ouvrage conserve la responsabilité exclusive de la préparation et de la mise en œuvre du processus d'appel d'Offres et de l'exécution du Contrat.
+
+Nous attestons par la présente que nous ne sommes pas, qu'aucun des membres de notre direction ou de nos représentants légaux, ou qu’aucun des membres de notre Joint Venture, y compris nos sous-traitants aux termes du Contrat, dans l'une des situations suivantes :
+
+2.1) être en faillite, en liquidation ou cessation d’activités, en règlement judiciaire, sous séquestre, en restructuration ou dans toute situation analogue ;
+
+2.2) être condamnés par un jugement définitif ou une décision administrative définitive ou faisant l'objet de sanctions financières de la part des Nations unies, de l'Union européenne ou de l'Allemagne pour participation à une organisation criminelle, blanchiment d'argent, infractions liées au terrorisme, travail des enfants ou traite des êtres humains ; ce critère d'exclusion est également applicable aux personnes morales, dont la majorité des actions sont détenues ou effectivement contrôlées par des personnes physiques ou morales qui sont elles-mêmes soumises à ces condamnations ou sanctions ;
+
+2.3) avoir été condamnés par une décision judiciaire définitive ou une décision administrative définitive d'un tribunal, de l'Union européenne, des autorités nationales du pays partenaire ou de l'Allemagne pour pratique punissable dans le cadre d'un appel d'Offres ou de l'exécution d'un Contrat ou pour une irrégularité quelconque affectant les intérêts financiers de l’Union européenne (dans l’hypothèse d’une telle condamnation, le Candidat ou soumissionnaire joindra à la présente Déclaration d’engagement les informations complémentaires qui permettraient de considérer que cette condamnation n’est pas pertinente dans le cadre du présent Contrat et que des mesures appropriées de mise en conformité ont été prises) ;
+
+2.4) avoir fait l’objet d’une résiliation prononcée à nos torts exclusifs au cours des cinq dernières années du fait d'un manquement grave ou persistant à nos obligations contractuelles lors de l'exécution d'un Contrat, sous réserve que cette sanction n’ait pas fait l’objet d’une contestation de notre part en cours ou ayant donné lieu à une décision de justice infirmant la résiliation à nos torts exclusifs ;
+
+2.5) n’ont pas rempli les obligations fiscales en vigueur concernant le paiement des impôts dans le pays de résidence fiscale et le pays d’origine du maître d’ouvrage (les contractants établis dans les pays de l’annexe 1 (https://www.consilium.europa.eu/de/policies/eu-list-of-non-cooperative-jurisdictions/) doivent présenter, au moment de l’attribution du marché/de la révision du contrat, en plus de la déclaration d’engagement, une déclaration de conformité fiscale (annexe 1 de la déclaration d’engagement) dûment remplie et contresignée par une personne habilitée à cet effet. Celle-ci fait partie intégrante du contrat. En cas de non-présentation, le contractant risque d’être exclu de la procédure de passation des marchés. Pour les contractants établis dans des pays ne figurant pas sur la liste de l’annexe I, seule la déclaration d’engagement doit être présentée, et non la déclaration de conformité fiscale),; 
+
+2.6) faire l'objet d'une décision d'exclusion de la Banque mondiale ou de toute autre banque multilatérale de développement et figurer dans la liste du site Web http://www.worldbank.org/debarr, ou respectivement sur la liste pertinente de toute autre banque multilatérale de développement (dans l’hypothèse d’une telle décision d’exclusion, le Candidat ou le soumissionnaire peut joindre à la présente Déclaration d’engagement les informations complémentaires qui permettraient de considérer que cette décision d’exclusion n’est pas pertinente dans le cadre du présent Contrat et que des mesures appropriées de mise en conformité ont été prises) ; ou
+
+2.7) s'être rendu coupable de fausses déclarations en fournissant les renseignements exigés comme condition préalable à la participation à la présente procédure d'appel d'offres.
+
+Nous attestons par les présentes que ni nous, ni aucun des membres de notre Joint Venture ou de nos sous-traitants aux termes du Contrat, ne sommes dans l'une ou l'autre des situations de conflit d'intérêts suivantes :
+
+3.1) être une filiale contrôlée par le Maître d’Ouvrage, ou un actionnaire contrôlant le Maître d’Ouvrage, sauf si le conflit d'intérêts qui en résulte a été porté à l'attention de la KfW et résolu à sa satisfaction ;
+
+3.2) avoir une relation d'affaires ou de famille avec du personnel du Maître d’Ouvrage impliqué dans le processus d'appel d'offres ou dans la supervision du Contrat en résultant, à moins que le conflit d'intérêts qui en résulte n’ait été porté à l'attention de la KfW et résolu à sa satisfaction ;
+
+3.3) être contrôlés par, ou contrôler un autre Candidat ou soumissionnaire, ou être sous contrôle commun avec un autre Candidat ou soumissionnaire, ou recevoir ou accorder des subventions directement ou indirectement à un autre Candidat ou soumissionnaire, avoir le même représentant légal qu'un autre Candidat ou soumissionnaire, maintenir des contacts directs ou indirects avec un autre Candidat ou soumissionnaire, qui nous permettent de disposer ou de donner accès aux informations contenues dans les Candidatures ou Offres respectives, influencer celles-ci ou influencer les décisions du Maître d’Ouvrage ;
+
+3.4) être engagés dans une activité de prestations de conseils, qui, de par sa nature, peut être en conflit avec les missions que nous effectuerions pour le Maître d’Ouvrage ;
+
+3.5) dans le cas de la passation de marchés de travaux de Génie Civil, d’installations ou de fournitures :
+
+avoir préparé ou avoir été associé à une personne qui a préparé les spécifications, dessins, calculs et autres documents devant être utilisés dans le processus d'appel d'offres du présent Contrat ;
+
+avoir été recrutés (ou se faire proposer d'être recrutés) nous-mêmes ou l'une de nos filiales, pour effectuer la supervision ou l'inspection des travaux pour le présent Contrat ;
+
+Si nous sommes une entité publique et que nous participons à un appel d'offres, nous certifions que nous jouissons d'une autonomie juridique et financière et que nous exerçons nos activités conformément aux lois et règlements commerciaux.
+
+Nous nous engageons à porter à l'attention de Maître d’Ouvrage, qui en informera la KfW, tout changement de situation concernant les points 2 à 4 ci-dessus. 
+
+Dans le cadre du processus d'appel d'offres et de l'exécution du Contrat correspondant :
+
+6.1) ni nous, ni aucun des membres de notre Joint Venture, ni aucun de nos sous-traitants aux termes du Contrat, n'avons engagé ou n'engagerons de pratique condamnable pendant le processus d'appel d'offres et dans le cas où un Contrat est attribué, nous n'engagerons aucune pratique condamnable pendant l'exécution du Contrat ;
+
+6.2) ni nous, ni aucun des membres de notre Joint Venture, ni aucun de nos sous-traitants aux termes du Contrat, ne ferons l’acquisition ou ne fournirons de matériel, ni n'opérerons dans des secteurs sous embargo des Nations Unies, de l'Union Européenne ou de l'Allemagne ; et
+
+6.3) nous nous engageons à nous conformer et à nous assurer que nos sous-traitants et nos principaux fournisseurs aux termes du Contrat, respectent les normes internationales en matière d'environnement et de travail, conformément aux lois et règlements applicables dans le pays de mise en œuvre du Contrat et aux conventions fondamentales de l'Organisation Internationale du Travail (OIT)  et aux traités internationaux sur l'environnement. Nous mettrons de plus en œuvre des mesures d'atténuation des risques environnementaux et sociaux lorsqu'elles sont spécifiées dans les plans de gestion environnementale et sociale pertinents ou d'autres documents similaires fournis par le Maître d’Ouvrage et, dans tous les cas, mettrons en œuvre des mesures visant à prévenir l'exploitation et les abus sexuels et la violence fondée sur le genre.
+
+Dans le cas d'attribution d'un Contrat, nous, ainsi que tous les membres de nos partenaires de Joint Venture et sous-traitants aux termes du Contrat, (i) fournirons, sur demande, des informations relatives au processus d'appel d'offres et à l'exécution du Contrat et (ii) autoriserons le Maître d’Ouvrage et la KfW, ou un agent désigné par l'un d'eux, et dans le cas de financement par l'Union européenne également les institutions européennes compétentes en vertu du droit communautaire, à examiner les comptes, dossiers et documents concernés, à permettre des contrôles sur place et à assurer l'accès aux sites et aux projets concernés.
+
+En cas d'attribution d'un Contrat, nous, ainsi que tous nos partenaires de Joint Venture et sous-traitants aux termes du Contrat, nous nous engageons à conserver les dossiers et documents susmentionnés conformément au Droit Applicable, mais en tout état de cause pendant au moins six ans à compter de la date d'exécution du Contrat ou de sa résiliation. Nos opérations financières et nos états financiers sont soumis à des procédures de contrôle conformément à la loi applicable. Nous acceptons de plus que nos données (y compris les données personnelles) générées dans le cadre de la préparation et de la mise en œuvre du processus d'appel d'offres et de l'exécution du Contrat soient stockées et traitées conformément à la loi applicable par le Maître d’Ouvrage et la KfW.
+
+Nom :En tant que :
+
+Dûment habilité à signer pour et au nom de
+
+Signature :En date du : 
+
+Annexe 1
+
+Déclaration de conformité fiscale : attestation obligatoire pour les personnes morales
+
+Nom de l’entreprise
+
+Par ma signature, je certifie que :                         
+
+je suis en droit de faire cette déclaration au nom de l’entreprise susmentionnée ;                       
+
+l’entreprise s’acquitte en bonne et due forme de tous les impôts, conformément à la législation fiscale du pays dans lequel elle est établie ;               
+
+l’entreprise n’est pas ou n’a pas été impliquée dans des procédures judiciaires concernant son imposition, ni actuellement, ni par le passé ;              
+
+l’entreprise s’acquittera en bonne et due forme des impôts qui pourraient être dus dans le cadre de la fourniture des prestations de services convenues par contrat;                       
+
+toutes les informations fournies et déclarations faites au préalable sont complètes, exactes quant à leur contenu et valables à l’heure actuelle.
+
+Kasserine21/04/2026El Haj Ali Dhaou(Lieu)(Date)(Nom du Contractant)
+
+.......................................................(Signature(s) )
+
+Annexe 1
+
+Déclaration de conformité fiscale : attestation obligatoire pour les personnes physiques
+
+Par ma signature, je certifie que :                                 
+
+je fais cette déclaration en mon nom/pour mon propre compte ;                      
+
+je m’acquitte en bonne et due forme des impôts que je suis tenu(e) de payer en vertu de la législation fiscale de mon pays de résidence ;                     
+
+je ne suis pas ou n’ai pas été impliqué(e) dans une procédure judiciaire en matière fiscale, ni actuellement, ni par le passé ;                
+
+je m’acquitterai en bonne et due forme des impôts qui pourraient être dus dans le cadre de la fourniture de la prestation de service convenue par contrat;             
+
+toutes les informations et déclarations contenues dans la présente attestation sont complètes, exactes quant à leur contenu et valables à l’heure actuelle.
+
+Kasserine21/04/2026El Haj Ali Dhaou(Lieu)(Date)(Nom de la personne)
+
+.......................................................(Signature)
