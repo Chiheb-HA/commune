@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             NewsSeeder::class,
             EventSeeder::class,
             ComplaintSeeder::class,
+            SettingsSeeder::class,
         ]);
     }
 }

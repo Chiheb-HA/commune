@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -35,6 +36,22 @@ class ProfileController extends Controller
         $request->user()->save();
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
+    }
+
+    /**
+     * Update notification preferences.
+     */
+    public function updateNotificationPreferences(Request $request): RedirectResponse
+    {
+        $request->validate([
+            'notify_on_new_request' => ['boolean'],
+        ]);
+
+        $request->user()->update([
+            'notify_on_new_request' => $request->boolean('notify_on_new_request'),
+        ]);
+
+        return Redirect::route('profile.edit')->with('status', 'notification-preferences-updated');
     }
 
     /**

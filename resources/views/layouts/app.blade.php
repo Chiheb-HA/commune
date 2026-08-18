@@ -222,14 +222,6 @@
                         </li>
                     @endauth
                     <li class="nav-item">
-                        <form action="{{ route('search') }}" method="GET" class="d-flex">
-                            <input type="text" name="q" class="form-control form-control-sm" placeholder="{{ __('messages.search') }}" value="{{ request('q') }}">
-                            <button type="submit" class="btn btn-sm btn-primary ms-2">
-                                <i class="bi bi-search"></i>
-                            </button>
-                        </form>
-                    </li>
-                    <li class="nav-item">
                         <div class="language-selector">
                             <a href="{{ route('setLocale', 'fr') }}" class="lang-btn {{ app()->getLocale() === 'fr' ? 'active' : '' }}">FR</a>
                             <a href="{{ route('setLocale', 'en') }}" class="lang-btn {{ app()->getLocale() === 'en' ? 'active' : '' }}">EN</a>

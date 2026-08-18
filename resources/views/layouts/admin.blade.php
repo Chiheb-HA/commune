@@ -40,12 +40,125 @@
             top: 0;
             padding: 20px 0;
             overflow-y: auto;
+            max-height: 100vh;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .sidebar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        [dir="rtl"] .sidebar {
+            left: auto;
+            right: 0;
         }
         
         .sidebar .brand {
             padding: 0 20px 30px 20px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             margin-bottom: 20px;
+        }
+        
+        [dir="rtl"] .sidebar .brand {
+            text-align: right;
+        }
+        
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sidebar-nav li {
+            margin: 5px 0;
+        }
+        
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            color: var(--sidebar-text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar-nav a:hover,
+        .sidebar-nav a.active {
+            background-color: rgba(30, 64, 175, 0.2);
+            color: white;
+            border-left: 4px solid var(--primary);
+            padding-left: 16px;
+        }
+        
+        [dir="rtl"] .sidebar-nav a:hover,
+        [dir="rtl"] .sidebar-nav a.active {
+            border-left: none;
+            border-right: 4px solid var(--primary);
+            padding-left: 12px;
+            padding-right: 16px;
+        }
+        
+        .sidebar-nav i {
+            width: 20px;
+            text-align: center;
+        }
+        
+        [dir="rtl"] .sidebar-nav i {
+            text-align: center;
+        }
+        
+        .sidebar-nav .btn-group {
+            width: 100%;
+        }
+        
+        .sidebar-nav .btn-group .btn {
+            flex: 1;
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-color: rgba(255, 255, 255, 0.2);
+            color: var(--sidebar-text);
+            background-color: transparent;
+        }
+        
+        .sidebar-nav .btn-group .btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .sidebar-nav .btn-group .btn.active {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        .sidebar-nav .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            border-color: rgba(255, 255, 255, 0.2);
+            color: var(--sidebar-text);
+            background-color: transparent;
+        }
+        
+        .sidebar-nav .btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
         }
         
         .sidebar .brand h5 {
@@ -82,8 +195,20 @@
             padding-left: 16px;
         }
         
+        [dir="rtl"] .sidebar-nav a:hover,
+        [dir="rtl"] .sidebar-nav a.active {
+            border-left: none;
+            border-right: 4px solid var(--primary);
+            padding-left: 12px;
+            padding-right: 16px;
+        }
+        
         .sidebar-nav i {
             width: 20px;
+            text-align: center;
+        }
+        
+        [dir="rtl"] .sidebar-nav i {
             text-align: center;
         }
         
@@ -95,6 +220,11 @@
             flex-direction: column;
         }
         
+        [dir="rtl"] .main-content {
+            margin-left: 0;
+            margin-right: 280px;
+        }
+        
         .top-navbar {
             background-color: white;
             border-bottom: 1px solid #e2e8f0;
@@ -102,6 +232,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+        
+        [dir="rtl"] .top-navbar {
+            flex-direction: row-reverse;
         }
         
         .top-navbar .user-info {
@@ -186,13 +320,27 @@
                 transition: width 0.3s ease;
             }
             
+            [dir="rtl"] .sidebar {
+                left: 0;
+                right: auto;
+            }
+            
             .sidebar.active {
                 width: 280px;
+            }
+            
+            [dir="rtl"] .sidebar.active {
+                right: 0;
+                left: auto;
             }
             
             .main-content {
                 margin-left: 0;
                 width: 100%;
+            }
+            
+            [dir="rtl"] .main-content {
+                margin-right: 0;
             }
             
             .toggle-sidebar {
@@ -211,6 +359,32 @@
         </div>
 
         <ul class="sidebar-nav">
+            <!-- Quick Actions -->
+            <li class="mt-3 mb-2 px-3"><small class="text-uppercase fw-bold">{{ __('messages.Quick Actions') }}</small></li>
+            
+            <!-- Language Switcher -->
+            <li class="px-3 mb-3">
+                <div class="btn-group w-100" role="group">
+                    <a href="{{ route('setLocale', 'fr') }}" class="btn btn-sm btn-outline-secondary {{ app()->getLocale() === 'fr' ? 'active' : '' }}" title="Français">
+                        FR
+                    </a>
+                    <a href="{{ route('setLocale', 'en') }}" class="btn btn-sm btn-outline-secondary {{ app()->getLocale() === 'en' ? 'active' : '' }}" title="English">
+                        EN
+                    </a>
+                    <a href="{{ route('setLocale', 'ar') }}" class="btn btn-sm btn-outline-secondary {{ app()->getLocale() === 'ar' ? 'active' : '' }}" title="العربية">
+                        AR
+                    </a>
+                </div>
+            </li>
+            
+            <li class="px-3 mb-3">
+                <a href="{{ route('home') }}" class="btn btn-sm btn-outline-primary w-100" title="{{ __('messages.Visit Website') }}">
+                    <i class="bi bi-globe"></i> {{ __('messages.Visit Website') }}
+                </a>
+            </li>
+            
+            <li class="mt-4 px-3"><small class="text-uppercase fw-bold">{{ __('messages.Navigation') }}</small></li>
+            
             <li><a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
                 <i class="bi bi-house-door"></i> <span>{{ __('messages.Dashboard') }}</span>
             </a></li>
@@ -272,9 +446,12 @@
             </a></li>
             @endif
 
-            <li class="mt-4 px-3"><small class="text-uppercase fw-bold">{{ __('messages.Site') }}</small></li>
-            <li><a href="{{ route('home') }}" class="nav-link">
-                <i class="bi bi-globe"></i> <span>{{ __('messages.Visit Website') }}</span>
+            <li class="mt-4 px-3"><small class="text-uppercase fw-bold">{{ __('messages.System') }}</small></li>
+            <li><a href="{{ route('admin.settings') }}" class="nav-link {{ request()->routeIs('admin.settings*') ? 'active' : '' }}">
+                <i class="bi bi-gear"></i> <span>{{ __('messages.Settings') }}</span>
+            </a></li>
+            <li><a href="{{ route('profile.edit') }}" class="nav-link {{ request()->routeIs('profile.*') ? 'active' : '' }}">
+                <i class="bi bi-person"></i> <span>{{ __('messages.Profile') }}</span>
             </a></li>
         </ul>
     </div>
@@ -291,29 +468,14 @@
             </div>
             
             <div class="user-info">
-                <!-- Language Switcher -->
-                <div class="btn-group" role="group">
-                    <a href="{{ route('setLocale', 'fr') }}" class="btn btn-sm btn-outline-secondary {{ app()->getLocale() === 'fr' ? 'active' : '' }}" title="Français">
-                        FR
-                    </a>
-                    <a href="{{ route('setLocale', 'en') }}" class="btn btn-sm btn-outline-secondary {{ app()->getLocale() === 'en' ? 'active' : '' }}" title="English">
-                        EN
-                    </a>
-                    <a href="{{ route('setLocale', 'ar') }}" class="btn btn-sm btn-outline-secondary {{ app()->getLocale() === 'ar' ? 'active' : '' }}" title="العربية">
-                        AR
-                    </a>
-                </div>
-                <a href="{{ route('home') }}" class="btn btn-sm btn-outline-primary" title="{{ __('messages.Visit Website') }}">
-                    <i class="bi bi-globe"></i> <span class="d-none d-sm-inline">{{ __('messages.Visit Website') }}</span>
-                </a>
                 <span class="text-muted">{{ auth()->user()->name ?? 'Admin' }}</span>
                 <div class="dropdown">
                     <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
                         <i class="bi bi-person-circle"></i>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">{{ __('messages.Profile') }}</a></li>
-                        <li><a class="dropdown-item" href="#">{{ __('messages.Settings') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('profile.edit') }}">{{ __('messages.Profile') }}</a></li>
+                        <li><a class="dropdown-item" href="{{ route('admin.settings') }}">{{ __('messages.Settings') }}</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li>
                             <form method="POST" action="{{ route('logout') }}">

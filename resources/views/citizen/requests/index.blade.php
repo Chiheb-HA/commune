@@ -30,8 +30,8 @@
                                     <td>{{ $request->request_number }}</td>
                                     <td>{{ $request->service->name ?? 'N/A' }}</td>
                                     <td>
-                                        <span class="badge bg-{{ $request->status === 'completed' ? 'success' : ($request->status === 'pending' ? 'warning' : 'info') }}">
-                                            {{ $request->status }}
+                                        <span class="badge bg-{{ $request->status === 'completed' ? 'success' : ($request->status === 'rejected' ? 'danger' : ($request->status === 'on_hold' ? 'secondary' : ($request->status === 'in_progress' ? 'info' : 'warning'))) }}">
+                                            {{ __('messages.' . ucfirst(str_replace('_', ' ', $request->status))) }}
                                         </span>
                                     </td>
                                     <td>{{ $request->priority }}</td>

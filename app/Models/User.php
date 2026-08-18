@@ -35,6 +35,7 @@ class User extends Authenticatable
         'department',
         'position',
         'password',
+        'notify_on_new_request',
     ];
 
     protected $hidden = [

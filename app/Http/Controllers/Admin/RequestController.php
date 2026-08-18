@@ -49,6 +49,12 @@ class RequestController extends Controller
 
     public function assign(Request $request, CitizenRequest $citizenRequest)
     {
+        // Only allow assignment when status is 'on_hold'
+        if ($citizenRequest->status !== 'on_hold') {
+            return redirect()->route('admin.requests.index')
+                ->with('error', __('messages.Can only assign when status is On Hold'));
+        }
+
         $validated = $request->validate([
             'assigned_to' => 'required|exists:users,id',
         ]);
@@ -56,10 +62,9 @@ class RequestController extends Controller
         $citizenRequest->update([
             'assigned_to' => $validated['assigned_to'],
             'assigned_at' => now(),
-            'status' => 'in_progress',
         ]);
 
-        return redirect()->back()->with('success', 'Request assigned successfully');
+        return redirect()->route('admin.requests.index')->with('success', __('messages.Request assigned successfully'));
     }
 
     public function updateStatus(Request $request, CitizenRequest $citizenRequest)
@@ -73,7 +78,7 @@ class RequestController extends Controller
             'completed_at' => $validated['status'] === 'completed' ? now() : null,
         ]);
 
-        return redirect()->back()->with('success', 'Status updated successfully');
+        return redirect()->route('admin.requests.index')->with('success', __('messages.Status updated successfully'));
     }
 
     public function complete(CitizenRequest $citizenRequest)

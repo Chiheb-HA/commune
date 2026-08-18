@@ -22,7 +22,9 @@ Route::get('/locale/{locale}', function ($locale) {
     if (in_array($locale, ['en', 'fr', 'ar'])) {
         session()->put('locale', $locale);
         app()->setLocale($locale);
+        config(['app.locale' => $locale]);
     }
+
     return redirect()->back();
 })->middleware('web')->name('setLocale');
 
@@ -103,6 +105,13 @@ Route::middleware(['auth', 'role:admin|editor|official'])->prefix('admin')->grou
         Route::post('/{complaint}/close', [ComplaintController::class, 'close'])->name('admin.complaints.close');
         Route::get('/statistics', [ComplaintController::class, 'statistics'])->name('admin.complaints.statistics');
     });
+
+    // Settings routes
+    Route::get('/settings', [App\Http\Controllers\Admin\SettingsController::class, 'index'])->name('admin.settings');
+    Route::patch('/settings/commune-info', [App\Http\Controllers\Admin\SettingsController::class, 'updateCommuneInfo'])->name('admin.settings.update-commune-info');
+    Route::patch('/settings/working-hours', [App\Http\Controllers\Admin\SettingsController::class, 'updateWorkingHours'])->name('admin.settings.update-working-hours');
+    Route::patch('/settings/service-toggles', [App\Http\Controllers\Admin\SettingsController::class, 'updateServiceToggles'])->name('admin.settings.update-service-toggles');
+    Route::post('/settings/run-backup', [App\Http\Controllers\Admin\SettingsController::class, 'runBackup'])->name('admin.settings.run-backup');
 });
 
 // Authenticated User Routes
