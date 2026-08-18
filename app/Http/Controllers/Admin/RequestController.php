@@ -20,7 +20,10 @@ class RequestController extends Controller
     public function index(Request $request)
     {
         $status = $request->query('status');
-        
+
+        // Clear any cached data
+        cache()->forget('citizen_requests_stats');
+
         $query = CitizenRequest::with(['user', 'service']);
 
         if ($status) {
@@ -32,16 +35,20 @@ class RequestController extends Controller
         $stats = [
             'pending' => CitizenRequest::where('status', 'pending')->count(),
             'in_progress' => CitizenRequest::where('status', 'in_progress')->count(),
+            'on_hold' => CitizenRequest::where('status', 'on_hold')->count(),
             'completed' => CitizenRequest::where('status', 'completed')->count(),
+            'rejected' => CitizenRequest::where('status', 'rejected')->count(),
             'total' => CitizenRequest::count(),
         ];
+
+        \Log::info('Requests index stats', ['stats' => $stats]);
 
         return view('admin.requests.index', compact('requests', 'stats'));
     }
 
-    public function show(CitizenRequest $request)
+    public function show($id)
     {
-        $request->load(['user', 'service']);
+        $request = CitizenRequest::with(['user', 'service'])->findOrFail($id);
         $officials = User::role('official')->get();
 
         return view('admin.requests.show', compact('request', 'officials'));
@@ -56,7 +63,7 @@ class RequestController extends Controller
         }
 
         $validated = $request->validate([
-            'assigned_to' => 'required|exists:users,id',
+            'assigned_to' => 'required|exists:users,cin',
         ]);
 
         $citizenRequest->update([
@@ -69,16 +76,43 @@ class RequestController extends Controller
 
     public function updateStatus(Request $request, CitizenRequest $citizenRequest)
     {
-        $validated = $request->validate([
-            'status' => 'required|in:pending,in_progress,on_hold,completed,rejected,cancelled',
-        ]);
+        try {
+            $validated = $request->validate([
+                'status' => 'required|in:on_hold,completed,in_progress,rejected',
+            ]);
 
-        $citizenRequest->update([
-            'status' => $validated['status'],
-            'completed_at' => $validated['status'] === 'completed' ? now() : null,
-        ]);
+            \Log::info('Updating request status', [
+                'request_id' => $citizenRequest->id,
+                'old_status' => $citizenRequest->status,
+                'new_status' => $validated['status']
+            ]);
 
-        return redirect()->route('admin.requests.index')->with('success', __('messages.Status updated successfully'));
+            $result = $citizenRequest->update([
+                'status' => $validated['status'],
+                'completed_at' => $validated['status'] === 'completed' ? now() : null,
+            ]);
+
+            $updatedRequest = $citizenRequest->fresh();
+
+            \Log::info('Request status update result', [
+                'request_id' => $citizenRequest->id,
+                'update_result' => $result,
+                'current_status' => $updatedRequest ? $updatedRequest->status : 'null'
+            ]);
+
+            // Clear any cached data
+            cache()->forget('citizen_requests_stats');
+
+            return redirect()->route('admin.requests.index')->with('success', __('messages.Status updated successfully'));
+
+        } catch (\Exception $e) {
+            \Log::error('Error updating request status', [
+                'error' => $e->getMessage(),
+                'request_id' => $citizenRequest->id ?? 'unknown'
+            ]);
+
+            return redirect()->back()->with('error', 'Error updating status: ' . $e->getMessage());
+        }
     }
 
     public function complete(CitizenRequest $citizenRequest)

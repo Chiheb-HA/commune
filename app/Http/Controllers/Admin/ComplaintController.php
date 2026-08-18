@@ -48,7 +48,7 @@ class ComplaintController extends Controller
     public function assign(Request $request, Complaint $complaint)
     {
         $validated = $request->validate([
-            'assigned_to' => 'required|exists:users,id',
+            'assigned_to' => 'required|exists:users,cin',
         ]);
 
         $complaint->update([

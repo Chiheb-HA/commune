@@ -185,21 +185,23 @@
 <section class="py-5 bg-light">
     <div class="container-lg">
         <div class="row text-center">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="mb-3">
                     <i class="bi bi-file-text" style="font-size: 2rem; color: var(--primary);"></i>
                 </div>
                 <h3 class="mb-2">{{ $recentArticles->count() }}</h3>
                 <p class="text-muted">{{ __('messages.articles_published') }}</p>
+                <a href="{{ route('articles.index') }}" class="btn btn-sm btn-outline-primary mt-2">{{ __('messages.view_all') }}</a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="mb-3">
                     <i class="bi bi-calendar-event" style="font-size: 2rem; color: var(--primary);"></i>
                 </div>
                 <h3 class="mb-2">{{ $upcomingEvents->count() }}</h3>
                 <p class="text-muted">{{ __('messages.events_organized') }}</p>
+                <a href="{{ route('events.index') }}" class="btn btn-sm btn-outline-primary mt-2">{{ __('messages.view_all') }}</a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="mb-3">
                     <i class="bi bi-newspaper" style="font-size: 2rem; color: var(--primary);"></i>
                 </div>
@@ -209,23 +211,16 @@
                     <a href="{{ route('news.index') }}" class="btn btn-sm btn-outline-primary mt-2">{{ __('messages.view_all') }}</a>
                 @endif
             </div>
-            <div class="col-md-3">
-                <div class="mb-3">
-                    <i class="bi bi-building" style="font-size: 2rem; color: var(--primary);"></i>
-                </div>
-                <h3 class="mb-2">-</h3>
-                <p class="text-muted">{{ __('messages.departments') }}</p>
-            </div>
         </div>
     </div>
 </section>
 
 <!-- CTA Section -->
-<section class="py-5" style="background: linear-gradient(135deg, var(--primary) 0%, #0f172a 100%); color: white;">
+<section class="py-5" style="background: linear-gradient(135deg, rgba(30, 64, 175, 0.85) 0%, rgba(15, 23, 42, 0.9) 100%), url('{{ asset('Flag-Tunisia.png') }}'); background-size: cover; background-position: center; color: white;">
     <div class="container-lg text-center">
         <h2 class="mb-3">{{ __('messages.need_help') }}</h2>
         <p class="lead mb-4">{{ __('messages.need_help_desc') }}</p>
-        <a href="#" class="btn btn-light btn-lg">{{ __('messages.get_support') }}</a>
+        <a href="{{ route('services.contact') }}" class="btn btn-light btn-lg">{{ __('messages.get_support') }}</a>
     </div>
 </section>
 @endsection

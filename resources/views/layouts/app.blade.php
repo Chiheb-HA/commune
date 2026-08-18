@@ -58,7 +58,9 @@
         }
         
         .hero-section {
-            background: linear-gradient(135deg, var(--primary) 0%, #0f172a 100%);
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.85) 0%, rgba(15, 23, 42, 0.9) 100%), url('{{ asset('Flag-Tunisia.png') }}');
+            background-size: cover;
+            background-position: center;
             color: white;
             padding: 80px 0;
         }
@@ -152,6 +154,14 @@
             color: white;
             border-color: var(--primary);
         }
+
+        [dir="ltr"] .navbar-brand img {
+            margin-right: 10px;
+        }
+
+        [dir="rtl"] .navbar-brand img {
+            margin-left: 10px;
+        }
     </style>
     @yield('extra-css')
 </head>
@@ -160,7 +170,8 @@
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-lg">
             <a class="navbar-brand" href="{{ route('home') }}">
-                <i class="bi bi-building"></i> Municipality Portal
+                <img src="{{ asset('Flag-Tunisia.png') }}" alt="Tunisia Flag" style="height: 30px; margin-right: 10px;">
+                <i class="bi bi-building"></i> بوابة البلدية
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>

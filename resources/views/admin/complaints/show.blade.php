@@ -49,17 +49,6 @@
             </div>
         </div>
 
-        <div class="card mb-4">
-            <div class="card-header">
-                <h6 class="mb-0">{{ __('Description') }}</h6>
-            </div>
-            <div class="card-body">
-                <p><strong>{{ __('French') }}:</strong> {{ $complaint->description_fr }}</p>
-                <p><strong>{{ __('English') }}:</strong> {{ $complaint->description_en }}</p>
-                <p><strong>{{ __('Arabic') }}:</strong> {{ $complaint->description_ar }}</p>
-            </div>
-        </div>
-
         @if($complaint->response)
             <div class="card mb-4">
                 <div class="card-header">
@@ -89,7 +78,7 @@
                             <select class="form-select" id="assigned_to" name="assigned_to">
                                 <option value="">{{ __('Select Official') }}</option>
                                 @foreach($officials as $official)
-                                    <option value="{{ $official->id }}">{{ $official->name }}</option>
+                                    <option value="{{ $official->cin }}">{{ $official->name }}</option>
                                 @endforeach
                             </select>
                         </div>

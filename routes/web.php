@@ -89,10 +89,10 @@ Route::middleware(['auth', 'role:admin|editor|official'])->prefix('admin')->grou
     // Requests routes
     Route::prefix('requests')->group(function () {
         Route::get('/', [RequestController::class, 'index'])->name('admin.requests.index');
-        Route::get('/{request}', [RequestController::class, 'show'])->name('admin.requests.show');
-        Route::post('/{request}/assign', [RequestController::class, 'assign'])->name('admin.requests.assign');
-        Route::post('/{request}/status', [RequestController::class, 'updateStatus'])->name('admin.requests.updateStatus');
-        Route::post('/{request}/complete', [RequestController::class, 'complete'])->name('admin.requests.complete');
+        Route::get('/{citizenRequest}', [RequestController::class, 'show'])->name('admin.requests.show');
+        Route::post('/{citizenRequest}/assign', [RequestController::class, 'assign'])->name('admin.requests.assign');
+        Route::post('/{citizenRequest}/status', [RequestController::class, 'updateStatus'])->name('admin.requests.updateStatus');
+        Route::post('/{citizenRequest}/complete', [RequestController::class, 'complete'])->name('admin.requests.complete');
         Route::get('/statistics', [RequestController::class, 'statistics'])->name('admin.requests.statistics');
     });
 

@@ -17,7 +17,7 @@
         <div class="card bg-warning text-white">
             <div class="card-body">
                 <h3>{{ $stats['pending'] ?? 0 }}</h3>
-                <small>{{ __('messages.Pending Requests') }}</small>
+                <small>{{ __('messages.Pending') }}</small>
             </div>
         </div>
     </div>
@@ -68,7 +68,17 @@
                                 <td>{{ $request->request_number }}</td>
                                 <td>{{ $request->service->name_en ?? 'N/A' }}</td>
                                 <td>
-                                    <span class="badge {{ $request->status === 'pending' ? 'bg-warning' : ($request->status === 'completed' ? 'bg-success' : 'bg-info') }}">
+                                    @php
+                                        $badgeClass = match($request->status) {
+                                            'pending' => 'bg-warning',
+                                            'in_progress' => 'bg-info',
+                                            'on_hold' => 'bg-secondary',
+                                            'completed' => 'bg-success',
+                                            'rejected' => 'bg-danger',
+                                            default => 'bg-secondary',
+                                        };
+                                    @endphp
+                                    <span class="badge {{ $badgeClass }}">
                                         {{ ucfirst(str_replace('_', ' ', $request->status)) }}
                                     </span>
                                 </td>
@@ -79,7 +89,7 @@
                                 </td>
                                 <td>{{ $request->created_at->translatedFormat('d F Y') }}</td>
                                 <td>
-                                    <a href="{{ route('admin.requests.show', $request) }}" class="btn btn-sm btn-primary">
+                                    <a href="{{ route('admin.requests.show', $request->id) }}" class="btn btn-sm btn-primary">
                                         <i class="bi bi-eye"></i>
                                     </a>
                                 </td>

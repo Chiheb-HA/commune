@@ -81,14 +81,14 @@
             </div>
             <div class="card-body">
                 @if($request->status === 'on_hold')
-                    <form action="{{ route('admin.requests.assign', $request) }}" method="POST" class="mb-3">
+                    <form action="{{ route('admin.requests.assign', $request->id) }}" method="POST" class="mb-3">
                         @csrf
                         <div class="mb-2">
                             <label for="assigned_to" class="form-label">{{ __('messages.Assign To') }}</label>
                             <select class="form-select" id="assigned_to" name="assigned_to">
                                 <option value="">{{ __('messages.Select Official') }}</option>
                                 @foreach($officials as $official)
-                                    <option value="{{ $official->id }}" {{ $request->assigned_to === $official->id ? 'selected' : '' }}>{{ $official->name }}</option>
+                                    <option value="{{ $official->cin }}" {{ $request->assigned_to === $official->cin ? 'selected' : '' }}>{{ $official->name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -100,22 +100,22 @@
                         <select class="form-select" id="assigned_to" name="assigned_to" disabled>
                             <option value="">{{ __('messages.Select Official') }}</option>
                             @foreach($officials as $official)
-                                <option value="{{ $official->id }}" {{ $request->assigned_to === $official->id ? 'selected' : '' }}>{{ $official->name }}</option>
+                                <option value="{{ $official->cin }}" {{ $request->assigned_to === $official->cin ? 'selected' : '' }}>{{ $official->name }}</option>
                             @endforeach
                         </select>
                         <small class="text-muted d-block mt-1">{{ __('messages.Can only assign when status is On Hold') }}</small>
                     </div>
                 @endif
 
-                @if(in_array($request->status, ['pending', 'in_progress']))
-                    <form action="{{ route('admin.requests.updateStatus', $request) }}" method="POST" class="mb-3">
+                @if(in_array($request->status, ['pending', 'in_progress', 'on_hold']))
+                    <form action="{{ route('admin.requests.updateStatus', $request->id) }}" method="POST" class="mb-3">
                         @csrf
                         <div class="mb-2">
                             <label for="status" class="form-label">{{ __('messages.Update Status') }}</label>
                             <select class="form-select" id="status" name="status">
-                                <option value="in_progress">{{ __('messages.In Progress') }}</option>
                                 <option value="on_hold">{{ __('messages.On Hold') }}</option>
                                 <option value="completed">{{ __('messages.Completed') }}</option>
+                                <option value="in_progress">{{ __('messages.In Progress') }}</option>
                                 <option value="rejected">{{ __('messages.Rejected') }}</option>
                             </select>
                         </div>
