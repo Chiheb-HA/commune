@@ -15,15 +15,12 @@
                         @csrf
                         
                         <div class="mb-3">
-                            <label for="category" class="form-label">{{ __('messages.category') }}</label>
-                            <select class="form-select" id="category" name="category" required>
+                            <label for="category_id" class="form-label">{{ __('messages.category') }}</label>
+                            <select class="form-select" id="category_id" name="category_id" required>
                                 <option value="">{{ __('messages.choose_service') }}</option>
-                                <option value="infrastructure">{{ __('messages.category_infrastructure') }}</option>
-                                <option value="services">{{ __('messages.category_services') }}</option>
-                                <option value="staff">{{ __('messages.category_staff') }}</option>
-                                <option value="cleanliness">{{ __('messages.category_cleanliness') }}</option>
-                                <option value="security">{{ __('messages.category_security') }}</option>
-                                <option value="other">{{ __('messages.category_other') }}</option>
+                                @foreach($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
                             </select>
                         </div>
 

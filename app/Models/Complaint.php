@@ -15,6 +15,7 @@ class Complaint extends BaseModel
         'cin',
         'complaint_number',
         'category',
+        'category_id',
         'description_fr',
         'description_en',
         'description_ar',
@@ -61,6 +62,11 @@ class Complaint extends BaseModel
     public function assignedTo(): BelongsTo
     {
         return $this->belongsTo(User::class, 'assigned_to', 'cin');
+    }
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(ComplaintCategory::class, 'category_id');
     }
 
     // Scopes

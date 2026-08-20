@@ -2,6 +2,10 @@
 
 @section('title', __('messages.request_details'))
 
+@php
+use Illuminate\Support\Facades\Storage;
+@endphp
+
 @section('content')
 <div class="container-lg py-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
@@ -51,6 +55,25 @@
                 <div class="mb-3">
                     <strong>{{ __('messages.notes') }}:</strong>
                     <p>{{ $request->notes }}</p>
+                </div>
+            @endif
+
+            @if($request->documents && $request->documents->count() > 0)
+                <div class="mb-3">
+                    <strong>{{ __('messages.attachments') }}:</strong>
+                    <div class="mt-2">
+                        @foreach($request->documents as $document)
+                            <div class="d-flex align-items-center justify-content-between p-2 border rounded mb-2">
+                                <div>
+                                    <span class="me-2">{{ $document->file_name }}</span>
+                                    <small class="text-muted">({{ number_format($document->file_size / 1024, 2) }} KB)</small>
+                                </div>
+                                <a href="{{ Storage::disk('public')->url($document->file_path) }}" target="_blank" class="btn btn-sm btn-primary">
+                                    {{ __('messages.view') }}
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
             @endif
         </div>

@@ -19,7 +19,7 @@
                             <select class="form-select" id="service_id" name="service_id" required>
                                 <option value="">{{ __('messages.choose_service') }}</option>
                                 @foreach($services as $service)
-                                    <option value="{{ $service->id }}">{{ $service->name_fr ?? $service->name_en ?? 'Service' }}</option>
+                                    <option value="{{ $service->id }}">{{ $service->name }}</option>
                                 @endforeach
                             </select>
                         </div>

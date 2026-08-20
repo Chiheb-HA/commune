@@ -176,11 +176,12 @@ return [
     // Additional missing keys
     'request_number' => 'Request Number',
     'complaint_number' => 'Complaint Number',
-    'reference_number' => 'Reference Number',
+    'Reference_Number' => 'Reference Number',
     'resolved_at' => 'Resolved At',
     'new_complaint' => 'New Complaint',
     'select_service' => 'Select Service',
     'attachments' => 'Attachments',
+    'Attachments' => 'Attachments',
     'attachments_hint' => 'Accepted formats: PDF, JPG, PNG (max 5MB)',
     'response' => 'Response',
     'submit' => 'Submit',

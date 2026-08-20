@@ -181,6 +181,7 @@ return [
     'new_complaint' => 'شكوى جديدة',
     'select_service' => 'اختر الخدمة',
     'attachments' => 'المرفقات',
+    'Attachments' => 'المرفقات',
     'attachments_hint' => 'التنسيقات المقبولة: PDF، JPG، PNG (الحد الأقصى 5 ميجابايت)',
     'response' => 'الرد',
     'submit' => 'إرسال',
@@ -292,6 +293,7 @@ return [
     'subject' => 'الموضوع',
     'view' => 'عرض',
     'view_all_events' => 'عرض جميع الفعاليات',
+    'Reference_Number' => 'رقم المرجع',
 
     // Statistics page keys
     'Requests Statistics' => 'إحصائيات الطلبات',

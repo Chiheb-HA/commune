@@ -7,11 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class MunicipalService extends BaseModel
+class ComplaintCategory extends BaseModel
 {
     use HasFactory, Sluggable, SoftDeletes;
-
-    protected $table = 'municipal_services';
 
     protected $fillable = [
         'name_fr',
@@ -21,18 +19,8 @@ class MunicipalService extends BaseModel
         'description_en',
         'description_ar',
         'icon',
-        'requirements_fr',
-        'requirements_en',
-        'requirements_ar',
-        'phone',
-        'email',
-        'documents_required_fr',
-        'documents_required_en',
-        'documents_required_ar',
-        'processing_time',
-        'cost',
-        'is_active',
         'order',
+        'is_active',
     ];
 
     protected $casts = [
@@ -49,9 +37,9 @@ class MunicipalService extends BaseModel
     }
 
     // Relations
-    public function requests(): HasMany
+    public function complaints(): HasMany
     {
-        return $this->hasMany(CitizenRequest::class, 'service_id');
+        return $this->hasMany(Complaint::class, 'category_id');
     }
 
     // Scopes

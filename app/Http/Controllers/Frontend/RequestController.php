@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\CitizenRequest;
 use App\Models\MunicipalService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RequestController extends Controller
 {
@@ -18,7 +19,7 @@ class RequestController extends Controller
             return redirect()->route('login')->with('info', __('messages.please_login_to_continue'));
         }
 
-        $services = MunicipalService::where('is_active', true)->get();
+        $services = MunicipalService::active()->orderBy('order')->get();
         return view('frontend.services.request-create', compact('services'));
     }
 
@@ -60,19 +61,26 @@ class RequestController extends Controller
 
             \Log::info('Creating request with data', ['request_data' => $requestData]);
 
-            $citizenRequest = CitizenRequest::create($requestData);
+            $citizenRequest = DB::transaction(function () use ($request, $requestData, $user) {
+                $citizenRequest = CitizenRequest::create($requestData);
 
-            \Log::info('Request created successfully', ['request_id' => $citizenRequest->id, 'request_number' => $citizenRequest->request_number]);
+                \Log::info('Request created successfully', ['request_id' => $citizenRequest->id, 'request_number' => $citizenRequest->request_number]);
 
-            // Handle file uploads
-            if ($request->hasFile('attachments')) {
-                foreach ($request->file('attachments') as $file) {
-                    $citizenRequest->documents()->create([
-                        'file_path' => $file->store('requests', 'public'),
-                        'file_name' => $file->getClientOriginalName(),
-                    ]);
+                // Handle file uploads
+                if ($request->hasFile('attachments')) {
+                    foreach ($request->file('attachments') as $file) {
+                        $citizenRequest->documents()->create([
+                            'file_path' => $file->store('requests', 'public'),
+                            'file_name' => $file->getClientOriginalName(),
+                            'file_type' => $file->getClientMimeType(),
+                            'file_size' => $file->getSize(),
+                            'uploaded_by' => $user->cin,
+                        ]);
+                    }
                 }
-            }
+
+                return $citizenRequest;
+            });
 
             return redirect()->route('citizen.dashboard')
                 ->with('success', __('messages.request_submitted_successfully', ['reference' => $citizenRequest->request_number]));

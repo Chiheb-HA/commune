@@ -3,6 +3,10 @@
 @section('page-title', __('messages.Request Details'))
 @section('title', __('messages.Request Details'))
 
+@php
+use Illuminate\Support\Facades\Storage;
+@endphp
+
 @section('content')
 <div class="page-header">
     <h1>{{ __('messages.Request Details') }}</h1>
@@ -38,7 +42,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>{{ __('messages.Reference Number') }}</th>
+                        <th>{{ __('messages.Reference_Number') }}</th>
                         <td>{{ $request->reference_number ?? 'N/A' }}</td>
                     </tr>
                     <tr>
@@ -69,6 +73,27 @@
                 </div>
                 <div class="card-body">
                     <p>{{ $request->notes }}</p>
+                </div>
+            </div>
+        @endif
+
+        @if($request->documents && $request->documents->count() > 0)
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h6 class="mb-0">{{ __('messages.Attachments') }}</h6>
+                </div>
+                <div class="card-body">
+                    @foreach($request->documents as $document)
+                        <div class="d-flex align-items-center justify-content-between p-2 border rounded mb-2">
+                            <div>
+                                <span class="me-2">{{ $document->file_name }}</span>
+                                <small class="text-muted">({{ $document->file_type }} - {{ number_format($document->file_size / 1024, 2) }} KB)</small>
+                            </div>
+                            <a href="{{ Storage::disk('public')->url($document->file_path) }}" target="_blank" class="btn btn-sm btn-primary">
+                                {{ __('messages.view') }}
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         @endif

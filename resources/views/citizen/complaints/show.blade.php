@@ -2,6 +2,10 @@
 
 @section('title', __('messages.complaint_details'))
 
+@php
+use Illuminate\Support\Facades\Storage;
+@endphp
+
 @section('content')
 <div class="container-lg py-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
@@ -61,6 +65,24 @@
                 <div class="mb-3">
                     <strong>{{ __('messages.response') }}:</strong>
                     <p>{{ $complaint->response }}</p>
+                </div>
+            @endif
+
+            @if($complaint->attachments && is_array($complaint->attachments) && count($complaint->attachments) > 0)
+                <div class="mb-3">
+                    <strong>{{ __('messages.attachments') }}:</strong>
+                    <div class="mt-2">
+                        @foreach($complaint->attachments as $attachment)
+                            <div class="d-flex align-items-center justify-content-between p-2 border rounded mb-2">
+                                <div>
+                                    <span class="me-2">{{ basename($attachment) }}</span>
+                                </div>
+                                <a href="{{ Storage::disk('public')->url($attachment) }}" target="_blank" class="btn btn-sm btn-primary">
+                                    {{ __('messages.view') }}
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
             @endif
         </div>

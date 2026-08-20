@@ -200,6 +200,7 @@ return [
     'new_complaint' => 'Nouvelle plainte',
     'select_service' => 'Sélectionner un service',
     'attachments' => 'Pièces jointes',
+    'Attachments' => 'Pièces jointes',
     'attachments_hint' => 'Formats acceptés: PDF, JPG, PNG (max 5MB)',
     'response' => 'Réponse',
     'submit' => 'Soumettre',
@@ -311,6 +312,7 @@ return [
     'subject' => 'Sujet',
     'view' => 'Voir',
     'view_all_events' => 'Voir tous les événements',
+    'Reference_Number' => 'Numéro de référence',
 
     // Statistics page keys
     'Requests Statistics' => 'Statistiques des Demandes',

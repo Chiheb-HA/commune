@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Complaint;
+use App\Models\ComplaintCategory;
 use Illuminate\Http\Request;
 
 class ComplaintController extends Controller
@@ -16,7 +17,8 @@ class ComplaintController extends Controller
         if (!auth()->check()) {
             return redirect()->route('login')->with('info', __('messages.please_login_to_continue'));
         }
-        return view('frontend.services.complaint-create');
+        $categories = ComplaintCategory::active()->orderBy('order')->get();
+        return view('frontend.services.complaint-create', compact('categories'));
     }
 
     /**
@@ -34,7 +36,7 @@ class ComplaintController extends Controller
             \Log::info('Complaint submission started', ['request_data' => $request->all()]);
 
             $validated = $request->validate([
-                'category' => 'required|in:infrastructure,services,staff,cleanliness,security,other',
+                'category_id' => 'required|exists:complaint_categories,id',
                 'description' => 'required|string|min:3',
                 'email' => 'required|email|in:' . $user->email,
                 'phone' => 'nullable|string|max:20',
@@ -48,10 +50,13 @@ class ComplaintController extends Controller
             \Log::info('Complaint validation passed', ['validated' => $validated]);
             \Log::info('User authenticated', ['user_id' => $user->cin, 'user_email' => $user->email]);
 
+            $category = ComplaintCategory::find($validated['category_id']);
+            
             $complaintData = [
                 'user_id' => $user->cin,
                 'cin' => $user->cin,
-                'category' => $validated['category'],
+                'category_id' => $validated['category_id'],
+                'category' => $category->slug ?? 'other',
                 'description_fr' => $validated['description'],
                 'description_en' => $validated['description'],
                 'description_ar' => $validated['description'],

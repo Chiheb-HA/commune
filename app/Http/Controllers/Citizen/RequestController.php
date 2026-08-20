@@ -31,6 +31,8 @@ class RequestController extends Controller
             abort(403);
         }
 
+        $request->load('documents');
+
         return view('citizen.requests.show', compact('request'));
     }
 }

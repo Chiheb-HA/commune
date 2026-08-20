@@ -48,7 +48,7 @@ class RequestController extends Controller
 
     public function show($id)
     {
-        $request = CitizenRequest::with(['user', 'service'])->findOrFail($id);
+        $request = CitizenRequest::with(['user', 'service', 'documents'])->findOrFail($id);
         $officials = User::role('official')->get();
 
         return view('admin.requests.show', compact('request', 'officials'));
