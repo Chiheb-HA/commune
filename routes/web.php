@@ -6,6 +6,7 @@ use App\Http\Controllers\Public\ArticleController as PublicArticleController;
 use App\Http\Controllers\Public\EventController as PublicEventController;
 use App\Http\Controllers\Public\NewsController as PublicNewsController;
 use App\Http\Controllers\Public\GalleryController as PublicGalleryController;
+use App\Http\Controllers\Public\DirectoryController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\EventController;
@@ -51,6 +52,12 @@ Route::prefix('actualites')->group(function () {
 Route::prefix('galeries')->group(function () {
     Route::get('/', [PublicGalleryController::class, 'index'])->name('galleries.index');
     Route::get('/{id}', [PublicGalleryController::class, 'show'])->name('galleries.show');
+});
+
+// Public Directory Routes
+Route::prefix('organigramme')->group(function () {
+    Route::get('/', [DirectoryController::class, 'index'])->name('directory.index');
+    Route::get('/{department:slug}', [DirectoryController::class, 'show'])->name('directory.show');
 });
 
 // Public Services Routes

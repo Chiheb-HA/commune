@@ -171,7 +171,7 @@
         <div class="container-lg">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('Flag-Tunisia.png') }}" alt="Tunisia Flag" style="height: 30px; margin-right: 10px;">
-                <i class="bi bi-building"></i> بوابة البلدية
+                <i class="bi bi-building"></i> بلدية الماجل بلعباس
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -269,8 +269,8 @@
                 <div class="col-md-3 mb-4">
                     <h6 class="text-white mb-3">{{ __('messages.directory_title') }}</h6>
                     <ul class="list-unstyled small">
-                        <li><a href="#departments">{{ __('messages.departments') }}</a></li>
-                        <li><a href="#officials">{{ __('messages.officials') }}</a></li>
+                        <li><a href="{{ route('directory.index') }}">{{ __('messages.departments') }}</a></li>
+                        <li><a href="{{ route('directory.index') }}">{{ __('messages.officials') }}</a></li>
                         <li><a href="#contact">{{ __('messages.contact') }}</a></li>
                     </ul>
                 </div>
