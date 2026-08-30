@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\News;
 use App\Models\Event;
+use App\Models\MunicipalService;
+use App\Models\Department;
+use App\Models\Official;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -62,6 +65,45 @@ class HomeController extends Controller
             ->latest()
             ->paginate(12);
 
-        return view('public.search', compact('articles', 'news', 'query'));
+        // Search Municipal Services
+        $services = MunicipalService::where('is_active', true)
+            ->where(function ($q) use ($query) {
+                $q->where('name_ar', 'like', "%{$query}%")
+                  ->orWhere('name_fr', 'like', "%{$query}%")
+                  ->orWhere('name_en', 'like', "%{$query}%")
+                  ->orWhere('description_ar', 'like', "%{$query}%")
+                  ->orWhere('description_fr', 'like', "%{$query}%")
+                  ->orWhere('description_en', 'like', "%{$query}%");
+            })
+            ->orderBy('order', 'asc')
+            ->get();
+
+        // Search Departments
+        $departments = Department::active()
+            ->where(function ($q) use ($query) {
+                $q->where('name_ar', 'like', "%{$query}%")
+                  ->orWhere('name_fr', 'like', "%{$query}%")
+                  ->orWhere('name_en', 'like', "%{$query}%")
+                  ->orWhere('description_ar', 'like', "%{$query}%")
+                  ->orWhere('description_fr', 'like', "%{$query}%")
+                  ->orWhere('description_en', 'like', "%{$query}%");
+            })
+            ->orderBy('order', 'asc')
+            ->get();
+
+        // Search Officials
+        $officials = Official::active()
+            ->with(['user', 'department'])
+            ->where(function ($q) use ($query) {
+                $q->where('position_ar', 'like', "%{$query}%")
+                  ->orWhere('position_fr', 'like', "%{$query}%")
+                  ->orWhere('position_en', 'like', "%{$query}%")
+                  ->orWhereHas('user', function ($userQuery) use ($query) {
+                      $userQuery->where('name', 'like', "%{$query}%");
+                  });
+            })
+            ->get();
+
+        return view('public.search', compact('articles', 'news', 'services', 'departments', 'officials', 'query'));
     }
 }

@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Citizen;
 use App\Http\Controllers\Controller;
 use App\Models\CitizenRequest;
 use App\Models\Complaint;
+use App\Models\MunicipalService;
+use App\Models\Department;
+use App\Models\Official;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -35,11 +38,24 @@ class DashboardController extends Controller
             ->where('status', 'new')
             ->count();
 
+        // Quick access data
+        $totalServices = MunicipalService::where('is_active', true)->count();
+        $totalDepartments = Department::active()->count();
+        $totalOfficials = Official::active()->count();
+        $popularServices = MunicipalService::where('is_active', true)
+            ->orderBy('order', 'asc')
+            ->take(4)
+            ->get();
+
         return view('citizen.dashboard', compact(
             'requests',
             'complaints',
             'pendingRequests',
-            'pendingComplaints'
+            'pendingComplaints',
+            'totalServices',
+            'totalDepartments',
+            'totalOfficials',
+            'popularServices'
         ));
     }
 }

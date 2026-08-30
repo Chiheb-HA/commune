@@ -34,6 +34,77 @@
         </div>
     </div>
 
+    <!-- Quick Access to New Features -->
+    <div class="row mb-5">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-building" style="font-size: 3rem; color: var(--primary);"></i>
+                    </div>
+                    <h5 class="card-title">{{ __('messages.municipal_services') }}</h5>
+                    <p class="card-text text-muted">{{ $totalServices }} {{ __('messages.Active') }}</p>
+                    <a href="{{ route('services.index') }}" class="btn btn-primary">{{ __('messages.browse_services') }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-building-gear" style="font-size: 3rem; color: var(--primary);"></i>
+                    </div>
+                    <h5 class="card-title">{{ __('messages.departments') }}</h5>
+                    <p class="card-text text-muted">{{ $totalDepartments }} {{ __('messages.departments') }}</p>
+                    <a href="{{ route('departments.index') }}" class="btn btn-primary">{{ __('messages.find_contacts') }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-person-badge" style="font-size: 3rem; color: var(--primary);"></i>
+                    </div>
+                    <h5 class="card-title">{{ __('messages.officials') }}</h5>
+                    <p class="card-text text-muted">{{ $totalOfficials }} {{ __('messages.officials') }}</p>
+                    <a href="{{ route('officials.index') }}" class="btn btn-primary">{{ __('messages.staff_directory') }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popular Services -->
+    @if(isset($popularServices) && $popularServices->count() > 0)
+    <div class="row mb-5">
+        <div class="col-12">
+            <h3 class="mb-3">{{ __('messages.Popular Services') }}</h3>
+            <div class="row g-4">
+                @foreach($popularServices as $service)
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    @if($service->icon)
+                                        <i class="{{ $service->icon }}" style="font-size: 2rem; color: var(--primary);"></i>
+                                    @else
+                                        <i class="bi bi-building" style="font-size: 2rem; color: var(--primary);"></i>
+                                    @endif
+                                </div>
+                                <h6 class="card-title">{{ $service->getTranslatableContent('name') }}</h6>
+                                <p class="card-text text-muted small">{{ Str::limit($service->getTranslatableContent('description'), 80) }}</p>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <a href="{{ route('services.request') }}" class="btn btn-sm btn-primary">{{ __('messages.submit_request') }}</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    @endif
+
     <!-- Recent Requests -->
     <div class="row mb-5">
         <div class="col-12">

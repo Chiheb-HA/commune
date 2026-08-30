@@ -9,11 +9,28 @@ class BaseModel extends Model
     protected $guard_name = 'web';
 
     // Get translatable content based on current locale
-    public function getTranslatableContent($baseAttribute, $locales = ['fr', 'en', 'ar'])
+    public function getTranslatableContent($baseAttribute, $locales = ['ar', 'fr', 'en'])
     {
-        $locale = app()->getLocale();
+        $currentLocale = app()->getLocale();
         
-        foreach ($locales as $loc) {
+        // First try the current locale
+        $currentAttribute = "{$baseAttribute}_{$currentLocale}";
+        if ($this->getAttribute($currentAttribute)) {
+            return $this->getAttribute($currentAttribute);
+        }
+        
+        // Then try Arabic as primary fallback
+        $arabicAttribute = "{$baseAttribute}_ar";
+        if ($this->getAttribute($arabicAttribute)) {
+            return $this->getAttribute($arabicAttribute);
+        }
+        
+        // Then try other fallback locales (excluding current and Arabic)
+        $fallbackLocales = array_filter($locales, function($loc) use ($currentLocale) {
+            return $loc !== $currentLocale && $loc !== 'ar';
+        });
+        
+        foreach ($fallbackLocales as $loc) {
             $attribute = "{$baseAttribute}_{$loc}";
             if ($this->getAttribute($attribute)) {
                 return $this->getAttribute($attribute);

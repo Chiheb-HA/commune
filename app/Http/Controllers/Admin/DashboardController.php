@@ -9,6 +9,9 @@ use App\Models\News;
 use App\Models\Event;
 use App\Models\User;
 use App\Models\CitizenRequest;
+use App\Models\MunicipalService;
+use App\Models\Department;
+use App\Models\Official;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -23,6 +26,10 @@ class DashboardController extends Controller
             'total_events' => Event::count(),
             'total_complaints' => Complaint::count(),
             'total_requests' => CitizenRequest::count(),
+            'total_services' => MunicipalService::count(),
+            'total_departments' => Department::count(),
+            'total_officials' => Official::count(),
+            'active_services' => MunicipalService::where('is_active', true)->count(),
             'pending_complaints' => Complaint::where('status', 'new')->count(),
             'pending_requests' => CitizenRequest::where('status', 'pending')->count(),
         ];
@@ -30,7 +37,18 @@ class DashboardController extends Controller
         $recentArticles = Article::latest()->take(5)->get();
         $recentComplaints = Complaint::latest()->take(5)->get();
         $recentRequests = CitizenRequest::latest()->take(5)->get();
+        $recentServices = MunicipalService::latest()->take(5)->get();
+        $recentDepartments = Department::latest()->take(5)->get();
+        $recentOfficials = Official::latest()->take(5)->get();
 
-        return view('admin.dashboard', compact('stats', 'recentArticles', 'recentComplaints', 'recentRequests'));
+        return view('admin.dashboard', compact(
+            'stats', 
+            'recentArticles', 
+            'recentComplaints', 
+            'recentRequests',
+            'recentServices',
+            'recentDepartments',
+            'recentOfficials'
+        ));
     }
 }
