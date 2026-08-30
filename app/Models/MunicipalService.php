@@ -43,7 +43,7 @@ class MunicipalService extends BaseModel
     {
         return [
             'slug' => [
-                'source' => 'name_fr'
+                'source' => 'name_ar'
             ]
         ];
     }
@@ -65,9 +65,9 @@ class MunicipalService extends BaseModel
     {
         $locale = app()->getLocale();
         return match($locale) {
-            'en' => $this->name_en ?? $this->name_fr ?? $this->name_ar ?? '',
+            'en' => $this->name_en ?? $this->name_ar ?? $this->name_fr ?? '',
             'ar' => $this->name_ar ?? $this->name_fr ?? $this->name_en ?? '',
-            default => $this->name_fr ?? $this->name_en ?? $this->name_ar ?? '',
+            default => $this->name_fr ?? $this->name_ar ?? $this->name_en ?? '',
         };
     }
 }

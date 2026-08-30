@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             CategorySeeder::class,
             MunicipalServiceSeeder::class,
+            DepartmentSeeder::class,
+            OfficialSeeder::class,
             BudgetSeeder::class,
             ArticleSeeder::class,
             NewsSeeder::class,

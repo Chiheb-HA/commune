@@ -6,13 +6,22 @@ use App\Http\Controllers\Public\ArticleController as PublicArticleController;
 use App\Http\Controllers\Public\EventController as PublicEventController;
 use App\Http\Controllers\Public\NewsController as PublicNewsController;
 use App\Http\Controllers\Public\GalleryController as PublicGalleryController;
+<<<<<<< HEAD
 use App\Http\Controllers\Public\DirectoryController;
+=======
+use App\Http\Controllers\Public\ServicesController as PublicServicesController;
+use App\Http\Controllers\Public\DepartmentsController as PublicDepartmentsController;
+use App\Http\Controllers\Public\OfficialsController as PublicOfficialsController;
+>>>>>>> 58229faa361d071b810560d6e736aae0e02e9e85
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\RequestController;
 use App\Http\Controllers\Admin\ComplaintController;
+use App\Http\Controllers\Admin\MunicipalServiceController;
+use App\Http\Controllers\Admin\DepartmentController;
+use App\Http\Controllers\Admin\OfficialController;
 use App\Http\Controllers\Frontend\ComplaintController as FrontendComplaintController;
 use App\Http\Controllers\Frontend\RequestController as FrontendRequestController;
 use App\Http\Controllers\Frontend\ContactController as FrontendContactController;
@@ -54,14 +63,26 @@ Route::prefix('galeries')->group(function () {
     Route::get('/{id}', [PublicGalleryController::class, 'show'])->name('galleries.show');
 });
 
+<<<<<<< HEAD
 // Public Directory Routes
 Route::prefix('organigramme')->group(function () {
     Route::get('/', [DirectoryController::class, 'index'])->name('directory.index');
     Route::get('/{department:slug}', [DirectoryController::class, 'show'])->name('directory.show');
+=======
+// Public Departments Routes
+Route::prefix('departments')->group(function () {
+    Route::get('/', [PublicDepartmentsController::class, 'index'])->name('departments.index');
+});
+
+// Public Officials Routes
+Route::prefix('officials')->group(function () {
+    Route::get('/', [PublicOfficialsController::class, 'index'])->name('officials.index');
+>>>>>>> 58229faa361d071b810560d6e736aae0e02e9e85
 });
 
 // Public Services Routes
 Route::prefix('services')->group(function () {
+    Route::get('/', [PublicServicesController::class, 'index'])->name('services.index');
     Route::get('/contact', [FrontendContactController::class, 'create'])->name('services.contact');
     Route::post('/contact', [FrontendContactController::class, 'store'])->name('services.contact.store');
 });
@@ -92,6 +113,39 @@ Route::middleware(['auth', 'role:admin|editor|official'])->prefix('admin')->grou
     Route::resource('galleries', GalleryController::class, ['as' => 'admin']);
     Route::post('galleries/{gallery}/images', [GalleryController::class, 'addImage'])->name('admin.galleries.addImage');
     Route::delete('gallery-images/{image}', [GalleryController::class, 'removeImage'])->name('admin.galleries.removeImage');
+
+    // Municipal Services routes
+    Route::prefix('municipal-services')->group(function () {
+        Route::get('/', [MunicipalServiceController::class, 'index'])->name('admin.municipal-services.index');
+        Route::get('/create', [MunicipalServiceController::class, 'create'])->name('admin.municipal-services.create');
+        Route::post('/', [MunicipalServiceController::class, 'store'])->name('admin.municipal-services.store');
+        Route::get('/{municipalService}/edit', [MunicipalServiceController::class, 'edit'])->name('admin.municipal-services.edit');
+        Route::put('/{municipalService}', [MunicipalServiceController::class, 'update'])->name('admin.municipal-services.update');
+        Route::delete('/{municipalService}', [MunicipalServiceController::class, 'destroy'])->name('admin.municipal-services.destroy');
+        Route::post('/{municipalService}/toggle-status', [MunicipalServiceController::class, 'toggleStatus'])->name('admin.municipal-services.toggle-status');
+    });
+
+    // Departments routes
+    Route::prefix('departments')->group(function () {
+        Route::get('/', [DepartmentController::class, 'index'])->name('admin.departments.index');
+        Route::get('/create', [DepartmentController::class, 'create'])->name('admin.departments.create');
+        Route::post('/', [DepartmentController::class, 'store'])->name('admin.departments.store');
+        Route::get('/{department}/edit', [DepartmentController::class, 'edit'])->name('admin.departments.edit');
+        Route::put('/{department}', [DepartmentController::class, 'update'])->name('admin.departments.update');
+        Route::delete('/{department}', [DepartmentController::class, 'destroy'])->name('admin.departments.destroy');
+        Route::post('/{department}/toggle-status', [DepartmentController::class, 'toggleStatus'])->name('admin.departments.toggle-status');
+    });
+
+    // Officials routes
+    Route::prefix('officials')->group(function () {
+        Route::get('/', [OfficialController::class, 'index'])->name('admin.officials.index');
+        Route::get('/create', [OfficialController::class, 'create'])->name('admin.officials.create');
+        Route::post('/', [OfficialController::class, 'store'])->name('admin.officials.store');
+        Route::get('/{official}/edit', [OfficialController::class, 'edit'])->name('admin.officials.edit');
+        Route::put('/{official}', [OfficialController::class, 'update'])->name('admin.officials.update');
+        Route::delete('/{official}', [OfficialController::class, 'destroy'])->name('admin.officials.destroy');
+        Route::post('/{official}/toggle-status', [OfficialController::class, 'toggleStatus'])->name('admin.officials.toggle-status');
+    });
 
     // Requests routes
     Route::prefix('requests')->group(function () {

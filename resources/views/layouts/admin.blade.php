@@ -365,14 +365,14 @@
             <!-- Language Switcher -->
             <li class="px-3 mb-3">
                 <div class="btn-group w-100" role="group">
+                    <a href="{{ route('setLocale', 'ar') }}" class="btn btn-sm btn-outline-secondary {{ app()->getLocale() === 'ar' ? 'active' : '' }}" title="العربية">
+                        AR
+                    </a>
                     <a href="{{ route('setLocale', 'fr') }}" class="btn btn-sm btn-outline-secondary {{ app()->getLocale() === 'fr' ? 'active' : '' }}" title="Français">
                         FR
                     </a>
                     <a href="{{ route('setLocale', 'en') }}" class="btn btn-sm btn-outline-secondary {{ app()->getLocale() === 'en' ? 'active' : '' }}" title="English">
                         EN
-                    </a>
-                    <a href="{{ route('setLocale', 'ar') }}" class="btn btn-sm btn-outline-secondary {{ app()->getLocale() === 'ar' ? 'active' : '' }}" title="العربية">
-                        AR
                     </a>
                 </div>
             </li>
@@ -411,14 +411,19 @@
                 <i class="bi bi-exclamation-circle"></i> <span>{{ __('messages.Complaints') }}</span>
             </a></li>
 
-            @if(Route::has('admin.departments.index'))
             <li class="mt-4 px-3"><small class="text-uppercase fw-bold">{{ __('messages.Directory') }}</small></li>
-            <li><a href="{{ route('admin.departments.index') }}" class="nav-link">
-                <i class="bi bi-building"></i> <span>{{ __('messages.Departments') }}</span>
+            @if(Route::has('admin.municipal-services.index'))
+            <li><a href="{{ route('admin.municipal-services.index') }}" class="nav-link {{ request()->routeIs('admin.municipal-services.*') ? 'active' : '' }}">
+                <i class="bi bi-building"></i> <span>{{ __('messages.Municipal Services') }}</span>
+            </a></li>
+            @endif
+            @if(Route::has('admin.departments.index'))
+            <li><a href="{{ route('admin.departments.index') }}" class="nav-link {{ request()->routeIs('admin.departments.*') ? 'active' : '' }}">
+                <i class="bi bi-building-gear"></i> <span>{{ __('messages.Departments') }}</span>
             </a></li>
             @endif
             @if(Route::has('admin.officials.index'))
-            <li><a href="{{ route('admin.officials.index') }}" class="nav-link">
+            <li><a href="{{ route('admin.officials.index') }}" class="nav-link {{ request()->routeIs('admin.officials.*') ? 'active' : '' }}">
                 <i class="bi bi-person-badge"></i> <span>{{ __('messages.Officials') }}</span>
             </a></li>
             @endif

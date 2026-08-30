@@ -198,9 +198,20 @@
                             {{ __('messages.services') }}
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('services.index') }}">{{ __('messages.municipal_services') }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{{ route('services.request') }}">{{ __('messages.submit_request') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('services.complaint') }}">{{ __('messages.file_complaint') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('services.contact') }}">{{ __('messages.contact') }}</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            {{ __('messages.directory_title') }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('departments.index') }}">{{ __('messages.departments') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('officials.index') }}">{{ __('messages.officials') }}</a></li>
                         </ul>
                     </li>
                     @auth
@@ -234,9 +245,9 @@
                     @endauth
                     <li class="nav-item">
                         <div class="language-selector">
+                            <a href="{{ route('setLocale', 'ar') }}" class="lang-btn {{ app()->getLocale() === 'ar' ? 'active' : '' }}">AR</a>
                             <a href="{{ route('setLocale', 'fr') }}" class="lang-btn {{ app()->getLocale() === 'fr' ? 'active' : '' }}">FR</a>
                             <a href="{{ route('setLocale', 'en') }}" class="lang-btn {{ app()->getLocale() === 'en' ? 'active' : '' }}">EN</a>
-                            <a href="{{ route('setLocale', 'ar') }}" class="lang-btn {{ app()->getLocale() === 'ar' ? 'active' : '' }}">AR</a>
                         </div>
                     </li>
                 </ul>
@@ -263,14 +274,19 @@
                         <li><a href="{{ route('articles.index') }}">{{ __('messages.articles') }}</a></li>
                         <li><a href="{{ route('home') }}#news">{{ __('messages.news') }}</a></li>
                         <li><a href="{{ route('events.index') }}">{{ __('messages.events') }}</a></li>
-                        <li><a href="#services">{{ __('messages.services') }}</a></li>
+                        <li><a href="{{ route('services.index') }}">{{ __('messages.services') }}</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 mb-4">
                     <h6 class="text-white mb-3">{{ __('messages.directory_title') }}</h6>
                     <ul class="list-unstyled small">
+<<<<<<< HEAD
                         <li><a href="{{ route('directory.index') }}">{{ __('messages.departments') }}</a></li>
                         <li><a href="{{ route('directory.index') }}">{{ __('messages.officials') }}</a></li>
+=======
+                        <li><a href="{{ route('departments.index') }}">{{ __('messages.departments') }}</a></li>
+                        <li><a href="{{ route('officials.index') }}">{{ __('messages.officials') }}</a></li>
+>>>>>>> 58229faa361d071b810560d6e736aae0e02e9e85
                         <li><a href="#contact">{{ __('messages.contact') }}</a></li>
                     </ul>
                 </div>
@@ -279,7 +295,7 @@
             <hr class="bg-secondary">
             <div class="row">
                 <div class="col-md-6">
-                    <p class="small">&copy; 2024 Municipality Portal. {{ __('messages.all_rights_reserved') }}</p>
+                    <p class="small">&copy; 2026 Municipality Portal. {{ __('messages.all_rights_reserved') }}</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <p class="small">

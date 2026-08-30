@@ -41,7 +41,7 @@ class Department extends BaseModel
     {
         return [
             'slug' => [
-                'source' => 'name_fr'
+                'source' => 'name_ar'
             ]
         ];
     }
@@ -71,7 +71,12 @@ class Department extends BaseModel
     // Accessors
     public function getNameAttribute(): string
     {
-        return $this->name_fr ?? $this->name_en ?? $this->name_ar ?? '';
+        $locale = app()->getLocale();
+        return match($locale) {
+            'en' => $this->name_en ?? $this->name_ar ?? $this->name_fr ?? '',
+            'ar' => $this->name_ar ?? $this->name_fr ?? $this->name_en ?? '',
+            default => $this->name_fr ?? $this->name_ar ?? $this->name_en ?? '',
+        };
     }
 
     /**
