@@ -48,6 +48,23 @@ return [
     'view_details' => 'View Details',
     'get_support' => 'Get Support',
 
+    // Municipal Services
+    'municipal_services' => 'Municipal Services',
+    'services_description' => 'Browse all available municipal services and their requirements',
+    'documents_required' => 'Documents Required',
+    'processing_time' => 'Processing Time',
+    'cost' => 'Cost',
+    'contact_service' => 'Contact Service',
+    'no_services_available' => 'No services available at the moment',
+    'authorization' => 'Authorization',
+    'quick_info' => 'Quick Info',
+    'search_services' => 'Search services...',
+    'view_documents' => 'View Documents',
+    'login_to_request' => 'Login to Request',
+    'contact_information' => 'Contact Information',
+    'login_required' => 'Login Required',
+    'search' => 'Search',
+
     // Admin
     'Dashboard' => 'Dashboard',
     'Welcomeback, Admin!' => 'Welcome back, Admin!',
@@ -354,6 +371,12 @@ return [
     'staff_directory_description' => 'Contact information for municipal staff and personnel',
     'office' => 'Office',
     'no_officials_in_department' => 'No staff in this department',
+    'search_departments' => 'Search departments, services, or staff...',
+    'organization_chart' => 'Organization Chart',
+    'organization_chart_description' => 'Dynamic view of municipal services and their structure',
+    'responsibilities' => 'Responsibilities',
+    'view_details' => 'View Details',
+    'popular_services' => 'Popular Services',
 
     // Search
     'Search Results' => 'Search Results',
@@ -428,4 +451,9 @@ return [
     'Staff Directory' => 'Staff Directory',
     'Popular Services' => 'Popular Services',
     'Building' => 'Building',
+    'Authorization' => 'Authorization',
+    'Quick Info' => 'Quick Info',
+    'Contact Information' => 'Contact Information',
+    'Search' => 'Search',
+    'search' => 'Search',
 ];
