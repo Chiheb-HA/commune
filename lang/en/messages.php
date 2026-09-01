@@ -491,4 +491,21 @@ return [
     'No tax records found' => 'No tax records found',
     'Tax Record Details' => 'Tax Record Details',
     'Too many requests' => 'Too many requests. Please try again later.',
+
+    // Request Tracking
+    'Request Tracking' => 'Request Tracking',
+    'Track Request' => 'Track Request',
+    'Request Number' => 'Request Number',
+    'Enter Request Number' => 'Enter Request Number',
+    'Enter CIN' => 'Enter CIN',
+    'Request Status' => 'Request Status',
+    'Request Timeline' => 'Request Timeline',
+    'No request found' => 'No request found',
+    'Request Details' => 'Request Details',
+    'Service Type' => 'Service Type',
+    'Assigned To' => 'Assigned To',
+    'Created At' => 'Created At',
+    'Updated At' => 'Updated At',
+    'Completed At' => 'Completed At',
+    'No messages available' => 'No messages available',
 ];

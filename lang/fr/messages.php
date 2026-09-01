@@ -490,4 +490,21 @@ return [
     'No tax records found' => 'Aucun registre de taxe trouvé',
     'Tax Record Details' => 'Détails du Registre de Taxe',
     'Too many requests' => 'Trop de demandes. Veuillez réessayer plus tard.',
+
+    // Request Tracking
+    'Request Tracking' => 'Suivi de Demande',
+    'Track Request' => 'Suivre une Demande',
+    'Request Number' => 'Numéro de Demande',
+    'Enter Request Number' => 'Entrez le numéro de demande',
+    'Enter CIN' => 'Entrez le CIN',
+    'Request Status' => 'Statut de la Demande',
+    'Request Timeline' => 'Chronologie de la Demande',
+    'No request found' => 'Aucune demande trouvée',
+    'Request Details' => 'Détails de la Demande',
+    'Service Type' => 'Type de Service',
+    'Assigned To' => 'Assigné à',
+    'Created At' => 'Créé le',
+    'Updated At' => 'Mis à jour le',
+    'Completed At' => 'Terminé le',
+    'No messages available' => 'Aucun message disponible',
 ];

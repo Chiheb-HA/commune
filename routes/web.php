@@ -10,6 +10,7 @@ use App\Http\Controllers\Public\ServicesController as PublicServicesController;
 use App\Http\Controllers\Public\DepartmentsController as PublicDepartmentsController;
 use App\Http\Controllers\Public\OfficialsController as PublicOfficialsController;
 use App\Http\Controllers\Public\TaxController;
+use App\Http\Controllers\Public\RequestTrackingController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\EventController;
@@ -75,6 +76,10 @@ Route::prefix('officials')->group(function () {
 // Public Tax Routes
 Route::get('/taxes', [TaxController::class, 'index'])->name('taxes.index');
 Route::post('/taxes', [TaxController::class, 'index'])->name('taxes.search');
+
+// Public Request Tracking Routes
+Route::get('/suivi-demande', [RequestTrackingController::class, 'index'])->name('request-tracking.index');
+Route::post('/suivi-demande', [RequestTrackingController::class, 'index'])->name('request-tracking.search');
 
 // Public Services Routes
 Route::prefix('services')->group(function () {

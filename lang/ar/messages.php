@@ -481,4 +481,21 @@ return [
     'No tax records found' => 'لم يتم العثور على سجلات ضرائب',
     'Tax Record Details' => 'تفاصيل سجل الضريبة',
     'Too many requests' => 'طلبات كثيرة جداً. يرجى المحاولة مرة أخرى لاحقاً.',
+
+    // Request Tracking
+    'Request Tracking' => 'تتبع الطلب',
+    'Track Request' => 'تتبع طلب',
+    'Request Number' => 'رقم الطلب',
+    'Enter Request Number' => 'أدخل رقم الطلب',
+    'Enter CIN' => 'أدخل رقم التعريف الوطني',
+    'Request Status' => 'حالة الطلب',
+    'Request Timeline' => 'الجدول الزمني للطلب',
+    'No request found' => 'لم يتم العثور على طلب',
+    'Request Details' => 'تفاصيل الطلب',
+    'Service Type' => 'نوع الخدمة',
+    'Assigned To' => 'مسند إلى',
+    'Created At' => 'تاريخ الإنشاء',
+    'Updated At' => 'تاريخ التحديث',
+    'Completed At' => 'تاريخ الإنجاز',
+    'No messages available' => 'لا توجد رسائل متاحة',
 ];
