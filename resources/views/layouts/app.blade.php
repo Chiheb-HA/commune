@@ -181,8 +181,14 @@
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">{{ __('messages.home') }}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('articles.*') ? 'active' : '' }}" href="{{ route('articles.index') }}">{{ __('messages.articles') }}</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle {{ request()->routeIs('articles.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
+                            {{ __('messages.articles') }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('articles.index') }}">{{ __('messages.articles') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('articles.category', 'reglementation') }}">{{ __('messages.Regulations') }}</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('news.*') ? 'active' : '' }}" href="{{ route('news.index') }}">{{ __('messages.news') }}</a>
@@ -280,13 +286,8 @@
                 <div class="col-md-3 mb-4">
                     <h6 class="text-white mb-3">{{ __('messages.directory_title') }}</h6>
                     <ul class="list-unstyled small">
-<<<<<<< HEAD
-                        <li><a href="{{ route('directory.index') }}">{{ __('messages.departments') }}</a></li>
-                        <li><a href="{{ route('directory.index') }}">{{ __('messages.officials') }}</a></li>
-=======
                         <li><a href="{{ route('departments.index') }}">{{ __('messages.departments') }}</a></li>
                         <li><a href="{{ route('officials.index') }}">{{ __('messages.officials') }}</a></li>
->>>>>>> 58229faa361d071b810560d6e736aae0e02e9e85
                         <li><a href="#contact">{{ __('messages.contact') }}</a></li>
                     </ul>
                 </div>
@@ -299,8 +300,9 @@
                 </div>
                 <div class="col-md-6 text-md-end">
                     <p class="small">
-                        <a href="#">{{ __('messages.privacy_policy') }}</a> | 
-                        <a href="#">{{ __('messages.terms_of_service') }}</a>
+                        <a href="{{ route('legal.privacy') }}">{{ __('messages.privacy_policy') }}</a> | 
+                        <a href="{{ route('legal.terms') }}">{{ __('messages.terms_of_service') }}</a> | 
+                        <a href="{{ route('legal.notice') }}">{{ __('messages.Legal Notice') }}</a>
                     </p>
                 </div>
             </div>

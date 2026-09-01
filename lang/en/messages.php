@@ -508,4 +508,13 @@ return [
     'Updated At' => 'Updated At',
     'Completed At' => 'Completed At',
     'No messages available' => 'No messages available',
+
+    // Regulations
+    'Regulations' => 'Regulations',
+
+    // Legal Content
+    'Legal Content' => 'Legal Content',
+    'Save Legal Content' => 'Save Legal Content',
+    'Legal Notice' => 'Legal Notice',
+    'No content available' => 'No content available',
 ];

@@ -507,4 +507,13 @@ return [
     'Updated At' => 'Mis à jour le',
     'Completed At' => 'Terminé le',
     'No messages available' => 'Aucun message disponible',
+
+    // Regulations
+    'Regulations' => 'Réglementation',
+
+    // Legal Content
+    'Legal Content' => 'Contenu Légal',
+    'Save Legal Content' => 'Enregistrer le Contenu Légal',
+    'Legal Notice' => 'Mentions Légales',
+    'No content available' => 'Aucun contenu disponible',
 ];

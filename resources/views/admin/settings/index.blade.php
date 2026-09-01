@@ -148,4 +148,71 @@
         </form>
     </div>
 </div>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h5 class="mb-0"><i class="bi bi-file-text me-2"></i>{{ __('messages.Legal Content') }}</h5>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="{{ route('admin.settings.update-legal-content') }}">
+            @csrf
+            @method('PATCH')
+
+            <!-- Privacy Policy -->
+            <h6 class="mb-3 mt-4">{{ __('messages.Privacy Policy') }}</h6>
+            <div class="row g-3 mb-4">
+                <div class="col-12">
+                    <label class="form-label">{{ __('messages.Privacy Policy') }} (FR)</label>
+                    <textarea name="legal_privacy_fr" class="form-control" rows="4">{{ $settings['legal_privacy_fr'] ?? '' }}</textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">{{ __('messages.Privacy Policy') }} (EN)</label>
+                    <textarea name="legal_privacy_en" class="form-control" rows="4">{{ $settings['legal_privacy_en'] ?? '' }}</textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">{{ __('messages.Privacy Policy') }} (AR)</label>
+                    <textarea name="legal_privacy_ar" class="form-control" rows="4">{{ $settings['legal_privacy_ar'] ?? '' }}</textarea>
+                </div>
+            </div>
+
+            <!-- Terms of Service -->
+            <h6 class="mb-3 mt-4">{{ __('messages.Terms of Service') }}</h6>
+            <div class="row g-3 mb-4">
+                <div class="col-12">
+                    <label class="form-label">{{ __('messages.Terms of Service') }} (FR)</label>
+                    <textarea name="legal_terms_fr" class="form-control" rows="4">{{ $settings['legal_terms_fr'] ?? '' }}</textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">{{ __('messages.Terms of Service') }} (EN)</label>
+                    <textarea name="legal_terms_en" class="form-control" rows="4">{{ $settings['legal_terms_en'] ?? '' }}</textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">{{ __('messages.Terms of Service') }} (AR)</label>
+                    <textarea name="legal_terms_ar" class="form-control" rows="4">{{ $settings['legal_terms_ar'] ?? '' }}</textarea>
+                </div>
+            </div>
+
+            <!-- Legal Notice -->
+            <h6 class="mb-3 mt-4">{{ __('messages.Legal Notice') }}</h6>
+            <div class="row g-3 mb-4">
+                <div class="col-12">
+                    <label class="form-label">{{ __('messages.Legal Notice') }} (FR)</label>
+                    <textarea name="legal_notice_fr" class="form-control" rows="4">{{ $settings['legal_notice_fr'] ?? '' }}</textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">{{ __('messages.Legal Notice') }} (EN)</label>
+                    <textarea name="legal_notice_en" class="form-control" rows="4">{{ $settings['legal_notice_en'] ?? '' }}</textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">{{ __('messages.Legal Notice') }} (AR)</label>
+                    <textarea name="legal_notice_ar" class="form-control" rows="4">{{ $settings['legal_notice_ar'] ?? '' }}</textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-floppy me-1"></i>{{ __('messages.Save Legal Content') }}
+            </button>
+        </form>
+    </div>
+</div>
 @endsection

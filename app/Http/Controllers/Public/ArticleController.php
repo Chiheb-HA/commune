@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Public;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\Category;
 
 class ArticleController extends Controller
 {
@@ -14,6 +15,18 @@ class ArticleController extends Controller
             ->paginate(12);
 
         return view('public.articles.index', compact('articles'));
+    }
+
+    public function byCategory($category)
+    {
+        $category = Category::where('slug', $category)->firstOrFail();
+        
+        $articles = Article::published()
+            ->where('category_id', $category->id)
+            ->orderBy('created_at', 'desc')
+            ->paginate(12);
+
+        return view('public.articles.index', compact('articles', 'category'));
     }
 
     public function show($slug)

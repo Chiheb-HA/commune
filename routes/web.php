@@ -11,6 +11,7 @@ use App\Http\Controllers\Public\DepartmentsController as PublicDepartmentsContro
 use App\Http\Controllers\Public\OfficialsController as PublicOfficialsController;
 use App\Http\Controllers\Public\TaxController;
 use App\Http\Controllers\Public\RequestTrackingController;
+use App\Http\Controllers\Public\LegalController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\EventController;
@@ -80,6 +81,11 @@ Route::post('/taxes', [TaxController::class, 'index'])->name('taxes.search');
 // Public Request Tracking Routes
 Route::get('/suivi-demande', [RequestTrackingController::class, 'index'])->name('request-tracking.index');
 Route::post('/suivi-demande', [RequestTrackingController::class, 'index'])->name('request-tracking.search');
+
+// Public Legal Routes
+Route::get('/confidentialite', [LegalController::class, 'privacy'])->name('legal.privacy');
+Route::get('/conditions-utilisation', [LegalController::class, 'terms'])->name('legal.terms');
+Route::get('/mentions-legales', [LegalController::class, 'notice'])->name('legal.notice');
 
 // Public Services Routes
 Route::prefix('services')->group(function () {
@@ -184,6 +190,7 @@ Route::middleware(['auth', 'role:admin|editor|official'])->prefix('admin')->grou
     Route::patch('/settings/commune-info', [App\Http\Controllers\Admin\SettingsController::class, 'updateCommuneInfo'])->name('admin.settings.update-commune-info');
     Route::patch('/settings/working-hours', [App\Http\Controllers\Admin\SettingsController::class, 'updateWorkingHours'])->name('admin.settings.update-working-hours');
     Route::patch('/settings/service-toggles', [App\Http\Controllers\Admin\SettingsController::class, 'updateServiceToggles'])->name('admin.settings.update-service-toggles');
+    Route::patch('/settings/legal-content', [App\Http\Controllers\Admin\SettingsController::class, 'updateLegalContent'])->name('admin.settings.update-legal-content');
     Route::post('/settings/run-backup', [App\Http\Controllers\Admin\SettingsController::class, 'runBackup'])->name('admin.settings.run-backup');
 });
 

@@ -498,4 +498,13 @@ return [
     'Updated At' => 'تاريخ التحديث',
     'Completed At' => 'تاريخ الإنجاز',
     'No messages available' => 'لا توجد رسائل متاحة',
+
+    // Regulations
+    'Regulations' => 'التنظيم',
+
+    // Legal Content
+    'Legal Content' => 'المحتوى القانوني',
+    'Save Legal Content' => 'حفظ المحتوى القانوني',
+    'Legal Notice' => 'الإشعارات القانونية',
+    'No content available' => 'لا يوجد محتوى متاح',
 ];

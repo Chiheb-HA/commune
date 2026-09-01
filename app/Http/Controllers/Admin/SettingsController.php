@@ -107,6 +107,36 @@ class SettingsController extends Controller
     }
 
     /**
+     * Update legal content.
+     */
+    public function updateLegalContent(Request $request)
+    {
+        $request->validate([
+            'legal_privacy_fr' => ['nullable', 'string'],
+            'legal_privacy_en' => ['nullable', 'string'],
+            'legal_privacy_ar' => ['nullable', 'string'],
+            'legal_terms_fr'   => ['nullable', 'string'],
+            'legal_terms_en'   => ['nullable', 'string'],
+            'legal_terms_ar'   => ['nullable', 'string'],
+            'legal_notice_fr'  => ['nullable', 'string'],
+            'legal_notice_en'  => ['nullable', 'string'],
+            'legal_notice_ar'  => ['nullable', 'string'],
+        ]);
+
+        Setting::set('legal_privacy_fr', $request->legal_privacy_fr ?? '');
+        Setting::set('legal_privacy_en', $request->legal_privacy_en ?? '');
+        Setting::set('legal_privacy_ar', $request->legal_privacy_ar ?? '');
+        Setting::set('legal_terms_fr', $request->legal_terms_fr ?? '');
+        Setting::set('legal_terms_en', $request->legal_terms_en ?? '');
+        Setting::set('legal_terms_ar', $request->legal_terms_ar ?? '');
+        Setting::set('legal_notice_fr', $request->legal_notice_fr ?? '');
+        Setting::set('legal_notice_en', $request->legal_notice_en ?? '');
+        Setting::set('legal_notice_ar', $request->legal_notice_ar ?? '');
+
+        return redirect()->route('admin.settings')->with('success', 'Legal content updated successfully.');
+    }
+
+    /**
      * Run database backup.
      */
     public function runBackup(Request $request)

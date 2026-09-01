@@ -74,6 +74,14 @@ class CategorySeeder extends Seeder
                 'description_en' => 'Public transport networks and roads',
                 'description_ar' => 'شبكات النقل العام والطرق',
             ],
+            [
+                'name_fr' => 'Réglementation',
+                'name_en' => 'Regulations',
+                'name_ar' => 'التنظيم',
+                'description_fr' => 'Règlements municipaux et directives',
+                'description_en' => 'Municipal regulations and guidelines',
+                'description_ar' => 'اللوائح البلدية والإرشادات',
+            ],
         ];
 
         foreach ($categories as $category) {
