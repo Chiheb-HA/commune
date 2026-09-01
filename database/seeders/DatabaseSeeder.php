@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             ArticleSeeder::class,
             NewsSeeder::class,
             EventSeeder::class,
+            ComplaintCategorySeeder::class,
             ComplaintSeeder::class,
             SettingsSeeder::class,
         ]);

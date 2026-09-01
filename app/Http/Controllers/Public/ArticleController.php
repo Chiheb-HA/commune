@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Public;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Support\Str;
 
 class ArticleController extends Controller
 {
@@ -19,8 +20,16 @@ class ArticleController extends Controller
 
     public function byCategory($category)
     {
-        $category = Category::where('slug', $category)->firstOrFail();
-        
+        $normalized = Str::slug($category);
+
+        $category = Category::where(function ($query) use ($normalized, $category) {
+            $query->where('slug', $normalized)
+                ->orWhere('slug', Str::slug('Regulations'))
+                ->orWhere('slug', Str::slug('Réglementation'))
+                ->orWhere('name_en', 'like', '%' . $category . '%')
+                ->orWhere('name_fr', 'like', '%' . $category . '%');
+        })->firstOrFail();
+
         $articles = Article::published()
             ->where('category_id', $category->id)
             ->orderBy('created_at', 'desc')

@@ -171,7 +171,7 @@
         <div class="container-lg">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('Flag-Tunisia.png') }}" alt="Tunisia Flag" style="height: 30px; margin-right: 10px;">
-                <i class="bi bi-building"></i> بلدية الماجل بلعباس
+                <i class="bi bi-building"></i> {{ __('messages.Municipality_MajelBelAbbes') }}
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -187,7 +187,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('articles.index') }}">{{ __('messages.articles') }}</a></li>
-                            <li><a class="dropdown-item" href="{{ route('articles.category', 'reglementation') }}">{{ __('messages.Regulations') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('articles.category', 'regulations') }}">{{ __('messages.Regulations') }}</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -288,7 +288,7 @@
                     <ul class="list-unstyled small">
                         <li><a href="{{ route('departments.index') }}">{{ __('messages.departments') }}</a></li>
                         <li><a href="{{ route('officials.index') }}">{{ __('messages.officials') }}</a></li>
-                        <li><a href="#contact">{{ __('messages.contact') }}</a></li>
+                        <li><a href="{{ route('services.contact') }}">{{ __('messages.contact') }}</a></li>
                     </ul>
                 </div>
                 
