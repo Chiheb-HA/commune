@@ -182,7 +182,67 @@
         </div>
     @endif
     
-    @if($articles->count() === 0 && $news->count() === 0 && $services->count() === 0 && $departments->count() === 0 && $officials->count() === 0)
+    <!-- Events Results -->
+    @if($events->count() > 0)
+        <h2 class="h4 mb-3">{{ __('messages.events') }}</h2>
+        <div class="row g-4 mb-5">
+            @foreach($events as $event)
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        @if($event->featured_image)
+                            <img src="{{ asset('storage/' . $event->featured_image) }}" class="card-img-top" alt="{{ $event->title }}" style="height: 200px; object-fit: cover;">
+                        @else
+                            <div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <i class="bi bi-calendar-event" style="font-size: 3rem;"></i>
+                            </div>
+                        @endif
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $event->title }}</h5>
+                            <p class="card-text text-muted small">{{ Str::limit(strip_tags($event->description), 100) }}</p>
+                            <small class="text-muted">
+                                <i class="bi bi-calendar"></i> {{ $event->start_date->translatedFormat('d F Y') }}
+                            </small>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="{{ route('events.show', $event->slug) }}" class="btn btn-sm btn-primary">{{ __('messages.view_details') }}</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    @endif
+    
+    <!-- Galleries Results -->
+    @if($galleries->count() > 0)
+        <h2 class="h4 mb-3">{{ __('messages.Galleries') }}</h2>
+        <div class="row g-4 mb-5">
+            @foreach($galleries as $gallery)
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        @if($gallery->images && $gallery->images->count() > 0)
+                            <img src="{{ asset('storage/' . $gallery->images->first()->image_url) }}" class="card-img-top" alt="{{ $gallery->title }}" style="height: 200px; object-fit: cover;">
+                        @else
+                            <div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <i class="bi bi-images" style="font-size: 3rem;"></i>
+                            </div>
+                        @endif
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $gallery->title }}</h5>
+                            <p class="card-text text-muted small">{{ Str::limit($gallery->description, 100) }}</p>
+                            <small class="text-muted">
+                                <i class="bi bi-images"></i> {{ $gallery->images ? $gallery->images->count() : 0 }} {{ __('messages.Images') }}
+                            </small>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="{{ route('galleries.show', $gallery->id) }}" class="btn btn-sm btn-primary">{{ __('messages.view_details') }}</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    @endif
+    
+    @if($articles->count() === 0 && $news->count() === 0 && $services->count() === 0 && $departments->count() === 0 && $officials->count() === 0 && $events->count() === 0 && $galleries->count() === 0)
         <div class="alert alert-warning">
             {{ __('messages.No results found for your search. Please try different keywords.') }}
         </div>

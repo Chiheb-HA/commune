@@ -516,4 +516,5 @@ return [
     'Save Legal Content' => 'Enregistrer le Contenu Légal',
     'Legal Notice' => 'Mentions Légales',
     'No content available' => 'Aucun contenu disponible',
+    'Images' => 'Images',
 ];

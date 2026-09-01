@@ -507,4 +507,5 @@ return [
     'Save Legal Content' => 'حفظ المحتوى القانوني',
     'Legal Notice' => 'الإشعارات القانونية',
     'No content available' => 'لا يوجد محتوى متاح',
+    'Images' => 'صور',
 ];

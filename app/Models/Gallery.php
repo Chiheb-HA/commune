@@ -52,6 +52,19 @@ class Gallery extends BaseModel
     // Accessors
     public function getTitleAttribute(): string
     {
-        return $this->title_fr ?? $this->title_en ?? $this->title_ar ?? '';
+        $locale = app()->getLocale();
+        return $this->{"title_{$locale}"} ?? $this->title_fr ?? $this->title_en ?? $this->title_ar ?? '';
     }
+
+    public function getDescriptionAttribute(): string
+    {
+        $locale = app()->getLocale();
+        return $this->{"description_{$locale}"} ?? $this->description_fr ?? $this->description_en ?? $this->description_ar ?? '';
+    }
+
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+    ];
 }

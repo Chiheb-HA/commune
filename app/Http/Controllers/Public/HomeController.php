@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\News;
 use App\Models\Event;
+use App\Models\Gallery;
 use App\Models\MunicipalService;
 use App\Models\Department;
 use App\Models\Official;
@@ -104,6 +105,35 @@ class HomeController extends Controller
             })
             ->get();
 
-        return view('public.search', compact('articles', 'news', 'services', 'departments', 'officials', 'query'));
+        // Search Events
+        $events = Event::published()
+            ->where(function ($q) use ($query) {
+                $locale = app()->getLocale();
+                $titleField = "title_{$locale}";
+                $descriptionField = "description_{$locale}";
+                $locationField = "location_{$locale}";
+                
+                $q->where($titleField, 'like', "%{$query}%")
+                  ->orWhere($descriptionField, 'like', "%{$query}%")
+                  ->orWhere($locationField, 'like', "%{$query}%");
+            })
+            ->latest()
+            ->get();
+
+        // Search Galleries
+        $galleries = Gallery::published()
+            ->with('images')
+            ->where(function ($q) use ($query) {
+                $q->where('title_ar', 'like', "%{$query}%")
+                  ->orWhere('title_fr', 'like', "%{$query}%")
+                  ->orWhere('title_en', 'like', "%{$query}%")
+                  ->orWhere('description_ar', 'like', "%{$query}%")
+                  ->orWhere('description_fr', 'like', "%{$query}%")
+                  ->orWhere('description_en', 'like', "%{$query}%");
+            })
+            ->latest()
+            ->get();
+
+        return view('public.search', compact('articles', 'news', 'services', 'departments', 'officials', 'events', 'galleries', 'query'));
     }
 }

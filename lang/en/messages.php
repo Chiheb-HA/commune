@@ -517,4 +517,5 @@ return [
     'Save Legal Content' => 'Save Legal Content',
     'Legal Notice' => 'Legal Notice',
     'No content available' => 'No content available',
+    'Images' => 'Images',
 ];
