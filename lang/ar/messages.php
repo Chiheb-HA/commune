@@ -68,6 +68,23 @@ return [
     'view_details' => 'عرض التفاصيل',
     'get_support' => 'الحصول على الدعم',
 
+    // Municipal Services
+    'municipal_services' => 'الخدمات البلدية',
+    'services_description' => 'تصفح جميع الخدمات البلدية المتاحة ومتطلباتها',
+    'documents_required' => 'الوثائق المطلوبة',
+    'processing_time' => 'وقت المعالجة',
+    'cost' => 'التكلفة',
+    'contact_service' => 'اتصل بالخدمة',
+    'no_services_available' => 'لا توجد خدمات متاحة في الوقت الحالي',
+    'authorization' => 'الترخيص',
+    'quick_info' => 'معلومات سريعة',
+    'search_services' => 'البحث عن الخدمات...',
+    'view_documents' => 'عرض الوثائق',
+    'login_to_request' => 'تسجيل الدخول للطلب',
+    'contact_information' => 'معلومات الاتصال',
+    'login_required' => 'تسجيل الدخول مطلوب',
+    'search' => 'بحث',
+
     // Admin
     'Dashboard' => 'لوحة التحكم',
     'Welcomeback, Admin!' => 'مرحباً بعودتك، أيها المشرف!',

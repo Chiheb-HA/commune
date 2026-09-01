@@ -72,6 +72,7 @@ Route::prefix('organigramme')->group(function () {
 // Public Departments Routes
 Route::prefix('departments')->group(function () {
     Route::get('/', [PublicDepartmentsController::class, 'index'])->name('departments.index');
+    Route::get('/{slug}', [PublicDepartmentsController::class, 'show'])->name('departments.show');
 });
 
 // Public Officials Routes
@@ -83,6 +84,7 @@ Route::prefix('officials')->group(function () {
 // Public Services Routes
 Route::prefix('services')->group(function () {
     Route::get('/', [PublicServicesController::class, 'index'])->name('services.index');
+    Route::get('/{slug}', [PublicServicesController::class, 'show'])->name('services.show');
     Route::get('/contact', [FrontendContactController::class, 'create'])->name('services.contact');
     Route::post('/contact', [FrontendContactController::class, 'store'])->name('services.contact.store');
 });

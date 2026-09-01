@@ -381,6 +381,13 @@ return [
     'cost' => 'Coût',
     'contact_service' => 'Contacter le Service',
     'no_services_available' => 'Aucun service disponible pour le moment',
+    'authorization' => 'Autorisation',
+    'quick_info' => 'Informations Rapides',
+    'search_services' => 'Rechercher des services...',
+    'view_documents' => 'Voir les Documents',
+    'login_to_request' => 'Connexion pour Demander',
+    'contact_information' => 'Informations de Contact',
+    'login_required' => 'Connexion Requise',
 
     // Departments
     'departments_description' => 'Informations sur les départements municipaux et leurs responsabilités',
