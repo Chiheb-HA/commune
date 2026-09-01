@@ -475,4 +475,19 @@ return [
     'Staff Directory' => 'Annuaire du Personnel',
     'Popular Services' => 'Services Populaires',
     'Building' => 'Bâtiment',
+
+    // Property Tax
+    'Property Tax' => 'Taxe Foncière',
+    'Property Tax Records' => 'Registres de Taxe Foncière',
+    'CIN' => 'CIN',
+    'Property Reference' => 'Référence de Propriété',
+    'Tax Type' => 'Type de Taxe',
+    'Fiscal Year' => 'Année Fiscale',
+    'Amount Due' => 'Montant Dû',
+    'Amount Paid' => 'Montant Payé',
+    'Due Date' => 'Date d\'Échéance',
+    'Search Tax Records' => 'Rechercher les Registres de Taxe',
+    'No tax records found' => 'Aucun registre de taxe trouvé',
+    'Tax Record Details' => 'Détails du Registre de Taxe',
+    'Too many requests' => 'Trop de demandes. Veuillez réessayer plus tard.',
 ];

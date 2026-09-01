@@ -466,4 +466,19 @@ return [
     'Staff Directory' => 'دليل الموظفين',
     'Popular Services' => 'الخدمات الشائعة',
     'Building' => 'المبنى',
+
+    // Property Tax
+    'Property Tax' => 'الضريبة العقارية',
+    'Property Tax Records' => 'سجلات الضرائب العقارية',
+    'CIN' => 'رقم التعريف الوطني',
+    'Property Reference' => 'مرجع الملكية',
+    'Tax Type' => 'نوع الضريبة',
+    'Fiscal Year' => 'السنة المالية',
+    'Amount Due' => 'المبلغ المستحق',
+    'Amount Paid' => 'المبلغ المدفوع',
+    'Due Date' => 'تاريخ الاستحقاق',
+    'Search Tax Records' => 'البحث في سجلات الضرائب',
+    'No tax records found' => 'لم يتم العثور على سجلات ضرائب',
+    'Tax Record Details' => 'تفاصيل سجل الضريبة',
+    'Too many requests' => 'طلبات كثيرة جداً. يرجى المحاولة مرة أخرى لاحقاً.',
 ];

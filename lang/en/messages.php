@@ -476,4 +476,19 @@ return [
     'Contact Information' => 'Contact Information',
     'Search' => 'Search',
     'search' => 'Search',
+
+    // Property Tax
+    'Property Tax' => 'Property Tax',
+    'Property Tax Records' => 'Property Tax Records',
+    'CIN' => 'CIN',
+    'Property Reference' => 'Property Reference',
+    'Tax Type' => 'Tax Type',
+    'Fiscal Year' => 'Fiscal Year',
+    'Amount Due' => 'Amount Due',
+    'Amount Paid' => 'Amount Paid',
+    'Due Date' => 'Due Date',
+    'Search Tax Records' => 'Search Tax Records',
+    'No tax records found' => 'No tax records found',
+    'Tax Record Details' => 'Tax Record Details',
+    'Too many requests' => 'Too many requests. Please try again later.',
 ];

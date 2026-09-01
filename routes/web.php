@@ -6,13 +6,10 @@ use App\Http\Controllers\Public\ArticleController as PublicArticleController;
 use App\Http\Controllers\Public\EventController as PublicEventController;
 use App\Http\Controllers\Public\NewsController as PublicNewsController;
 use App\Http\Controllers\Public\GalleryController as PublicGalleryController;
-<<<<<<< HEAD
-use App\Http\Controllers\Public\DirectoryController;
-=======
 use App\Http\Controllers\Public\ServicesController as PublicServicesController;
 use App\Http\Controllers\Public\DepartmentsController as PublicDepartmentsController;
 use App\Http\Controllers\Public\OfficialsController as PublicOfficialsController;
->>>>>>> 58229faa361d071b810560d6e736aae0e02e9e85
+use App\Http\Controllers\Public\TaxController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\EventController;
@@ -22,6 +19,7 @@ use App\Http\Controllers\Admin\ComplaintController;
 use App\Http\Controllers\Admin\MunicipalServiceController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\OfficialController;
+use App\Http\Controllers\Admin\PropertyTaxController;
 use App\Http\Controllers\Frontend\ComplaintController as FrontendComplaintController;
 use App\Http\Controllers\Frontend\RequestController as FrontendRequestController;
 use App\Http\Controllers\Frontend\ContactController as FrontendContactController;
@@ -63,12 +61,6 @@ Route::prefix('galeries')->group(function () {
     Route::get('/{id}', [PublicGalleryController::class, 'show'])->name('galleries.show');
 });
 
-<<<<<<< HEAD
-// Public Directory Routes
-Route::prefix('organigramme')->group(function () {
-    Route::get('/', [DirectoryController::class, 'index'])->name('directory.index');
-    Route::get('/{department:slug}', [DirectoryController::class, 'show'])->name('directory.show');
-=======
 // Public Departments Routes
 Route::prefix('departments')->group(function () {
     Route::get('/', [PublicDepartmentsController::class, 'index'])->name('departments.index');
@@ -78,8 +70,11 @@ Route::prefix('departments')->group(function () {
 // Public Officials Routes
 Route::prefix('officials')->group(function () {
     Route::get('/', [PublicOfficialsController::class, 'index'])->name('officials.index');
->>>>>>> 58229faa361d071b810560d6e736aae0e02e9e85
 });
+
+// Public Tax Routes
+Route::get('/taxes', [TaxController::class, 'index'])->name('taxes.index');
+Route::post('/taxes', [TaxController::class, 'index'])->name('taxes.search');
 
 // Public Services Routes
 Route::prefix('services')->group(function () {
@@ -147,6 +142,16 @@ Route::middleware(['auth', 'role:admin|editor|official'])->prefix('admin')->grou
         Route::put('/{official}', [OfficialController::class, 'update'])->name('admin.officials.update');
         Route::delete('/{official}', [OfficialController::class, 'destroy'])->name('admin.officials.destroy');
         Route::post('/{official}/toggle-status', [OfficialController::class, 'toggleStatus'])->name('admin.officials.toggle-status');
+    });
+
+    // Property Tax routes
+    Route::prefix('property-taxes')->group(function () {
+        Route::get('/', [PropertyTaxController::class, 'index'])->name('admin.property-taxes.index');
+        Route::get('/create', [PropertyTaxController::class, 'create'])->name('admin.property-taxes.create');
+        Route::post('/', [PropertyTaxController::class, 'store'])->name('admin.property-taxes.store');
+        Route::get('/{propertyTax}/edit', [PropertyTaxController::class, 'edit'])->name('admin.property-taxes.edit');
+        Route::put('/{propertyTax}', [PropertyTaxController::class, 'update'])->name('admin.property-taxes.update');
+        Route::delete('/{propertyTax}', [PropertyTaxController::class, 'destroy'])->name('admin.property-taxes.destroy');
     });
 
     // Requests routes
