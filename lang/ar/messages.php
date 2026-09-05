@@ -73,6 +73,7 @@ return [
     'view_all_articles' => 'عرض جميع المقالات',
     'view_details' => 'عرض التفاصيل',
     'get_support' => 'الحصول على الدعم',
+    'skip_to_content' => 'تخطي إلى المحتوى',
 
     // Common auth and public view strings
     'Remember me' => 'تذكرني',

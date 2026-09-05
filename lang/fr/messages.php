@@ -90,6 +90,7 @@ return [
     'view_all_articles' => 'Voir Tous les Articles',
     'view_details' => 'Voir les Détails',
     'get_support' => 'Obtenir de l\'Aide',
+    'skip_to_content' => 'Aller au contenu',
     'view_all_events' => 'Voir Tous les Événements',
 
     // Common auth and public view strings

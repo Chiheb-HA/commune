@@ -73,6 +73,7 @@ return [
     'view_all_articles' => 'View All Articles',
     'view_details' => 'View Details',
     'get_support' => 'Get Support',
+    'skip_to_content' => 'Skip to content',
 
     // Common auth and public view strings
     'Remember me' => 'Remember me',

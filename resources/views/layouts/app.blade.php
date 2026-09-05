@@ -162,10 +162,29 @@
         [dir="rtl"] .navbar-brand img {
             margin-left: 10px;
         }
+
+        html.font-sm {
+            font-size: 14px;
+        }
+
+        html.font-md {
+            font-size: 16px;
+        }
+
+        html.font-lg {
+            font-size: 19px;
+        }
     </style>
+    <script>
+        (function () {
+            const fontSize = localStorage.getItem('fontSizePref') || 'md';
+            document.documentElement.classList.add('font-' + fontSize);
+        })();
+    </script>
     @yield('extra-css')
 </head>
 <body>
+    <a href="#main-content" class="visually-hidden-focusable">{{ __('messages.skip_to_content') }}</a>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-lg">
@@ -250,6 +269,13 @@
                             <a class="nav-link" href="{{ route('register') }}">{{ __('messages.register') }}</a>
                         </li>
                     @endauth
+                    <li class="nav-item d-flex align-items-center">
+                        <div class="font-size-selector d-flex gap-1 ms-lg-3">
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-font-size="sm" aria-label="A-">A-</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-font-size="md" aria-label="A">A</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-font-size="lg" aria-label="A+">A+</button>
+                        </div>
+                    </li>
                     <li class="nav-item">
                         <div class="language-selector">
                             <a href="{{ route('setLocale', 'ar') }}" class="lang-btn {{ app()->getLocale() === 'ar' ? 'active' : '' }}">AR</a>
@@ -263,7 +289,7 @@
     </nav>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         @yield('content')
     </main>
 
@@ -346,6 +372,18 @@
     @endif
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            document.querySelectorAll('[data-font-size]').forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const fontSize = button.dataset.fontSize;
+                    document.documentElement.classList.remove('font-sm', 'font-md', 'font-lg');
+                    document.documentElement.classList.add('font-' + fontSize);
+                    localStorage.setItem('fontSizePref', fontSize);
+                });
+            });
+        })();
+    </script>
     <script>
         (function () {
             let currentFormToSubmit = null;
