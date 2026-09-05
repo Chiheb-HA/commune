@@ -78,6 +78,7 @@ return [
     'taxes' => 'Taxes',
     'request_tracking' => 'Request Tracking',
     'legal' => 'Legal',
+    'our_location' => 'Our Location',
 
     // Common auth and public view strings
     'Remember me' => 'Remember me',

@@ -78,6 +78,7 @@ return [
     'taxes' => 'الضرائب',
     'request_tracking' => 'تتبع الطلبات',
     'legal' => 'الشؤون القانونية',
+    'our_location' => 'موقعنا',
 
     // Common auth and public view strings
     'Remember me' => 'تذكرني',

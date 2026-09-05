@@ -95,6 +95,7 @@ return [
     'taxes' => 'Taxes',
     'request_tracking' => 'Suivi des demandes',
     'legal' => 'Mentions légales',
+    'our_location' => 'Notre emplacement',
     'view_all_events' => 'Voir Tous les Événements',
 
     // Common auth and public view strings

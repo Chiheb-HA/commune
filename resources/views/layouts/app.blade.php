@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     @endif
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style>
         :root {
             --primary: #1e40af;
@@ -319,7 +321,10 @@
                         <li><a href="{{ route('services.contact') }}">{{ __('messages.contact') }}</a></li>
                     </ul>
                 </div>
-                
+                <div class="col-md-3 mb-4">
+                    <h6 class="text-white mb-3">{{ __('messages.our_location') }}</h6>
+                    <div id="commune-map" style="height:220px;border-radius:8px;"></div>
+                </div>
             </div>
             <hr class="bg-secondary">
             <div class="row">
@@ -337,6 +342,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            const mapElement = document.getElementById('commune-map');
+            if (!mapElement || typeof L === 'undefined') return;
+
+            // TODO: move to Settings model
+            const communeCoordinates = [34.75, 8.5222];
+            const map = L.map(mapElement, {
+                scrollWheelZoom: false
+            }).setView(communeCoordinates, 14);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            L.marker(communeCoordinates)
+                .addTo(map)
+                .bindPopup(@json(__('messages.Municipality_MajelBelAbbes')));
+        })();
+    </script>
 
     <!-- Confirmation Modal -->
     <x-confirmation-modal id="confirmationModal" />
