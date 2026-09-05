@@ -330,7 +330,8 @@
                     <p class="small">
                         <a href="{{ route('legal.privacy') }}">{{ __('messages.privacy_policy') }}</a> | 
                         <a href="{{ route('legal.terms') }}">{{ __('messages.terms_of_service') }}</a> | 
-                        <a href="{{ route('legal.notice') }}">{{ __('messages.Legal Notice') }}</a>
+                        <a href="{{ route('legal.notice') }}">{{ __('messages.Legal Notice') }}</a> |
+                        <a href="{{ route('sitemap.index') }}">{{ __('messages.sitemap_title') }}</a>
                     </p>
                 </div>
             </div>

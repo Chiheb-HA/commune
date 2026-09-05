@@ -91,6 +91,10 @@ return [
     'view_details' => 'Voir les Détails',
     'get_support' => 'Obtenir de l\'Aide',
     'skip_to_content' => 'Aller au contenu',
+    'sitemap_title' => 'Plan du site',
+    'taxes' => 'Taxes',
+    'request_tracking' => 'Suivi des demandes',
+    'legal' => 'Mentions légales',
     'view_all_events' => 'Voir Tous les Événements',
 
     // Common auth and public view strings

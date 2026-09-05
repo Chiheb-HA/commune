@@ -14,6 +14,7 @@ use App\Http\Controllers\Public\TaxController;
 use App\Http\Controllers\Public\RequestTrackingController;
 use App\Http\Controllers\Public\LegalController;
 use App\Http\Controllers\Public\EmergencyContactController;
+use App\Http\Controllers\Public\SitemapController;
 
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
@@ -118,6 +119,11 @@ Route::prefix('officials')->group(function () {
 // Emergency Contacts
 Route::get('/contacts-urgence', [EmergencyContactController::class, 'index'])
     ->name('emergency-contacts.index');
+
+
+// Sitemap
+Route::get('/plan-du-site', [SitemapController::class, 'index'])
+    ->name('sitemap.index');
 
 
 // Taxes

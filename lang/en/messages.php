@@ -74,6 +74,10 @@ return [
     'view_details' => 'View Details',
     'get_support' => 'Get Support',
     'skip_to_content' => 'Skip to content',
+    'sitemap_title' => 'Sitemap',
+    'taxes' => 'Taxes',
+    'request_tracking' => 'Request Tracking',
+    'legal' => 'Legal',
 
     // Common auth and public view strings
     'Remember me' => 'Remember me',

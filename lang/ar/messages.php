@@ -74,6 +74,10 @@ return [
     'view_details' => 'عرض التفاصيل',
     'get_support' => 'الحصول على الدعم',
     'skip_to_content' => 'تخطي إلى المحتوى',
+    'sitemap_title' => 'خريطة الموقع',
+    'taxes' => 'الضرائب',
+    'request_tracking' => 'تتبع الطلبات',
+    'legal' => 'الشؤون القانونية',
 
     // Common auth and public view strings
     'Remember me' => 'تذكرني',
