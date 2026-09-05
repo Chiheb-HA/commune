@@ -15,6 +15,7 @@ use App\Http\Controllers\Public\RequestTrackingController;
 use App\Http\Controllers\Public\LegalController;
 use App\Http\Controllers\Public\EmergencyContactController;
 use App\Http\Controllers\Public\SitemapController;
+use App\Http\Controllers\Public\BudgetController;
 
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
@@ -127,6 +128,9 @@ Route::get('/plan-du-site', [SitemapController::class, 'index'])
 
 
 // Taxes
+Route::get('/budget', [BudgetController::class, 'index'])
+    ->name('budget.index');
+
 Route::get('/taxes', [TaxController::class, 'index'])
     ->name('taxes.index');
 

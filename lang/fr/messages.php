@@ -96,6 +96,18 @@ return [
     'request_tracking' => 'Suivi des demandes',
     'legal' => 'Mentions légales',
     'our_location' => 'Notre emplacement',
+    'budget_title' => 'Budget',
+    'budget_description' => 'Consultez le budget de la commune et les résumés financiers.',
+    'budget_year' => 'Année budgétaire',
+    'allocated' => 'Alloué',
+    'spent' => 'Dépensé',
+    'revenue' => 'Recettes',
+    'expenses' => 'Dépenses',
+    'all' => 'Toutes',
+    'category' => 'Catégorie',
+    'uncategorized' => 'Sans catégorie',
+    'no_budget_data' => 'Aucune donnée budgétaire n’est disponible pour cette période.',
+    'no_financial_summary' => 'Aucun résumé financier n’est disponible pour cette période.',
     'view_all_events' => 'Voir Tous les Événements',
 
     // Common auth and public view strings

@@ -79,6 +79,18 @@ return [
     'request_tracking' => 'تتبع الطلبات',
     'legal' => 'الشؤون القانونية',
     'our_location' => 'موقعنا',
+    'budget_title' => 'الميزانية',
+    'budget_description' => 'اطّلع على ميزانية البلدية والملخصات المالية.',
+    'budget_year' => 'السنة المالية',
+    'allocated' => 'المبلغ المخصص',
+    'spent' => 'المبلغ المنفق',
+    'revenue' => 'الإيرادات',
+    'expenses' => 'المصروفات',
+    'all' => 'الكل',
+    'category' => 'الفئة',
+    'uncategorized' => 'غير مصنف',
+    'no_budget_data' => 'لا توجد بيانات للميزانية لهذه الفترة.',
+    'no_financial_summary' => 'لا يوجد ملخص مالي لهذه الفترة.',
 
     // Common auth and public view strings
     'Remember me' => 'تذكرني',

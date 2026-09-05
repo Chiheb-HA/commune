@@ -79,6 +79,18 @@ return [
     'request_tracking' => 'Request Tracking',
     'legal' => 'Legal',
     'our_location' => 'Our Location',
+    'budget_title' => 'Budget',
+    'budget_description' => 'Review the municipality budget and financial summaries.',
+    'budget_year' => 'Budget year',
+    'allocated' => 'Allocated',
+    'spent' => 'Spent',
+    'revenue' => 'Revenue',
+    'expenses' => 'Expenses',
+    'all' => 'All',
+    'category' => 'Category',
+    'uncategorized' => 'Uncategorized',
+    'no_budget_data' => 'No budget data is available for this period.',
+    'no_financial_summary' => 'No financial summary is available for this period.',
 
     // Common auth and public view strings
     'Remember me' => 'Remember me',
