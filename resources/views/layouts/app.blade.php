@@ -218,6 +218,7 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('departments.index') }}">{{ __('messages.departments') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('officials.index') }}">{{ __('messages.officials') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('emergency-contacts.index') }}">{{ __('messages.emergency_contacts') }}</a></li>
                         </ul>
                     </li>
                     @auth
@@ -288,6 +289,7 @@
                     <ul class="list-unstyled small">
                         <li><a href="{{ route('departments.index') }}">{{ __('messages.departments') }}</a></li>
                         <li><a href="{{ route('officials.index') }}">{{ __('messages.officials') }}</a></li>
+                        <li><a href="{{ route('emergency-contacts.index') }}">{{ __('messages.emergency_contacts') }}</a></li>
                         <li><a href="{{ route('services.contact') }}">{{ __('messages.contact') }}</a></li>
                     </ul>
                 </div>
