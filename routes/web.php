@@ -128,6 +128,10 @@ Route::get('/plan-du-site', [SitemapController::class, 'index'])
 
 
 // Taxes
+// Keep the export route before any future budget slug/catch-all route.
+Route::get('/budget/export', [BudgetController::class, 'exportCsv'])
+    ->name('budget.export');
+
 Route::get('/budget', [BudgetController::class, 'index'])
     ->name('budget.index');
 

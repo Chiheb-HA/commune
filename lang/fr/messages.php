@@ -108,6 +108,7 @@ return [
     'uncategorized' => 'Sans catégorie',
     'no_budget_data' => 'Aucune donnée budgétaire n’est disponible pour cette période.',
     'no_financial_summary' => 'Aucun résumé financier n’est disponible pour cette période.',
+    'export_csv' => 'Exporter CSV',
     'view_all_events' => 'Voir Tous les Événements',
 
     // Common auth and public view strings

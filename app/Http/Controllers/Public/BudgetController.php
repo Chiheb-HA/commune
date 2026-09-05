@@ -65,4 +65,50 @@ class BudgetController extends Controller
             'years'
         ));
     }
+
+    public function exportCsv(Request $request)
+    {
+        $year = $request->query('year');
+        $allocations = Budget::active()
+            ->with(['category', 'allocations'])
+            ->when($year, fn ($query) => $query->byFiscalYear($year))
+            ->get()
+            ->flatMap(function ($budget) {
+                return $budget->allocations->map(function ($allocation) use ($budget) {
+                    return [
+                        'category' => $budget->category?->name ?? __('messages.uncategorized'),
+                        'allocated' => $allocation->allocated_amount,
+                        'spent' => $allocation->spent_amount,
+                    ];
+                });
+            });
+
+        $hasArabicText = $allocations->contains(function ($allocation) {
+            return preg_match('/[\x{0600}-\x{06FF}]/u', $allocation['category']) === 1;
+        });
+
+        $filename = 'budget-' . ($year ?: 'all') . '.csv';
+
+        return response()->streamDownload(function () use ($allocations, $hasArabicText) {
+            $handle = fopen('php://output', 'w');
+
+            if ($hasArabicText) {
+                fwrite($handle, "\xEF\xBB\xBF");
+            }
+
+            fputcsv($handle, ['Category', 'Allocated', 'Spent']);
+
+            foreach ($allocations as $allocation) {
+                fputcsv($handle, [
+                    $allocation['category'],
+                    $allocation['allocated'],
+                    $allocation['spent'],
+                ]);
+            }
+
+            fclose($handle);
+        }, $filename, [
+            'Content-Type' => 'text/csv',
+        ]);
+    }
 }

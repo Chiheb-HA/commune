@@ -39,8 +39,8 @@
                     @foreach($allocationsByCategory as $category => $categoryBudgets)
                         <tr>
                             <th scope="row">{{ $category }}</th>
-                            <td>{{ number_format($categoryBudgets->flatMap->allocations->sum('allocated_amount'), 2) }}</td>
-                            <td>{{ number_format($categoryBudgets->flatMap->allocations->sum('spent_amount'), 2) }}</td>
+                            <td>{{ number_format($categoryBudgets->flatMap(function ($budget) { return $budget->allocations; })->sum('allocated_amount'), 2) }}</td>
+                            <td>{{ number_format($categoryBudgets->flatMap(function ($budget) { return $budget->allocations; })->sum('spent_amount'), 2) }}</td>
                         </tr>
                     @endforeach
                 </tbody>

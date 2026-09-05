@@ -91,6 +91,7 @@ return [
     'uncategorized' => 'غير مصنف',
     'no_budget_data' => 'لا توجد بيانات للميزانية لهذه الفترة.',
     'no_financial_summary' => 'لا يوجد ملخص مالي لهذه الفترة.',
+    'export_csv' => 'تصدير CSV',
 
     // Common auth and public view strings
     'Remember me' => 'تذكرني',

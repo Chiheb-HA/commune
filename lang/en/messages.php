@@ -91,6 +91,7 @@ return [
     'uncategorized' => 'Uncategorized',
     'no_budget_data' => 'No budget data is available for this period.',
     'no_financial_summary' => 'No financial summary is available for this period.',
+    'export_csv' => 'Export CSV',
 
     // Common auth and public view strings
     'Remember me' => 'Remember me',
