@@ -211,6 +211,33 @@
             @endforeach
         </div>
     @endif
+
+    <!-- Emergency Contacts Results -->
+    @if($emergencyContacts->count() > 0)
+        <h2 class="h4 mb-3">{{ __('messages.emergency_contacts') }}</h2>
+        <div class="row g-4 mb-5">
+            @foreach($emergencyContacts as $contact)
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $contact->name }}</h5>
+                            @if($contact->phone)
+                                <a href="tel:{{ $contact->phone }}" class="d-block fs-5 py-2">
+                                    <i class="bi bi-telephone me-2" aria-hidden="true"></i>{{ $contact->phone }}
+                                </a>
+                            @endif
+                            @if($contact->service)
+                                <p class="card-text text-muted small mb-0">{{ $contact->service }}</p>
+                            @endif
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="{{ route('emergency-contacts.index') }}" class="btn btn-sm btn-primary">{{ __('messages.view_details') }}</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    @endif
     
     <!-- Galleries Results -->
     @if($galleries->count() > 0)
@@ -242,7 +269,7 @@
         </div>
     @endif
     
-    @if($articles->count() === 0 && $news->count() === 0 && $services->count() === 0 && $departments->count() === 0 && $officials->count() === 0 && $events->count() === 0 && $galleries->count() === 0)
+    @if($articles->count() === 0 && $news->count() === 0 && $services->count() === 0 && $departments->count() === 0 && $officials->count() === 0 && $events->count() === 0 && $emergencyContacts->count() === 0 && $galleries->count() === 0)
         <div class="alert alert-warning">
             {{ __('messages.No results found for your search. Please try different keywords.') }}
         </div>

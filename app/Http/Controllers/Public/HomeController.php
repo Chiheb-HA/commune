@@ -10,6 +10,7 @@ use App\Models\Gallery;
 use App\Models\MunicipalService;
 use App\Models\Department;
 use App\Models\Official;
+use App\Models\TelephoneDirectory;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -120,6 +121,18 @@ class HomeController extends Controller
             ->latest()
             ->get();
 
+                // Search Emergency Contacts
+                $emergencyContacts = TelephoneDirectory::active()
+                        ->where(function ($q) use ($query) {
+                                $q->where('name_ar', 'like', "%{$query}%")
+                                    ->orWhere('name_fr', 'like', "%{$query}%")
+                                    ->orWhere('name_en', 'like', "%{$query}%")
+                                    ->orWhere('phone', 'like', "%{$query}%")
+                                    ->orWhere('service', 'like', "%{$query}%");
+                        })
+                        ->orderBy('order', 'asc')
+                        ->get();
+
         // Search Galleries
         $galleries = Gallery::published()
             ->with('images')
@@ -134,6 +147,6 @@ class HomeController extends Controller
             ->latest()
             ->get();
 
-        return view('public.search', compact('articles', 'news', 'services', 'departments', 'officials', 'events', 'galleries', 'query'));
+        return view('public.search', compact('articles', 'news', 'services', 'departments', 'officials', 'events', 'emergencyContacts', 'galleries', 'query'));
     }
 }
