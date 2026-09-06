@@ -103,6 +103,14 @@ return [
     'member_count' => 'Members',
     'president' => 'President',
     'contact_person' => 'Contact person',
+    'manage_associations' => 'Manage civil associations',
+    'new_association' => 'New Association',
+    'edit_association' => 'Edit Association',
+    'association_created' => 'Association created successfully.',
+    'association_updated' => 'Association updated successfully.',
+    'association_deleted' => 'Association deleted successfully.',
+    'president_fax' => 'President fax',
+    'contact_person_role' => 'Contact person role',
     'export_csv' => 'Export CSV',
 
     // Common auth and public view strings

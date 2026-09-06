@@ -28,6 +28,7 @@ use App\Http\Controllers\Admin\MunicipalServiceController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\OfficialController;
 use App\Http\Controllers\Admin\PropertyTaxController;
+use App\Http\Controllers\Admin\AssociationController as AdminAssociationController;
 
 use App\Http\Controllers\Frontend\ComplaintController as FrontendComplaintController;
 use App\Http\Controllers\Frontend\RequestController as FrontendRequestController;
@@ -301,6 +302,12 @@ Route::middleware(['auth', 'role:admin|editor|official'])
                 [MunicipalServiceController::class, 'toggleStatus']
             )->name('admin.municipal-services.toggle-status');
         });
+
+
+        // Departments
+        Route::resource('associations', AdminAssociationController::class, [
+            'as' => 'admin'
+        ])->except(['show']);
 
 
         // Departments

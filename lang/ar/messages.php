@@ -103,6 +103,14 @@ return [
     'member_count' => 'عدد الأعضاء',
     'president' => 'الرئيس',
     'contact_person' => 'جهة الاتصال',
+    'manage_associations' => 'إدارة الجمعيات المدنية',
+    'new_association' => 'جمعية جديدة',
+    'edit_association' => 'تعديل الجمعية',
+    'association_created' => 'تم إنشاء الجمعية بنجاح.',
+    'association_updated' => 'تم تحديث الجمعية بنجاح.',
+    'association_deleted' => 'تم حذف الجمعية بنجاح.',
+    'president_fax' => 'فاكس الرئيس',
+    'contact_person_role' => 'وظيفة جهة الاتصال',
     'export_csv' => 'تصدير CSV',
 
     // Common auth and public view strings
