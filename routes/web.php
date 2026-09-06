@@ -30,6 +30,7 @@ use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\OfficialController;
 use App\Http\Controllers\Admin\PropertyTaxController;
 use App\Http\Controllers\Admin\AssociationController as AdminAssociationController;
+use App\Http\Controllers\Admin\CouncilSessionController as AdminCouncilSessionController;
 
 use App\Http\Controllers\Frontend\ComplaintController as FrontendComplaintController;
 use App\Http\Controllers\Frontend\RequestController as FrontendRequestController;
@@ -312,6 +313,17 @@ Route::middleware(['auth', 'role:admin|editor|official'])
         Route::resource('associations', AdminAssociationController::class, [
             'as' => 'admin'
         ])->except(['show']);
+
+
+        // Departments
+        Route::resource('council-sessions', AdminCouncilSessionController::class, [
+            'as' => 'admin'
+        ])->parameters(['council-sessions' => 'councilSession'])->except(['show']);
+
+        Route::post(
+            'council-sessions/{councilSession}/notify',
+            [AdminCouncilSessionController::class, 'notifyMembers']
+        )->name('admin.council-sessions.notify');
 
 
         // Departments
