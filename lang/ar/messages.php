@@ -111,6 +111,16 @@ return [
     'association_deleted' => 'تم حذف الجمعية بنجاح.',
     'president_fax' => 'فاكس الرئيس',
     'contact_person_role' => 'وظيفة جهة الاتصال',
+    'council_sessions' => 'جلسات المجلس',
+    'council_sessions_description' => 'اطّلع على جلسات المجلس القادمة ومحاضر الجلسات المنشورة.',
+    'council_status_upcoming' => 'قادم',
+    'council_status_held' => 'منعقدة',
+    'council_status_cancelled' => 'ملغاة',
+    'council_type_ordinaire' => 'جلسة عادية',
+    'council_type_extraordinaire' => 'جلسة استثنائية',
+    'committee' => 'اللجنة',
+    'view_minutes' => 'عرض المحضر',
+    'no_council_sessions' => 'لا توجد جلسات للمجلس في الوقت الحالي.',
     'export_csv' => 'تصدير CSV',
 
     // Common auth and public view strings

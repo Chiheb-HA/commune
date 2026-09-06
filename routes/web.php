@@ -17,6 +17,7 @@ use App\Http\Controllers\Public\EmergencyContactController;
 use App\Http\Controllers\Public\SitemapController;
 use App\Http\Controllers\Public\BudgetController;
 use App\Http\Controllers\Public\AssociationController;
+use App\Http\Controllers\Public\CouncilSessionController;
 
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
@@ -130,6 +131,9 @@ Route::get('/plan-du-site', [SitemapController::class, 'index'])
 
 
 // Taxes
+Route::get('/sessions-conseil', [CouncilSessionController::class, 'index'])
+    ->name('council-sessions.index');
+
 Route::get('/associations', [AssociationController::class, 'index'])
     ->name('associations.index');
 

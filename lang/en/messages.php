@@ -111,6 +111,16 @@ return [
     'association_deleted' => 'Association deleted successfully.',
     'president_fax' => 'President fax',
     'contact_person_role' => 'Contact person role',
+    'council_sessions' => 'Council sessions',
+    'council_sessions_description' => 'Consult upcoming council sessions and published minutes.',
+    'council_status_upcoming' => 'Upcoming',
+    'council_status_held' => 'Held',
+    'council_status_cancelled' => 'Cancelled',
+    'council_type_ordinaire' => 'Ordinary session',
+    'council_type_extraordinaire' => 'Extraordinary session',
+    'committee' => 'Committee',
+    'view_minutes' => 'View minutes',
+    'no_council_sessions' => 'No council sessions are available at the moment.',
     'export_csv' => 'Export CSV',
 
     // Common auth and public view strings
