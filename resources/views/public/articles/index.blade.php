@@ -4,13 +4,13 @@
 
 @section('content')
 <div class="container-lg py-5">
-    <h1 class="mb-4">{{ __('Articles') }}</h1>
+    <h1 class="mb-4">{{ __('Messages.articles') }}</h1>
     
     <div class="row mb-4">
         <div class="col-md-6">
             <form method="GET" class="d-flex gap-2">
-                <input type="text" name="search" class="form-control" placeholder="{{ __('Search articles...') }}" value="{{ request('search') }}">
-                <button type="submit" class="btn btn-primary">{{ __('Search') }}</button>
+                <input type="text" name="search" class="form-control" placeholder="{{ __('Messages.Search articles...') }}" value="{{ request('search') }}">
+                <button type="submit" class="btn btn-primary">{{ __('Messages.search') }}</button>
             </form>
         </div>
     </div>
@@ -34,14 +34,14 @@
                         <small class="text-muted d-block mb-2">
                             <i class="bi bi-calendar"></i> {{ $article->created_at->translatedFormat('d F Y') }}
                         </small>
-                        <a href="{{ route('articles.show', $article->slug) }}" class="btn btn-sm btn-primary">{{ __('Read More') }}</a>
+                        <a href="{{ route('articles.show', $article->slug) }}" class="btn btn-sm btn-primary">{{ __('Messages.read_more') }}</a>
                     </div>
                 </div>
             </div>
         @empty
             <div class="col-12">
                 <div class="alert alert-info">
-                    {{ __('No articles found.') }}
+                    {{ __('Messages.no_articles') }}
                 </div>
             </div>
         @endforelse

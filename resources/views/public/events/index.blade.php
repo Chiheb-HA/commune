@@ -9,15 +9,15 @@
     <div class="row mb-4">
         <div class="col-md-6">
             <form method="GET" class="d-flex gap-2">
-                <input type="text" name="search" class="form-control" placeholder="{{ __('Search events...') }}" value="{{ request('search') }}">
-                <button type="submit" class="btn btn-primary">{{ __('Search') }}</button>
+                <input type="text" name="search" class="form-control" placeholder="{{ __('Messages.Search events...') }}" value="{{ request('search') }}">
+                <button type="submit" class="btn btn-primary">{{ __('Messages.Search') }}</button>
             </form>
         </div>
         <div class="col-md-3">
             <select name="sort" class="form-select" onchange="location.href='?sort='+this.value">
-                <option value="upcoming" {{ request('sort') === 'upcoming' ? 'selected' : '' }}>{{ __('Upcoming First') }}</option>
-                <option value="latest" {{ request('sort') === 'latest' ? 'selected' : '' }}>{{ __('Latest') }}</option>
-                <option value="oldest" {{ request('sort') === 'oldest' ? 'selected' : '' }}>{{ __('Oldest') }}</option>
+                <option value="upcoming" {{ request('sort') === 'upcoming' ? 'selected' : '' }}>{{ __('Messages.Upcoming First') }}</option>
+                <option value="latest" {{ request('sort') === 'latest' ? 'selected' : '' }}>{{ __('Messages.Latest') }}</option>
+                <option value="oldest" {{ request('sort') === 'oldest' ? 'selected' : '' }}>{{ __('Messages.Oldest') }}</option>
             </select>
         </div>
     </div>
@@ -46,10 +46,10 @@
                         <p class="card-text small">{{ Str::limit($event->description, 80) }}</p>
                     </div>
                     <div class="card-footer bg-transparent">
-                        <a href="{{ route('events.show', $event->slug) }}" class="btn btn-sm btn-primary">{{ __('View Details') }}</a>
+                        <a href="{{ route('events.show', $event->slug) }}" class="btn btn-sm btn-primary">{{ __('Messages.view_details') }}</a>
                         @if(auth()->check())
                             <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#registerModal{{ $event->id }}">
-                                {{ __('Register') }}
+                                {{ __('Messages.register') }}
                             </button>
                         @endif
                     </div>
@@ -58,7 +58,7 @@
         @empty
             <div class="col-12">
                 <div class="alert alert-info">
-                    {{ __('No events found.') }}
+                    {{ __('Messages.no_events') }}
                 </div>
             </div>
         @endforelse
