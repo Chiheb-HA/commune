@@ -27,10 +27,18 @@
         * {
             --bs-primary: var(--primary);
         }
+
+        html,
+        body {
+            height: 100%;
+        }
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background-color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
         .navbar {
@@ -102,7 +110,12 @@
             background-color: #1e293b;
             color: #cbd5e1;
             padding: 40px 0 20px 0;
-            margin-top: 80px;
+            margin-top: auto;
+            flex-shrink: 0;
+        }
+
+        main {
+            flex: 1 0 auto;
         }
         
         footer a {
@@ -124,6 +137,7 @@
         }
 
         @media (max-width: 576px) {
+            .navbar-brand { font-size: 1rem; }
             .hero-section { padding: 40px 0; }
             .hero-section h1 { font-size: 1.9rem; }
         }
