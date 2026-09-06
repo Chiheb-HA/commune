@@ -625,6 +625,7 @@ return [
 
     // Regulations
     'Regulations' => 'التنظيم',
+    'general_regulations_pau' => 'التراتيب العامة',
 
     // Legal Content
     'Legal Content' => 'المحتوى القانوني',

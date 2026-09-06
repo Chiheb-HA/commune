@@ -210,18 +210,18 @@
             </div>
 
             <!-- General Regulations / PAU -->
-            <h6 class="mb-3 mt-4">Réglementation générale / PAU</h6>
+            <h6 class="mb-3 mt-4">{{ __('messages.general_regulations_pau') }}</h6>
             <div class="row g-3 mb-4">
                 <div class="col-12">
-                    <label class="form-label">Réglementation générale / PAU (FR)</label>
+                    <label class="form-label">{{ __('messages.general_regulations_pau') }} (FR)</label>
                     <textarea name="legal_pau_fr" class="form-control" rows="4">{{ $settings['legal_pau_fr'] ?? '' }}</textarea>
                 </div>
                 <div class="col-12">
-                    <label class="form-label">Réglementation générale / PAU (EN)</label>
+                    <label class="form-label">{{ __('messages.general_regulations_pau') }} (EN)</label>
                     <textarea name="legal_pau_en" class="form-control" rows="4">{{ $settings['legal_pau_en'] ?? '' }}</textarea>
                 </div>
                 <div class="col-12">
-                    <label class="form-label">Réglementation générale / PAU (AR)</label>
+                    <label class="form-label">{{ __('messages.general_regulations_pau') }} (AR)</label>
                     <textarea name="legal_pau_ar" class="form-control" rows="4">{{ $settings['legal_pau_ar'] ?? '' }}</textarea>
                 </div>
             </div>

@@ -42,7 +42,7 @@ class LegalController extends Controller
         $content = Setting::get('legal_pau_' . app()->getLocale());
         
         return view('public.legal.page', [
-            'title' => 'Réglementation générale / PAU',
+            'title' => __('messages.general_regulations_pau'),
             'content' => $content,
         ]);
     }

@@ -267,7 +267,7 @@
                         <li><a href="{{ route('services.index') }}">{{ __('messages.services') }}</a></li>
                         <li><a href="{{ route('budget.index') }}">{{ __('messages.budget_title') }}</a></li>
                         <li><a href="{{ route('council-sessions.index') }}">{{ __('messages.council_sessions') }}</a></li>
-                        <li><a href="{{ route('legal.pau') }}">Réglementation générale / PAU</a></li>
+                        <li><a href="{{ route('legal.pau') }}">{{ __('messages.general_regulations_pau') }}</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 mb-4">
@@ -294,7 +294,7 @@
                         <a href="{{ route('legal.privacy') }}">{{ __('messages.privacy_policy') }}</a> | 
                         <a href="{{ route('legal.terms') }}">{{ __('messages.terms_of_service') }}</a> | 
                         <a href="{{ route('legal.notice') }}">{{ __('messages.Legal Notice') }}</a> |
-                        <a href="{{ route('legal.pau') }}">Réglementation générale / PAU</a> |
+                        <a href="{{ route('legal.pau') }}">{{ __('messages.general_regulations_pau') }}</a> |
                         <a href="{{ route('sitemap.index') }}">{{ __('messages.sitemap_title') }}</a>
                     </p>
                 </div>

@@ -359,7 +359,7 @@ return [
     'message' => 'Message',
     'back' => 'Retour',
     'no_news' => 'Aucune actualité disponible',
-    'Search' => 'Rechercher',
+    'search' => 'Rechercher',
     'Search Results' => 'Résultats de recherche',
     'Search query: :query' => 'Requête de recherche : :query',
     'No articles found for your search.' => 'Aucun article trouvé pour votre recherche.',
@@ -634,6 +634,7 @@ return [
 
     // Regulations
     'Regulations' => 'Réglementation',
+    'general_regulations_pau' => 'Réglementation générale',
 
     // Legal Content
     'Legal Content' => 'Contenu Légal',
