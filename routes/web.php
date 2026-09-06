@@ -16,6 +16,7 @@ use App\Http\Controllers\Public\LegalController;
 use App\Http\Controllers\Public\EmergencyContactController;
 use App\Http\Controllers\Public\SitemapController;
 use App\Http\Controllers\Public\BudgetController;
+use App\Http\Controllers\Public\AssociationController;
 
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
@@ -128,6 +129,12 @@ Route::get('/plan-du-site', [SitemapController::class, 'index'])
 
 
 // Taxes
+Route::get('/associations', [AssociationController::class, 'index'])
+    ->name('associations.index');
+
+Route::get('/associations/{association}', [AssociationController::class, 'show'])
+    ->name('associations.show');
+
 // Keep the export route before any future budget slug/catch-all route.
 Route::get('/budget/export', [BudgetController::class, 'exportCsv'])
     ->name('budget.export');

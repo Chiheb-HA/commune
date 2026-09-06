@@ -91,6 +91,18 @@ return [
     'uncategorized' => 'Uncategorized',
     'no_budget_data' => 'No budget data is available for this period.',
     'no_financial_summary' => 'No financial summary is available for this period.',
+    'associations' => 'Associations',
+    'associations_description' => 'Discover registered civil associations and their areas of interest.',
+    'search_associations' => 'Search associations...',
+    'no_associations' => 'No associations are available at the moment.',
+    'matricule' => 'Registration number',
+    'authorization_number' => 'Authorization number',
+    'authorization_date' => 'Authorization date',
+    'interest_area' => 'Area of interest',
+    'correspondence_address' => 'Correspondence address',
+    'member_count' => 'Members',
+    'president' => 'President',
+    'contact_person' => 'Contact person',
     'export_csv' => 'Export CSV',
 
     // Common auth and public view strings

@@ -91,6 +91,18 @@ return [
     'uncategorized' => 'غير مصنف',
     'no_budget_data' => 'لا توجد بيانات للميزانية لهذه الفترة.',
     'no_financial_summary' => 'لا يوجد ملخص مالي لهذه الفترة.',
+    'associations' => 'الجمعيات',
+    'associations_description' => 'اكتشف الجمعيات المدنية المسجلة ومجالات اهتمامها.',
+    'search_associations' => 'البحث عن جمعية...',
+    'no_associations' => 'لا توجد جمعيات متاحة في الوقت الحالي.',
+    'matricule' => 'رقم التسجيل',
+    'authorization_number' => 'رقم الترخيص',
+    'authorization_date' => 'تاريخ الترخيص',
+    'interest_area' => 'مجال الاهتمام',
+    'correspondence_address' => 'عنوان المراسلة',
+    'member_count' => 'عدد الأعضاء',
+    'president' => 'الرئيس',
+    'contact_person' => 'جهة الاتصال',
     'export_csv' => 'تصدير CSV',
 
     // Common auth and public view strings
