@@ -176,6 +176,11 @@
         html.font-lg {
             font-size: 19px;
         }
+
+        @media (max-width: 576px) {
+            .hero-section { padding: 40px 0; }
+            .hero-section h1 { font-size: 1.9rem; }
+        }
     </style>
     <script>
         (function () {
