@@ -115,48 +115,6 @@
             color: white;
         }
         
-        .language-selector {
-            display: flex;
-            gap: 8px;
-            margin-left: 20px;
-            padding-left: 20px;
-            border-left: 1px solid #e2e8f0;
-        }
-        
-        [dir="rtl"] .language-selector {
-            margin-left: 0;
-            margin-right: 20px;
-            padding-left: 0;
-            padding-right: 20px;
-            border-left: none;
-            border-right: 1px solid #e2e8f0;
-        }
-        
-        .lang-btn {
-            background: none;
-            border: 1px solid var(--secondary);
-            color: var(--secondary);
-            padding: 4px 10px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        
-        .lang-btn.active {
-            background-color: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-        
-        .lang-btn:hover {
-            background-color: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-
         [dir="ltr"] .navbar-brand img {
             margin-right: 10px;
         }
@@ -175,7 +133,7 @@
 <body>
     <a href="#main-content" class="visually-hidden-focusable">{{ __('messages.skip_to_content') }}</a>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <nav class="navbar navbar-expand-xl sticky-top">
         <div class="container-lg">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('Flag-Tunisia.png') }}" alt="Tunisia Flag" style="height: 30px; margin-right: 10px;">
@@ -258,12 +216,15 @@
                             <a class="nav-link" href="{{ route('register') }}">{{ __('messages.register') }}</a>
                         </li>
                     @endauth
-                    <li class="nav-item">
-                        <div class="language-selector">
-                            <a href="{{ route('setLocale', 'ar') }}" class="lang-btn {{ app()->getLocale() === 'ar' ? 'active' : '' }}">AR</a>
-                            <a href="{{ route('setLocale', 'fr') }}" class="lang-btn {{ app()->getLocale() === 'fr' ? 'active' : '' }}">FR</a>
-                            <a href="{{ route('setLocale', 'en') }}" class="lang-btn {{ app()->getLocale() === 'en' ? 'active' : '' }}">EN</a>
-                        </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-globe2 me-1" aria-hidden="true"></i>{{ strtoupper(app()->getLocale()) }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="{{ route('setLocale', 'ar') }}" class="dropdown-item {{ app()->getLocale() === 'ar' ? 'active' : '' }}">AR</a></li>
+                            <li><a href="{{ route('setLocale', 'fr') }}" class="dropdown-item {{ app()->getLocale() === 'fr' ? 'active' : '' }}">FR</a></li>
+                            <li><a href="{{ route('setLocale', 'en') }}" class="dropdown-item {{ app()->getLocale() === 'en' ? 'active' : '' }}">EN</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
