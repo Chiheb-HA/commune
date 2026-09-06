@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\CitizenRequest;
 use App\Models\MunicipalService;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class RequestController extends Controller
 {
@@ -15,10 +17,6 @@ class RequestController extends Controller
      */
     public function create()
     {
-        if (!auth()->check()) {
-            return redirect()->route('login')->with('info', __('messages.please_login_to_continue'));
-        }
-
         $services = MunicipalService::active()->orderBy('order')->get();
         return view('frontend.services.request-create', compact('services'));
     }
@@ -29,19 +27,40 @@ class RequestController extends Controller
     public function store(Request $request)
     {
         try {
-            if (!auth()->check()) {
-                return redirect()->route('login')->with('info', __('messages.please_login_to_continue'));
-            }
-
             \Log::info('Request submission started', ['request_data' => $request->all()]);
 
-            $validated = $request->validate([
+            $rules = [
                 'service_id' => 'required|exists:municipal_services,id',
                 'description' => 'required|string|min:3',
                 'priority' => 'required|in:low,medium,high',
                 'attachments' => 'nullable|array|max:3',
                 'attachments.*' => 'file|max:5120',
-            ]);
+            ];
+
+            if (auth()->check()) {
+                $user = auth()->user();
+            } else {
+                $rules['name'] = 'required|string|max:255';
+                $rules['cin'] = 'required|string|max:8';
+                $rules['phone'] = 'required|string|max:20';
+                $validated = $request->validate($rules);
+                $user = User::firstOrCreate(
+                    ['cin' => $validated['cin']],
+                    [
+                        'name' => $validated['name'],
+                        'email' => 'guest-' . $validated['cin'] . '@commune.local',
+                        'phone' => $validated['phone'],
+                        'password' => Hash::make(str()->random(40)),
+                        'status' => 'active',
+                        'user_type' => 'citizen',
+                    ]
+                );
+                if (!$user->hasRole('citizen')) {
+                    $user->assignRole('citizen');
+                }
+            }
+
+            $validated ??= $request->validate($rules);
 
             \Log::info('Request validation passed', ['validated' => $validated]);
 
@@ -82,7 +101,7 @@ class RequestController extends Controller
                 return $citizenRequest;
             });
 
-            return redirect()->route('citizen.dashboard')
+            return redirect()->route(auth()->check() ? 'citizen.dashboard' : 'services.request')
                 ->with('success', __('messages.request_submitted_successfully', ['reference' => $citizenRequest->request_number]));
 
         } catch (\Exception $e) {

@@ -173,20 +173,17 @@ Route::prefix('services')->group(function () {
     Route::post('/contact', [FrontendContactController::class, 'store'])
         ->name('services.contact.store');
 
-    // Authenticated Service Submission Routes must be registered before the catch-all slug route.
-    Route::middleware(['auth'])->group(function () {
-        Route::get('/request', [FrontendRequestController::class, 'create'])
-            ->name('services.request');
+    Route::get('/request', [FrontendRequestController::class, 'create'])
+        ->name('services.request');
 
-        Route::post('/request', [FrontendRequestController::class, 'store'])
-            ->name('services.request.store');
+    Route::post('/request', [FrontendRequestController::class, 'store'])
+        ->name('services.request.store');
 
-        Route::get('/complaint', [FrontendComplaintController::class, 'create'])
-            ->name('services.complaint');
+    Route::get('/complaint', [FrontendComplaintController::class, 'create'])
+        ->name('services.complaint');
 
-        Route::post('/complaint', [FrontendComplaintController::class, 'store'])
-            ->name('services.complaint.store');
-    });
+    Route::post('/complaint', [FrontendComplaintController::class, 'store'])
+        ->name('services.complaint.store');
 
     Route::get('/{slug}', [PublicServicesController::class, 'show'])
         ->name('services.show');

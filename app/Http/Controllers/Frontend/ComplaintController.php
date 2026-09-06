@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Complaint;
 use App\Models\ComplaintCategory;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ComplaintController extends Controller
 {
@@ -14,9 +16,6 @@ class ComplaintController extends Controller
      */
     public function create()
     {
-        if (!auth()->check()) {
-            return redirect()->route('login')->with('info', __('messages.please_login_to_continue'));
-        }
         $categories = ComplaintCategory::active()->orderBy('order')->get();
         return view('frontend.services.complaint-create', compact('categories'));
     }
@@ -27,25 +26,47 @@ class ComplaintController extends Controller
     public function store(Request $request)
     {
         try {
-            if (!auth()->check()) {
-                return redirect()->route('login')->with('info', __('messages.please_login_to_continue'));
-            }
-
-            $user = auth()->user();
-
             \Log::info('Complaint submission started', ['request_data' => $request->all()]);
 
-            $validated = $request->validate([
+            $rules = [
                 'category_id' => 'required|exists:complaint_categories,id',
                 'description' => 'required|string|min:3',
-                'email' => 'required|email|in:' . $user->email,
-                'phone' => 'nullable|string|max:20',
                 'priority' => 'required|in:low,medium,high,urgent',
                 'attachments' => 'nullable|array|max:3',
                 'attachments.*' => 'file|max:5120',
-            ], [
+            ];
+
+            if (auth()->check()) {
+                $user = auth()->user();
+                $rules['email'] = 'required|email|in:' . $user->email;
+                $rules['phone'] = 'nullable|string|max:20';
+            } else {
+                $rules['name'] = 'required|string|max:255';
+                $rules['cin'] = 'required|string|max:8';
+                $rules['phone'] = 'required|string|max:20';
+                $rules['email'] = 'nullable|email';
+            }
+
+            $validated = $request->validate($rules, [
                 'email.in' => __('messages.email_must_match_account'),
             ]);
+
+            if (!auth()->check()) {
+                $user = User::firstOrCreate(
+                    ['cin' => $validated['cin']],
+                    [
+                        'name' => $validated['name'],
+                        'email' => 'guest-' . $validated['cin'] . '@commune.local',
+                        'phone' => $validated['phone'],
+                        'password' => Hash::make(str()->random(40)),
+                        'status' => 'active',
+                        'user_type' => 'citizen',
+                    ]
+                );
+                if (!$user->hasRole('citizen')) {
+                    $user->assignRole('citizen');
+                }
+            }
 
             \Log::info('Complaint validation passed', ['validated' => $validated]);
             \Log::info('User authenticated', ['user_id' => $user->cin, 'user_email' => $user->email]);
@@ -62,7 +83,7 @@ class ComplaintController extends Controller
                 'description_ar' => $validated['description'],
                 'status' => 'new',
                 'priority' => $validated['priority'],
-                'email' => $validated['email'],
+                'email' => $validated['email'] ?? $user->email,
                 'phone' => $validated['phone'] ?? null,
                 'location' => $request->input('location'),
             ];
@@ -82,7 +103,7 @@ class ComplaintController extends Controller
 
             \Log::info('Complaint created successfully', ['complaint_id' => $complaint->id, 'complaint_number' => $complaint->complaint_number]);
 
-            return redirect()->route('citizen.dashboard')
+            return redirect()->route(auth()->check() ? 'citizen.dashboard' : 'services.complaint')
                 ->with('success', __('messages.complaint_submitted_successfully', ['reference' => $complaint->complaint_number]));
 
         } catch (\Exception $e) {

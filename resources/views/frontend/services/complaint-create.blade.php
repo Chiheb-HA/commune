@@ -29,19 +29,30 @@
                             <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="cin" class="form-label">{{ __('messages.cin') }}</label>
-                            <input type="text" class="form-control" id="cin" name="cin" value="{{ auth()->user()->cin }}" readonly>
-                        </div>
+                        @guest
+                            <div class="mb-3">
+                                <label for="name" class="form-label">{{ __('messages.name') }}</label>
+                                <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="cin" class="form-label">{{ __('messages.cin') }}</label>
+                                <input type="text" class="form-control" id="cin" name="cin" value="{{ old('cin') }}" required>
+                            </div>
+                        @else
+                            <div class="mb-3">
+                                <label for="cin" class="form-label">{{ __('messages.cin') }}</label>
+                                <input type="text" class="form-control" id="cin" name="cin" value="{{ auth()->user()->cin }}" readonly>
+                            </div>
+                        @endguest
 
                         <div class="mb-3">
                             <label for="email" class="form-label">{{ __('messages.email') }}</label>
-                            <input type="email" class="form-control" id="email" name="email" value="{{ auth()->user()->email }}" readonly>
+                            <input type="email" class="form-control" id="email" name="email" value="{{ auth()->user()->email ?? old('email') }}" {{ auth()->check() ? 'readonly' : '' }}>
                         </div>
 
                         <div class="mb-3">
                             <label for="phone" class="form-label">{{ __('messages.phone') }}</label>
-                            <input type="tel" class="form-control" id="phone" name="phone">
+                            <input type="tel" class="form-control" id="phone" name="phone" value="{{ auth()->user()->phone ?? old('phone') }}" required>
                         </div>
 
                         <div class="mb-3">
