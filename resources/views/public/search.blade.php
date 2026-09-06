@@ -9,6 +9,46 @@
     @if($query)
         <p class="mb-4 text-muted">{{ __('messages.Search query: :query', ['query' => $query]) }}</p>
     @endif
+
+    <!-- Council Sessions Results -->
+    @if($councilSessions->count() > 0)
+        <h2 class="h4 mb-3">{{ __('messages.council_sessions') }}</h2>
+        <div class="row g-4 mb-5">
+            @foreach($councilSessions as $session)
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $session->title }}</h5>
+                            <p class="card-text text-muted small">{{ $session->session_date->translatedFormat('d F Y') }}</p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="{{ route('council-sessions.index') }}" class="btn btn-sm btn-primary">{{ __('messages.view_details') }}</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    @endif
+
+    <!-- Associations Results -->
+    @if($associations->count() > 0)
+        <h2 class="h4 mb-3">{{ __('messages.associations') }}</h2>
+        <div class="row g-4 mb-5">
+            @foreach($associations as $association)
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $association->name }}</h5>
+                            <p class="card-text text-muted small">{{ Str::limit($association->description, 100) }}</p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="{{ route('associations.show', $association) }}" class="btn btn-sm btn-primary">{{ __('messages.view_details') }}</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    @endif
     
     <!-- Municipal Services Results -->
     @if($services->count() > 0)
@@ -269,7 +309,7 @@
         </div>
     @endif
     
-    @if($articles->count() === 0 && $news->count() === 0 && $services->count() === 0 && $departments->count() === 0 && $officials->count() === 0 && $events->count() === 0 && $emergencyContacts->count() === 0 && $galleries->count() === 0)
+    @if($articles->count() === 0 && $news->count() === 0 && $services->count() === 0 && $departments->count() === 0 && $officials->count() === 0 && $councilSessions->count() === 0 && $associations->count() === 0 && $events->count() === 0 && $emergencyContacts->count() === 0 && $galleries->count() === 0)
         <div class="alert alert-warning">
             {{ __('messages.No results found for your search. Please try different keywords.') }}
         </div>

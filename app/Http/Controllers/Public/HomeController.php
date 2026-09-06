@@ -10,6 +10,8 @@ use App\Models\Gallery;
 use App\Models\MunicipalService;
 use App\Models\Department;
 use App\Models\Official;
+use App\Models\CouncilSession;
+use App\Models\Association;
 use App\Models\TelephoneDirectory;
 use Illuminate\Http\Request;
 
@@ -106,6 +108,27 @@ class HomeController extends Controller
             })
             ->get();
 
+                // Search Council Sessions
+                $councilSessions = CouncilSession::where('status', 'published')
+                        ->where(function ($q) use ($query) {
+                                $q->where('title_ar', 'like', "%{$query}%")
+                                    ->orWhere('title_fr', 'like', "%{$query}%")
+                                    ->orWhere('title_en', 'like', "%{$query}%");
+                        })
+                        ->latest()
+                        ->get();
+
+                // Search Associations
+                $associations = Association::where(function ($q) use ($query) {
+                                $q->where('name_ar', 'like', "%{$query}%")
+                                    ->orWhere('name_fr', 'like', "%{$query}%")
+                                    ->orWhere('name_en', 'like', "%{$query}%")
+                                    ->orWhere('description_ar', 'like', "%{$query}%")
+                                    ->orWhere('description_fr', 'like', "%{$query}%")
+                                    ->orWhere('description_en', 'like', "%{$query}%");
+                        })
+                        ->get();
+
         // Search Events
         $events = Event::published()
             ->where(function ($q) use ($query) {
@@ -147,6 +170,6 @@ class HomeController extends Controller
             ->latest()
             ->get();
 
-        return view('public.search', compact('articles', 'news', 'services', 'departments', 'officials', 'events', 'emergencyContacts', 'galleries', 'query'));
+        return view('public.search', compact('articles', 'news', 'services', 'departments', 'officials', 'councilSessions', 'associations', 'events', 'emergencyContacts', 'galleries', 'query'));
     }
 }
