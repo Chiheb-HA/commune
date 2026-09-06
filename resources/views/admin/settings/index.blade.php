@@ -209,6 +209,23 @@
                 </div>
             </div>
 
+            <!-- General Regulations / PAU -->
+            <h6 class="mb-3 mt-4">Réglementation générale / PAU</h6>
+            <div class="row g-3 mb-4">
+                <div class="col-12">
+                    <label class="form-label">Réglementation générale / PAU (FR)</label>
+                    <textarea name="legal_pau_fr" class="form-control" rows="4">{{ $settings['legal_pau_fr'] ?? '' }}</textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Réglementation générale / PAU (EN)</label>
+                    <textarea name="legal_pau_en" class="form-control" rows="4">{{ $settings['legal_pau_en'] ?? '' }}</textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Réglementation générale / PAU (AR)</label>
+                    <textarea name="legal_pau_ar" class="form-control" rows="4">{{ $settings['legal_pau_ar'] ?? '' }}</textarea>
+                </div>
+            </div>
+
             <button type="submit" class="btn btn-primary">
                 <i class="bi bi-floppy me-1"></i>{{ __('messages.Save Legal Content') }}
             </button>

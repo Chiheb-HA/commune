@@ -121,6 +121,9 @@ class SettingsController extends Controller
             'legal_notice_fr'  => ['nullable', 'string'],
             'legal_notice_en'  => ['nullable', 'string'],
             'legal_notice_ar'  => ['nullable', 'string'],
+            'legal_pau_fr'     => ['nullable', 'string'],
+            'legal_pau_en'     => ['nullable', 'string'],
+            'legal_pau_ar'     => ['nullable', 'string'],
         ]);
 
         Setting::set('legal_privacy_fr', $request->legal_privacy_fr ?? '');
@@ -132,6 +135,9 @@ class SettingsController extends Controller
         Setting::set('legal_notice_fr', $request->legal_notice_fr ?? '');
         Setting::set('legal_notice_en', $request->legal_notice_en ?? '');
         Setting::set('legal_notice_ar', $request->legal_notice_ar ?? '');
+        Setting::set('legal_pau_fr', $request->legal_pau_fr ?? '');
+        Setting::set('legal_pau_en', $request->legal_pau_en ?? '');
+        Setting::set('legal_pau_ar', $request->legal_pau_ar ?? '');
 
         return redirect()->route('admin.settings')->with('success', 'Legal content updated successfully.');
     }

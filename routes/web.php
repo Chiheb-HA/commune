@@ -173,6 +173,9 @@ Route::get('/conditions-utilisation', [LegalController::class, 'terms'])
 Route::get('/mentions-legales', [LegalController::class, 'notice'])
     ->name('legal.notice');
 
+Route::get('/reglementation', [LegalController::class, 'pau'])
+    ->name('legal.pau');
+
 
 // Services
 Route::prefix('services')->group(function () {

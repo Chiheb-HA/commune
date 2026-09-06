@@ -36,4 +36,14 @@ class LegalController extends Controller
             'content' => $content,
         ]);
     }
+
+    public function pau()
+    {
+        $content = Setting::get('legal_pau_' . app()->getLocale());
+        
+        return view('public.legal.page', [
+            'title' => 'Réglementation générale / PAU',
+            'content' => $content,
+        ]);
+    }
 }
