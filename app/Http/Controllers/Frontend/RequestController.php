@@ -17,7 +17,14 @@ class RequestController extends Controller
      */
     public function create()
     {
-        $services = MunicipalService::active()->orderBy('order')->get();
+        $services = MunicipalService::active()
+            ->orderBy('order')
+            ->get()
+            ->unique(function ($service) {
+                return strtolower(trim($service->name_fr ?? $service->name_en ?? $service->name_ar));
+            })
+            ->values();
+
         return view('frontend.services.request-create', compact('services'));
     }
 

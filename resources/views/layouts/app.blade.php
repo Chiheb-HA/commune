@@ -167,7 +167,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('articles.index') }}">{{ __('messages.articles') }}</a></li>
-                            <li><a class="dropdown-item" href="{{ route('articles.category', 'regulations') }}">{{ __('messages.Regulations') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('legal.pau') }}">{{ __('messages.Regulations') }}</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
