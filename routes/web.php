@@ -162,6 +162,12 @@ Route::get('/suivi-demande', [RequestTrackingController::class, 'index'])
 Route::post('/suivi-demande', [RequestTrackingController::class, 'index'])
     ->name('request-tracking.search');
 
+Route::get('/consultation-permis', [RequestTrackingController::class, 'permit'])
+    ->name('permit-consultation.index');
+
+Route::post('/consultation-permis', [RequestTrackingController::class, 'permit'])
+    ->name('permit-consultation.search');
+
 
 // Legal
 Route::get('/confidentialite', [LegalController::class, 'privacy'])
