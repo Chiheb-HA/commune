@@ -56,6 +56,13 @@
             color: var(--secondary) !important;
             font-weight: 500;
             transition: color 0.3s ease;
+            font-size: 0.9rem;
+            padding: 0.5rem 0.75rem !important;
+        }
+
+        .dropdown-item {
+            font-size: 0.85rem;
+            padding: 0.4rem 1rem;
         }
         
         .nav-link:hover {
@@ -201,6 +208,19 @@
                             <li><a class="dropdown-item" href="{{ route('emergency-contacts.index') }}">{{ __('messages.emergency_contacts') }}</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            {{ __('messages.Resources') }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('faq.index') }}">{{ __('messages.FAQs') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('partnerships.index') }}">{{ __('messages.Partnerships') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('staff-resources.index') }}">{{ __('messages.Staff Resources') }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ route('budget.index') }}">{{ __('messages.budget_title') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('council-sessions.index') }}">{{ __('messages.council_sessions') }}</a></li>
+                        </ul>
+                    </li>
                     @auth
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
@@ -265,9 +285,6 @@
                         <li><a href="{{ route('home') }}#news">{{ __('messages.news') }}</a></li>
                         <li><a href="{{ route('events.index') }}">{{ __('messages.events') }}</a></li>
                         <li><a href="{{ route('services.index') }}">{{ __('messages.services') }}</a></li>
-                        <li><a href="{{ route('faq.index') }}">{{ __('messages.FAQs') }}</a></li>
-                        <li><a href="{{ route('partnerships.index') }}">{{ __('messages.Partnerships') }}</a></li>
-                        <li><a href="{{ route('staff-resources.index') }}">{{ __('messages.Staff Resources') }}</a></li>
                         <li><a href="{{ route('budget.index') }}">{{ __('messages.budget_title') }}</a></li>
                         <li><a href="{{ route('council-sessions.index') }}">{{ __('messages.council_sessions') }}</a></li>
                         <li><a href="{{ route('legal.pau') }}">{{ __('messages.general_regulations_pau') }}</a></li>

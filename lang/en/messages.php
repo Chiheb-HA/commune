@@ -50,6 +50,7 @@ return [
     'services' => 'Services',
     'file_complaint' => 'File Complaint',
     'contact' => 'Contact',
+    'Resources' => 'Resources',
     'dashboard' => 'Dashboard',
     'logout' => 'Logout',
     'login' => 'Login',

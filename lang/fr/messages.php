@@ -67,6 +67,7 @@ return [
     'logout' => 'Déconnexion',
     'login' => 'Connexion',
     'register' => 'Inscription',
+    'Resources' => 'Ressources',
 
     // Footer
     'about' => 'À Propos',

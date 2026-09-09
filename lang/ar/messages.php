@@ -50,6 +50,7 @@ return [
     'services' => 'الخدمات',
     'file_complaint' => 'تقديم شكوى',
     'contact' => 'اتصل بنا',
+    'Resources' => 'الموارد',
     'dashboard' => 'لوحة التحكم',
     'logout' => 'تسجيل الخروج',
     'login' => 'تسجيل الدخول',
