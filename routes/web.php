@@ -20,6 +20,7 @@ use App\Http\Controllers\Public\AssociationController;
 use App\Http\Controllers\Public\CouncilSessionController;
 use App\Http\Controllers\Public\FaqController as PublicFaqController;
 use App\Http\Controllers\Public\PartnershipController as PublicPartnershipController;
+use App\Http\Controllers\Public\StaffResourceController as PublicStaffResourceController;
 
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
@@ -35,6 +36,7 @@ use App\Http\Controllers\Admin\AssociationController as AdminAssociationControll
 use App\Http\Controllers\Admin\CouncilSessionController as AdminCouncilSessionController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\PartnershipController;
+use App\Http\Controllers\Admin\StaffResourceController;
 
 use App\Http\Controllers\Frontend\ComplaintController as FrontendComplaintController;
 use App\Http\Controllers\Frontend\RequestController as FrontendRequestController;
@@ -197,6 +199,11 @@ Route::get('/partenariats', [PublicPartnershipController::class, 'index'])
     ->name('partnerships.index');
 
 
+// Staff Resources
+Route::get('/espace-fonctionnaire', [PublicStaffResourceController::class, 'index'])
+    ->name('staff-resources.index');
+
+
 // Services
 Route::prefix('services')->group(function () {
 
@@ -300,6 +307,12 @@ Route::middleware(['auth', 'role:admin|editor|official'])
 
         // Partnerships
         Route::resource('partnerships', PartnershipController::class, [
+            'as' => 'admin'
+        ]);
+
+
+        // Staff Resources
+        Route::resource('staff-resources', StaffResourceController::class, [
             'as' => 'admin'
         ]);
 

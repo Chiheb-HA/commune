@@ -663,4 +663,20 @@ return [
     'Partner Country' => 'Pays Partenaire',
     'Partner City' => 'Ville Partenaire',
     'Signed Date' => 'Date de Signature',
+
+    // Staff Resources
+    'Staff Resources' => 'Ressources du Personnel',
+    'Manage staff resources: guides, training, and technical assistance' => 'Gérer les ressources du personnel: guides, formation et assistance technique',
+    'New Staff Resource' => 'Nouvelle Ressource du Personnel',
+    'No staff resources found.' => 'Aucune ressource du personnel trouvée.',
+    'No staff resources available at the moment.' => 'Aucune ressource du personnel disponible pour le moment.',
+    'Guides, training, and technical assistance for staff' => 'Guides, formation et assistance technique pour le personnel',
+    'Guides' => 'Guides',
+    'Training' => 'Formation',
+    'Technical Assistance' => 'Assistance Technique',
+    'Download' => 'Télécharger',
+    'View' => 'Voir',
+    'Type' => 'Type',
+    'File Path' => 'Chemin du Fichier',
+    'External Link' => 'Lien Externe',
 ];
