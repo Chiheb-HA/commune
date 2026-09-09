@@ -642,4 +642,14 @@ return [
     'Legal Notice' => 'Legal Notice',
     'No content available' => 'No content available',
     'Images' => 'Images',
+
+    // FAQ
+    'FAQs' => 'FAQs',
+    'Manage frequently asked questions' => 'Manage frequently asked questions',
+    'New FAQ' => 'New FAQ',
+    'No FAQs found.' => 'No FAQs found.',
+    'No FAQs available at the moment.' => 'No FAQs available at the moment.',
+    'Frequently asked questions about our services' => 'Frequently asked questions about our services',
+    'Question' => 'Question',
+    'Answer' => 'Answer',
 ];

@@ -633,4 +633,14 @@ return [
     'Legal Notice' => 'الإشعارات القانونية',
     'No content available' => 'لا يوجد محتوى متاح',
     'Images' => 'صور',
+
+    // FAQ
+    'FAQs' => 'الأسئلة الشائعة',
+    'Manage frequently asked questions' => 'إدارة الأسئلة الشائعة',
+    'New FAQ' => 'سؤال شائع جديد',
+    'No FAQs found.' => 'لم يتم العثور على أسئلة شائعة.',
+    'No FAQs available at the moment.' => 'لا توجد أسئلة شائعة متاحة في الوقت الحالي.',
+    'Frequently asked questions about our services' => 'الأسئلة الشائعة حول خدماتنا',
+    'Question' => 'السؤال',
+    'Answer' => 'الإجابة',
 ];

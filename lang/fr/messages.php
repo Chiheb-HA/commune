@@ -642,4 +642,14 @@ return [
     'Legal Notice' => 'Mentions Légales',
     'No content available' => 'Aucun contenu disponible',
     'Images' => 'Images',
+
+    // FAQ
+    'FAQs' => 'FAQ',
+    'Manage frequently asked questions' => 'Gérer les questions fréquentes',
+    'New FAQ' => 'Nouvelle FAQ',
+    'No FAQs found.' => 'Aucune FAQ trouvée.',
+    'No FAQs available at the moment.' => 'Aucune FAQ disponible pour le moment.',
+    'Frequently asked questions about our services' => 'Questions fréquentes sur nos services',
+    'Question' => 'Question',
+    'Answer' => 'Réponse',
 ];

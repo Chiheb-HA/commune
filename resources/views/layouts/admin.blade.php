@@ -402,6 +402,9 @@
             <li><a href="{{ route('admin.galleries.index') }}" class="nav-link {{ request()->routeIs('admin.galleries.*') ? 'active' : '' }}">
                 <i class="bi bi-image"></i> <span>{{ __('messages.Galleries') }}</span>
             </a></li>
+            <li><a href="{{ route('admin.faqs.index') }}" class="nav-link {{ request()->routeIs('admin.faqs.*') ? 'active' : '' }}">
+                <i class="bi bi-question-circle"></i> <span>{{ __('messages.FAQs') }}</span>
+            </a></li>
 
             <li class="mt-4 px-3"><small class="text-uppercase fw-bold">{{ __('messages.Services') }}</small></li>
             <li><a href="{{ route('admin.requests.index') }}" class="nav-link {{ request()->routeIs('admin.requests.*') ? 'active' : '' }}">
