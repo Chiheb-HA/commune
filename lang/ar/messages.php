@@ -643,4 +643,15 @@ return [
     'Frequently asked questions about our services' => 'الأسئلة الشائعة حول خدماتنا',
     'Question' => 'السؤال',
     'Answer' => 'الإجابة',
+
+    // Partnerships
+    'Partnerships' => 'الشراكات',
+    'Manage partnerships and twinning agreements' => 'إدارة الشراكات واتفاقيات التوأمة',
+    'New Partnership' => 'شراكة جديدة',
+    'No partnerships found.' => 'لم يتم العثور على شراكات.',
+    'No partnerships available at the moment.' => 'لا توجد شراكات متاحة في الوقت الحالي.',
+    'Our partnerships and twinning agreements' => 'شراكاتنا واتفاقيات التوأمة',
+    'Partner Country' => 'البلد الشريك',
+    'Partner City' => 'المدينة الشريكة',
+    'Signed Date' => 'تاريخ التوقيع',
 ];

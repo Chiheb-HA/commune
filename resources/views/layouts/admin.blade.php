@@ -405,6 +405,9 @@
             <li><a href="{{ route('admin.faqs.index') }}" class="nav-link {{ request()->routeIs('admin.faqs.*') ? 'active' : '' }}">
                 <i class="bi bi-question-circle"></i> <span>{{ __('messages.FAQs') }}</span>
             </a></li>
+            <li><a href="{{ route('admin.partnerships.index') }}" class="nav-link {{ request()->routeIs('admin.partnerships.*') ? 'active' : '' }}">
+                <i class="bi bi-handshake"></i> <span>{{ __('messages.Partnerships') }}</span>
+            </a></li>
 
             <li class="mt-4 px-3"><small class="text-uppercase fw-bold">{{ __('messages.Services') }}</small></li>
             <li><a href="{{ route('admin.requests.index') }}" class="nav-link {{ request()->routeIs('admin.requests.*') ? 'active' : '' }}">

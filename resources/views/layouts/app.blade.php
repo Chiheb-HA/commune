@@ -266,6 +266,7 @@
                         <li><a href="{{ route('events.index') }}">{{ __('messages.events') }}</a></li>
                         <li><a href="{{ route('services.index') }}">{{ __('messages.services') }}</a></li>
                         <li><a href="{{ route('faq.index') }}">{{ __('messages.FAQs') }}</a></li>
+                        <li><a href="{{ route('partnerships.index') }}">{{ __('messages.Partnerships') }}</a></li>
                         <li><a href="{{ route('budget.index') }}">{{ __('messages.budget_title') }}</a></li>
                         <li><a href="{{ route('council-sessions.index') }}">{{ __('messages.council_sessions') }}</a></li>
                         <li><a href="{{ route('legal.pau') }}">{{ __('messages.general_regulations_pau') }}</a></li>

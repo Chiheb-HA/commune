@@ -652,4 +652,15 @@ return [
     'Frequently asked questions about our services' => 'Frequently asked questions about our services',
     'Question' => 'Question',
     'Answer' => 'Answer',
+
+    // Partnerships
+    'Partnerships' => 'Partnerships',
+    'Manage partnerships and twinning agreements' => 'Manage partnerships and twinning agreements',
+    'New Partnership' => 'New Partnership',
+    'No partnerships found.' => 'No partnerships found.',
+    'No partnerships available at the moment.' => 'No partnerships available at the moment.',
+    'Our partnerships and twinning agreements' => 'Our partnerships and twinning agreements',
+    'Partner Country' => 'Partner Country',
+    'Partner City' => 'Partner City',
+    'Signed Date' => 'Signed Date',
 ];

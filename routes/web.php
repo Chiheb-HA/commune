@@ -19,6 +19,7 @@ use App\Http\Controllers\Public\BudgetController;
 use App\Http\Controllers\Public\AssociationController;
 use App\Http\Controllers\Public\CouncilSessionController;
 use App\Http\Controllers\Public\FaqController as PublicFaqController;
+use App\Http\Controllers\Public\PartnershipController as PublicPartnershipController;
 
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
@@ -33,6 +34,7 @@ use App\Http\Controllers\Admin\PropertyTaxController;
 use App\Http\Controllers\Admin\AssociationController as AdminAssociationController;
 use App\Http\Controllers\Admin\CouncilSessionController as AdminCouncilSessionController;
 use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\PartnershipController;
 
 use App\Http\Controllers\Frontend\ComplaintController as FrontendComplaintController;
 use App\Http\Controllers\Frontend\RequestController as FrontendRequestController;
@@ -190,6 +192,11 @@ Route::get('/faq', [PublicFaqController::class, 'index'])
     ->name('faq.index');
 
 
+// Partnerships
+Route::get('/partenariats', [PublicPartnershipController::class, 'index'])
+    ->name('partnerships.index');
+
+
 // Services
 Route::prefix('services')->group(function () {
 
@@ -287,6 +294,12 @@ Route::middleware(['auth', 'role:admin|editor|official'])
 
         // FAQs
         Route::resource('faqs', FaqController::class, [
+            'as' => 'admin'
+        ]);
+
+
+        // Partnerships
+        Route::resource('partnerships', PartnershipController::class, [
             'as' => 'admin'
         ]);
 
