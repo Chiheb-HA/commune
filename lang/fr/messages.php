@@ -680,4 +680,11 @@ return [
     'Type' => 'Type',
     'File Path' => 'Chemin du Fichier',
     'External Link' => 'Lien Externe',
+
+    // Navbar Categories
+    'actualites_menu' => 'Actualités',
+    'governance_menu' => 'Gouvernance & Référence',
+    'services_menu' => 'Services & Démarches',
+    'directory_menu' => 'Annuaire & Contact',
+    'building_permit_status' => 'Statut du permis de construire',
 ];

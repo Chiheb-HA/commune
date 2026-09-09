@@ -169,56 +169,49 @@
                         <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">{{ __('messages.home') }}</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{ request()->routeIs('articles.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
-                            {{ __('messages.articles') }}
+                        <a class="nav-link dropdown-toggle {{ request()->routeIs('news.*') || request()->routeIs('events.*') || request()->routeIs('articles.*') || request()->routeIs('galleries.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
+                            {{ __('messages.actualites_menu') }}
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('news.index') }}">{{ __('messages.news') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('events.index') }}">{{ __('messages.events') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('articles.index') }}">{{ __('messages.articles') }}</a></li>
-                            <li><a class="dropdown-item" href="{{ route('legal.pau') }}">{{ __('messages.Regulations') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('galleries.index') }}">{{ __('messages.Galleries') }}</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('news.*') ? 'active' : '' }}" href="{{ route('news.index') }}">{{ __('messages.news') }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('events.*') ? 'active' : '' }}" href="{{ route('events.index') }}">{{ __('messages.events') }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('galleries.*') ? 'active' : '' }}" href="{{ route('galleries.index') }}">{{ __('messages.Galleries') }}</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle {{ request()->routeIs('legal.pau') || request()->routeIs('budget.*') || request()->routeIs('council-sessions.*') || request()->routeIs('associations.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
+                            {{ __('messages.governance_menu') }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('legal.pau') }}">{{ __('messages.Regulations') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('budget.index') }}">{{ __('messages.budget_title') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('council-sessions.index') }}">{{ __('messages.council_sessions') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('associations.index') }}">{{ __('messages.associations') }}</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            {{ __('messages.services') }}
+                        <a class="nav-link dropdown-toggle {{ (request()->routeIs('services.*') && !request()->routeIs('services.contact*')) || request()->routeIs('permit-consultation.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
+                            {{ __('messages.services_menu') }}
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('services.index') }}">{{ __('messages.municipal_services') }}</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{{ route('services.request') }}">{{ __('messages.submit_request') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('services.complaint') }}">{{ __('messages.file_complaint') }}</a></li>
-                            <li><a class="dropdown-item" href="{{ route('services.contact') }}">{{ __('messages.contact') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('permit-consultation.index') }}">{{ __('messages.building_permit_status') }}</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            {{ __('messages.directory_title') }}
+                        <a class="nav-link dropdown-toggle {{ request()->routeIs('departments.*') || request()->routeIs('officials.*') || request()->routeIs('emergency-contacts.*') || request()->routeIs('services.contact*') || request()->routeIs('sitemap.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
+                            {{ __('messages.directory_menu') }}
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('departments.index') }}">{{ __('messages.departments') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('officials.index') }}">{{ __('messages.officials') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('emergency-contacts.index') }}">{{ __('messages.emergency_contacts') }}</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            {{ __('messages.Resources') }}
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ route('faq.index') }}">{{ __('messages.FAQs') }}</a></li>
-                            <li><a class="dropdown-item" href="{{ route('partnerships.index') }}">{{ __('messages.Partnerships') }}</a></li>
-                            <li><a class="dropdown-item" href="{{ route('staff-resources.index') }}">{{ __('messages.Staff Resources') }}</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{ route('budget.index') }}">{{ __('messages.budget_title') }}</a></li>
-                            <li><a class="dropdown-item" href="{{ route('council-sessions.index') }}">{{ __('messages.council_sessions') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('services.contact') }}">{{ __('messages.contact') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('sitemap.index') }}">{{ __('messages.sitemap_title') }}</a></li>
                         </ul>
                     </li>
                     @auth

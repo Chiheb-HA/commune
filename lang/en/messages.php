@@ -680,4 +680,11 @@ return [
     'Type' => 'Type',
     'File Path' => 'File Path',
     'External Link' => 'External Link',
+
+    // Navbar Categories
+    'actualites_menu' => 'News & Updates',
+    'governance_menu' => 'Governance & Reference',
+    'services_menu' => 'Services & Procedures',
+    'directory_menu' => 'Directory & Contact',
+    'building_permit_status' => 'Building Permit Status',
 ];

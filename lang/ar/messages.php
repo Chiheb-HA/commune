@@ -671,4 +671,11 @@ return [
     'Type' => 'النوع',
     'File Path' => 'مسار الملف',
     'External Link' => 'رابط خارجي',
+
+    // Navbar Categories
+    'actualites_menu' => 'الأخبار والمستجدات',
+    'governance_menu' => 'الحوكمة والمرجع',
+    'services_menu' => 'الخدمات والإجراءات',
+    'directory_menu' => 'الدليل والاتصال',
+    'building_permit_status' => 'حالة رخصة البناء',
 ];
