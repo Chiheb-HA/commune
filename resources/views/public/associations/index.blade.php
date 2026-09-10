@@ -6,6 +6,7 @@
 <div class="container-lg py-5">
     <h1 class="mb-4">{{ __('messages.associations') }}</h1>
     <p class="lead mb-5">{{ __('messages.associations_description') }}</p>
+    <a href="{{ route('associations.export') }}" class="btn btn-outline-primary mb-4"><i class="bi bi-download"></i> {{ __('messages.export_csv') }}</a>
 
     <form method="GET" class="row g-3 mb-5">
         <div class="col-sm-8 col-md-6">

@@ -137,6 +137,9 @@ Route::prefix('departments')->group(function () {
     Route::get('/', [PublicDepartmentsController::class, 'index'])
         ->name('departments.index');
 
+    Route::get('/export', [PublicDepartmentsController::class, 'exportCsv'])
+        ->name('departments.export');
+
     Route::get('/{slug}', [PublicDepartmentsController::class, 'show'])
         ->name('departments.show');
 });
@@ -146,6 +149,9 @@ Route::prefix('departments')->group(function () {
 Route::prefix('officials')->group(function () {
     Route::get('/', [PublicOfficialsController::class, 'index'])
         ->name('officials.index');
+
+    Route::get('/export', [PublicOfficialsController::class, 'exportCsv'])
+        ->name('officials.export');
 });
 
 
@@ -166,8 +172,14 @@ Route::get('/plan-du-site', [SitemapController::class, 'index'])
 Route::get('/sessions-conseil', [CouncilSessionController::class, 'index'])
     ->name('council-sessions.index');
 
+Route::get('/sessions-conseil/export', [CouncilSessionController::class, 'exportCsv'])
+    ->name('council-sessions.export');
+
 Route::get('/associations', [AssociationController::class, 'index'])
     ->name('associations.index');
+
+Route::get('/associations/export', [AssociationController::class, 'exportCsv'])
+    ->name('associations.export');
 
 Route::get('/associations/{association}', [AssociationController::class, 'show'])
     ->name('associations.show');

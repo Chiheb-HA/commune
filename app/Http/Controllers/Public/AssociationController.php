@@ -27,4 +27,18 @@ class AssociationController extends Controller
     {
         return view('public.associations.show', compact('association'));
     }
+
+    public function exportCsv()
+    {
+        $associations = Association::orderBy('name')->get();
+
+        return response()->streamDownload(function () use ($associations) {
+            $handle = fopen('php://output', 'w');
+            fputcsv($handle, ['Name', 'Matricule', 'Interest Area', 'Email', 'Phone']);
+            foreach ($associations as $association) {
+                fputcsv($handle, [$association->name, $association->matricule, $association->interest_area, $association->email, $association->president_phone]);
+            }
+            fclose($handle);
+        }, 'associations.csv', ['Content-Type' => 'text/csv']);
+    }
 }

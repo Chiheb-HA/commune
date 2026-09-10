@@ -6,6 +6,7 @@
 <div class="container-lg py-5">
     <h1 class="mb-4">{{ __('messages.departments') }}</h1>
     <p class="lead mb-5">{{ __('messages.departments_description') }}</p>
+        <a href="{{ route('departments.export') }}" class="btn btn-outline-primary mb-4"><i class="bi bi-download"></i> {{ __('messages.export_csv') }}</a>
     
     <div class="row g-4">
         @forelse($departments as $department)

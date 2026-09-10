@@ -23,4 +23,18 @@ class OfficialsController extends Controller
 
         return view('public.officials.index', compact('officials', 'departments'));
     }
+
+    public function exportCsv()
+    {
+        $officials = Official::active()->with(['user', 'department'])->orderBy('department_id')->get();
+
+        return response()->streamDownload(function () use ($officials) {
+            $handle = fopen('php://output', 'w');
+            fputcsv($handle, ['Name', 'Position', 'Department', 'Phone', 'Email']);
+            foreach ($officials as $official) {
+                fputcsv($handle, [$official->user?->name, $official->position, $official->department?->name, $official->phone, $official->email]);
+            }
+            fclose($handle);
+        }, 'officials.csv', ['Content-Type' => 'text/csv']);
+    }
 }

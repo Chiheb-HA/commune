@@ -57,4 +57,18 @@ class DepartmentsController extends Controller
 
         return view('public.departments.show', compact('department'));
     }
+
+    public function exportCsv()
+    {
+        $departments = Department::active()->orderBy('order')->orderBy('name_fr')->get();
+
+        return response()->streamDownload(function () use ($departments) {
+            $handle = fopen('php://output', 'w');
+            fputcsv($handle, ['Name', 'Phone', 'Email', 'Location', 'Order']);
+            foreach ($departments as $department) {
+                fputcsv($handle, [$department->name, $department->phone, $department->email, $department->location, $department->order]);
+            }
+            fclose($handle);
+        }, 'departments.csv', ['Content-Type' => 'text/csv']);
+    }
 }

@@ -6,6 +6,7 @@
 <div class="container-lg py-5">
     <h1 class="mb-4">{{ __('messages.council_sessions') }}</h1>
     <p class="lead mb-5">{{ __('messages.council_sessions_description') }}</p>
+    <a href="{{ route('council-sessions.export') }}" class="btn btn-outline-primary mb-4"><i class="bi bi-download"></i> {{ __('messages.export_csv') }}</a>
 
     <div class="row g-4">
         @forelse($sessions as $session)
