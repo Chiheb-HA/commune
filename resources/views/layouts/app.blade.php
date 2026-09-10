@@ -180,7 +180,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{ request()->routeIs('legal.pau') || request()->routeIs('budget.*') || request()->routeIs('council-sessions.*') || request()->routeIs('associations.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle {{ request()->routeIs('legal.pau') || request()->routeIs('budget.*') || request()->routeIs('council-sessions.*') || request()->routeIs('associations.*') || request()->routeIs('partnerships.index') || request()->routeIs('staff-resources.index') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
                             {{ __('messages.governance_menu') }}
                         </a>
                         <ul class="dropdown-menu">
@@ -188,6 +188,8 @@
                             <li><a class="dropdown-item" href="{{ route('budget.index') }}">{{ __('messages.budget_title') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('council-sessions.index') }}">{{ __('messages.council_sessions') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('associations.index') }}">{{ __('messages.associations') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('partnerships.index') }}">{{ __('messages.Partnerships') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('staff-resources.index') }}">{{ __('messages.Staff Resources') }}</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -203,7 +205,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{ request()->routeIs('departments.*') || request()->routeIs('officials.*') || request()->routeIs('emergency-contacts.*') || request()->routeIs('services.contact*') || request()->routeIs('sitemap.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle {{ request()->routeIs('departments.*') || request()->routeIs('officials.*') || request()->routeIs('emergency-contacts.*') || request()->routeIs('services.contact*') || request()->routeIs('sitemap.*') || request()->routeIs('faqs.index') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
                             {{ __('messages.directory_menu') }}
                         </a>
                         <ul class="dropdown-menu">
@@ -211,6 +213,7 @@
                             <li><a class="dropdown-item" href="{{ route('officials.index') }}">{{ __('messages.officials') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('emergency-contacts.index') }}">{{ __('messages.emergency_contacts') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('services.contact') }}">{{ __('messages.contact') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('faqs.index') }}">{{ __('messages.FAQs') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('sitemap.index') }}">{{ __('messages.sitemap_title') }}</a></li>
                         </ul>
                     </li>
