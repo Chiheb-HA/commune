@@ -221,6 +221,9 @@ Route::get('/environnement', [LegalController::class, 'environment'])
 Route::get('/reglements', [LegalController::class, 'regulations'])
     ->name('legal.regulations');
 
+Route::get('/liens-utiles', [LegalController::class, 'usefulLinks'])
+    ->name('legal.useful-links');
+
 
 // FAQ
 Route::get('/faq', [PublicFaqController::class, 'index'])

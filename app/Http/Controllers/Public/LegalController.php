@@ -81,4 +81,11 @@ class LegalController extends Controller
 
         return view('public.legal.regulations', ['title' => __('messages.regulations'), 'content' => $content]);
     }
+
+    public function usefulLinks()
+    {
+        $content = Setting::get('useful_links_' . app()->getLocale()) ?? __('messages.useful_links_placeholder');
+
+        return view('public.legal.useful-links', ['title' => __('messages.useful_links'), 'content' => $content]);
+    }
 }
