@@ -206,6 +206,21 @@ Route::get('/mentions-legales', [LegalController::class, 'notice'])
 Route::get('/reglementation', [LegalController::class, 'pau'])
     ->name('legal.pau');
 
+Route::get('/legislation', [LegalController::class, 'legislation'])
+    ->name('legal.legislation');
+
+Route::get('/competences', [LegalController::class, 'competences'])
+    ->name('legal.competences');
+
+Route::get('/administration', [LegalController::class, 'administration'])
+    ->name('legal.administration');
+
+Route::get('/environnement', [LegalController::class, 'environment'])
+    ->name('legal.environment');
+
+Route::get('/reglements', [LegalController::class, 'regulations'])
+    ->name('legal.regulations');
+
 
 // FAQ
 Route::get('/faq', [PublicFaqController::class, 'index'])

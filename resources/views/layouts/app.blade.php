@@ -183,11 +183,16 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{ request()->routeIs('legal.pau') || request()->routeIs('budget.*') || request()->routeIs('council-sessions.*') || request()->routeIs('associations.*') || request()->routeIs('partnerships.index') || request()->routeIs('staff-resources.index') || request()->routeIs('funding-sources.*') || request()->routeIs('governance-publications.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle {{ request()->routeIs('legal.*') || request()->routeIs('budget.*') || request()->routeIs('council-sessions.*') || request()->routeIs('associations.*') || request()->routeIs('partnerships.index') || request()->routeIs('staff-resources.index') || request()->routeIs('funding-sources.*') || request()->routeIs('governance-publications.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
                             {{ __('messages.governance_menu') }}
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('legal.pau') }}">{{ __('messages.Regulations') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('legal.legislation') }}">{{ __('messages.legislation') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('legal.competences') }}">{{ __('messages.competences') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('legal.administration') }}">{{ __('messages.administration') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('legal.environment') }}">{{ __('messages.environment') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('legal.regulations') }}">{{ __('messages.regulations') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('budget.index') }}">{{ __('messages.budget_title') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('council-sessions.index') }}">{{ __('messages.council_sessions') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('associations.index') }}">{{ __('messages.associations') }}</a></li>
