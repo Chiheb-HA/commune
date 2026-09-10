@@ -25,6 +25,7 @@ use App\Http\Controllers\Public\NewsletterController as PublicNewsletterControll
 use App\Http\Controllers\Public\FundingSourceController as PublicFundingSourceController;
 use App\Http\Controllers\Public\CompetitionController as PublicCompetitionController;
 use App\Http\Controllers\Public\ProcurementNoticeController as PublicProcurementNoticeController;
+use App\Http\Controllers\Public\GovernancePublicationController as PublicGovernancePublicationController;
 
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
@@ -45,6 +46,7 @@ use App\Http\Controllers\Admin\NewsletterController;
 use App\Http\Controllers\Admin\FundingSourceController;
 use App\Http\Controllers\Admin\CompetitionController;
 use App\Http\Controllers\Admin\ProcurementNoticeController;
+use App\Http\Controllers\Admin\GovernancePublicationController;
 
 use App\Http\Controllers\Frontend\ComplaintController as FrontendComplaintController;
 use App\Http\Controllers\Frontend\RequestController as FrontendRequestController;
@@ -237,6 +239,11 @@ Route::get('/avis-appel-concurrence', [PublicProcurementNoticeController::class,
     ->name('procurement-notices.index');
 
 
+// Governance Publications
+Route::get('/gouvernance-locale', [PublicGovernancePublicationController::class, 'index'])
+    ->name('governance-publications.index');
+
+
 // Services
 Route::prefix('services')->group(function () {
 
@@ -373,6 +380,12 @@ Route::middleware(['auth', 'role:admin|editor|official'])
 
         // Procurement Notices
         Route::resource('procurement-notices', ProcurementNoticeController::class, [
+            'as' => 'admin'
+        ]);
+
+
+        // Governance Publications
+        Route::resource('governance-publications', GovernancePublicationController::class, [
             'as' => 'admin'
         ]);
 
