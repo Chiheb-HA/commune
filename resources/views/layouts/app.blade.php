@@ -169,7 +169,7 @@
                         <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">{{ __('messages.home') }}</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{ request()->routeIs('news.*') || request()->routeIs('events.*') || request()->routeIs('articles.*') || request()->routeIs('galleries.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle {{ request()->routeIs('news.*') || request()->routeIs('events.*') || request()->routeIs('articles.*') || request()->routeIs('galleries.*') || request()->routeIs('newsletter.*') || request()->routeIs('competitions.*') || request()->routeIs('procurement-notices.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
                             {{ __('messages.actualites_menu') }}
                         </a>
                         <ul class="dropdown-menu">
@@ -177,10 +177,13 @@
                             <li><a class="dropdown-item" href="{{ route('events.index') }}">{{ __('messages.events') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('articles.index') }}">{{ __('messages.articles') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('galleries.index') }}">{{ __('messages.Galleries') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('newsletter.index') }}">{{ __('messages.Subscribe to Newsletter') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('competitions.index') }}">{{ __('messages.Competitions') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('procurement-notices.index') }}">{{ __('messages.Procurement Notices') }}</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{ request()->routeIs('legal.pau') || request()->routeIs('budget.*') || request()->routeIs('council-sessions.*') || request()->routeIs('associations.*') || request()->routeIs('partnerships.index') || request()->routeIs('staff-resources.index') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle {{ request()->routeIs('legal.pau') || request()->routeIs('budget.*') || request()->routeIs('council-sessions.*') || request()->routeIs('associations.*') || request()->routeIs('partnerships.index') || request()->routeIs('staff-resources.index') || request()->routeIs('funding-sources.*') || request()->routeIs('governance-publications.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
                             {{ __('messages.governance_menu') }}
                         </a>
                         <ul class="dropdown-menu">
@@ -190,6 +193,8 @@
                             <li><a class="dropdown-item" href="{{ route('associations.index') }}">{{ __('messages.associations') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('partnerships.index') }}">{{ __('messages.Partnerships') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('staff-resources.index') }}">{{ __('messages.Staff Resources') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('funding-sources.index') }}">{{ __('messages.Funding Sources') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('governance-publications.index') }}">{{ __('messages.Governance Publications') }}</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -303,7 +308,7 @@
             <hr class="bg-secondary">
             <div class="row mb-4">
                 <div class="col-md-12">
-                    <div class="card bg-dark text-white">
+                    <div class="card bg-dark text-white" id="newsletter">
                         <div class="card-body">
                             <h5 class="card-title">{{ __('messages.Subscribe to Newsletter') }}</h5>
                             <p class="card-text small">{{ __('messages.newsletter_description') }}</p>

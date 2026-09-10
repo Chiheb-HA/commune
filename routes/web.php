@@ -215,6 +215,9 @@ Route::get('/espace-fonctionnaire', [PublicStaffResourceController::class, 'inde
 
 
 // Newsletter
+Route::get('/newsletter', fn () => redirect('/#newsletter'))
+    ->name('newsletter.index');
+
 Route::post('/newsletter', [PublicNewsletterController::class, 'store'])
     ->name('newsletter.store');
 
