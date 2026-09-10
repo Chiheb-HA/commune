@@ -1,4 +1,4 @@
-@php echo '<?xml version="1.0" encoding="UTF-8"?>'; @endphp
+@php echo chr(60) . '?xml version="1.0" encoding="UTF-8"?' . chr(62); @endphp
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 @foreach($urls as $item)
     <url>
