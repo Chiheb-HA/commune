@@ -684,6 +684,15 @@ return [
     'newsletter_subscribed' => 'Vous êtes maintenant abonné à la newsletter.',
     'Confirmed' => 'Confirmé',
     'Pending' => 'En attente',
+
+    // Funding Sources
+    'Funding Sources' => 'Sources de Financement',
+    'Manage funding sources' => 'Gérer les sources de financement',
+    'New Funding Source' => 'Nouvelle Source de Financement',
+    'No funding sources found.' => 'Aucune source de financement trouvée.',
+    'No funding sources available at the moment.' => 'Aucune source de financement disponible pour le moment.',
+    'funding_sources_description' => 'Découvrez les différentes sources de financement de la commune.',
+    'Fiscal Year' => 'Année Fiscale',
     'Guides' => 'Guides',
     'Training' => 'Formation',
     'Technical Assistance' => 'Assistance Technique',

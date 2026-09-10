@@ -22,6 +22,7 @@ use App\Http\Controllers\Public\FaqController as PublicFaqController;
 use App\Http\Controllers\Public\PartnershipController as PublicPartnershipController;
 use App\Http\Controllers\Public\StaffResourceController as PublicStaffResourceController;
 use App\Http\Controllers\Public\NewsletterController as PublicNewsletterController;
+use App\Http\Controllers\Public\FundingSourceController as PublicFundingSourceController;
 
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
@@ -39,6 +40,7 @@ use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\PartnershipController;
 use App\Http\Controllers\Admin\StaffResourceController;
 use App\Http\Controllers\Admin\NewsletterController;
+use App\Http\Controllers\Admin\FundingSourceController;
 
 use App\Http\Controllers\Frontend\ComplaintController as FrontendComplaintController;
 use App\Http\Controllers\Frontend\RequestController as FrontendRequestController;
@@ -211,6 +213,11 @@ Route::post('/newsletter', [PublicNewsletterController::class, 'store'])
     ->name('newsletter.store');
 
 
+// Funding Sources
+Route::get('/financement', [PublicFundingSourceController::class, 'index'])
+    ->name('funding-sources.index');
+
+
 // Services
 Route::prefix('services')->group(function () {
 
@@ -331,6 +338,12 @@ Route::middleware(['auth', 'role:admin|editor|official'])
                 [NewsletterController::class, 'index']
             )->name('admin.newsletter.index');
         });
+
+
+        // Funding Sources
+        Route::resource('funding-sources', FundingSourceController::class, [
+            'as' => 'admin'
+        ]);
 
 
         // Municipal Services

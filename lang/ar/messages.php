@@ -684,6 +684,15 @@ return [
     'Confirmed' => 'مؤكد',
     'Pending' => 'قيد الانتظار',
 
+    // Funding Sources
+    'Funding Sources' => 'مصادر التمويل',
+    'Manage funding sources' => 'إدارة مصادر التمويل',
+    'New Funding Source' => 'مصدر تمويل جديد',
+    'No funding sources found.' => 'لم يتم العثور على مصادر تمويل.',
+    'No funding sources available at the moment.' => 'لا توجد مصادر تمويل متاحة في الوقت الحالي.',
+    'funding_sources_description' => 'اكتشف مصادر التمويل المختلفة للبلدية.',
+    'Fiscal Year' => 'السنة المالية',
+
     // Navbar Categories
     'actualites_menu' => 'الأخبار والمستجدات',
     'governance_menu' => 'الحوكمة والمرجع',

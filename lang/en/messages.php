@@ -693,6 +693,15 @@ return [
     'Confirmed' => 'Confirmed',
     'Pending' => 'Pending',
 
+    // Funding Sources
+    'Funding Sources' => 'Funding Sources',
+    'Manage funding sources' => 'Manage funding sources',
+    'New Funding Source' => 'New Funding Source',
+    'No funding sources found.' => 'No funding sources found.',
+    'No funding sources available at the moment.' => 'No funding sources available at the moment.',
+    'funding_sources_description' => 'Discover the various funding sources of the municipality.',
+    'Fiscal Year' => 'Fiscal Year',
+
     // Navbar Categories
     'actualites_menu' => 'News & Updates',
     'governance_menu' => 'Governance & Reference',
