@@ -366,6 +366,10 @@ Route::middleware(['auth', 'role:admin|editor|official'])
                 '/',
                 [NewsletterController::class, 'index']
             )->name('admin.newsletter.index');
+            Route::get(
+                '/export',
+                [NewsletterController::class, 'export']
+            )->name('admin.newsletter.export');
         });
 
 

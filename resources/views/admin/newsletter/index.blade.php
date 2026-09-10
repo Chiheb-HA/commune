@@ -7,6 +7,7 @@
 <div class="page-header">
     <h1>{{ __('messages.Newsletter Subscribers') }}</h1>
     <p class="text-muted">{{ __('messages.Manage newsletter subscribers') }}</p>
+    <a href="{{ route('admin.newsletter.export') }}" class="btn btn-primary"><i class="bi bi-download"></i> {{ __('messages.Export') }}</a>
 </div>
 
 <div class="card">
