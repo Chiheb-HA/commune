@@ -3,5 +3,10 @@
 .env
 .env.backup
 /storage/*.key
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/framework/cache/*
+/storage/logs/*
+/.phpunit.result.cache
 /public/hot
 /public/storage
