@@ -41,6 +41,7 @@ class DatabaseSeeder extends Seeder
             ProcurementNoticeSeeder::class,
             GovernancePublicationSeeder::class,
             NewsletterSubscriberSeeder::class,
+            TelephoneDirectorySeeder::class,
         ]);
     }
 }
