@@ -32,6 +32,7 @@ class DatabaseSeeder extends Seeder
             SettingsSeeder::class,
             GallerySeeder::class,
             AssociationSeeder::class,
+            CouncilSessionSeeder::class,
         ]);
     }
 }
