@@ -20,12 +20,27 @@
                         <i class="bi bi-person"></i> {{ $newsItem->author->name }}
                     @endif
                     <span class="mx-2">|</span>
-                    <i class="bi bi-eye"></i> {{ $newsItem->views }} {{ __('messages.Views') }}
+                    <i class="bi bi-eye"></i> {{ $newsItem->views_count }} {{ __('messages.Views') }}
+                    <span class="mx-2">|</span>
+                    <i class="bi bi-share"></i> {{ $newsItem->shares_count }} {{ __('messages.Shares') }}
                 </small>
             </div>
             
             <div class="content mb-4">
                 {!! $newsItem->content !!}
+            </div>
+
+            @if($newsItem->tags)
+                <p class="text-muted"><strong>{{ __('messages.Tags') }}:</strong> {{ $newsItem->tags }}</p>
+            @endif
+
+            <div class="mt-4 pt-4 border-top">
+                <h6 class="mb-3">{{ __('Share this article:') }}</h6>
+                <div class="d-flex gap-2">
+                    <a href="{{ route('news.share', [$newsItem->slug, 'facebook']) }}" class="btn btn-sm btn-outline-primary" target="_blank"><i class="bi bi-facebook"></i> Facebook</a>
+                    <a href="{{ route('news.share', [$newsItem->slug, 'x']) }}" class="btn btn-sm btn-outline-info" target="_blank"><i class="bi bi-twitter"></i> X</a>
+                    <a href="{{ route('news.share', [$newsItem->slug, 'email']) }}" class="btn btn-sm btn-outline-secondary"><i class="bi bi-envelope"></i> Email</a>
+                </div>
             </div>
             
             <div class="mt-4 pt-4 border-top">

@@ -85,6 +85,10 @@ Route::prefix('articles')->group(function () {
     Route::get('/category/{category}', [PublicArticleController::class, 'byCategory'])
         ->name('articles.category');
 
+    Route::get('/{slug}/share/{network}', [PublicArticleController::class, 'share'])
+        ->where('network', 'facebook|x|email')
+        ->name('articles.share');
+
     Route::get('/{slug}', [PublicArticleController::class, 'show'])
         ->name('articles.show');
 });
@@ -104,6 +108,10 @@ Route::prefix('events')->group(function () {
 Route::prefix('actualites')->group(function () {
     Route::get('/', [PublicNewsController::class, 'index'])
         ->name('news.index');
+
+    Route::get('/{slug}/share/{network}', [PublicNewsController::class, 'share'])
+        ->where('network', 'facebook|x|email')
+        ->name('news.share');
 
     Route::get('/{slug}', [PublicNewsController::class, 'show'])
         ->name('news.show');

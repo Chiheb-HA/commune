@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Public;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Str;
 
 class ArticleController extends Controller
@@ -57,5 +58,21 @@ class ArticleController extends Controller
             ->get();
 
         return view('public.articles.show', compact('article', 'relatedArticles'));
+    }
+
+    public function share($slug, string $network): RedirectResponse
+    {
+        $article = Article::published()->where('slug', $slug)->firstOrFail();
+        $article->increment('shares_count');
+        $url = route('articles.show', $article->slug);
+
+        $target = match ($network) {
+            'facebook' => 'https://www.facebook.com/sharer/sharer.php?u=' . urlencode($url),
+            'x' => 'https://twitter.com/intent/tweet?url=' . urlencode($url) . '&text=' . urlencode($article->title),
+            'email' => 'mailto:?subject=' . urlencode($article->title) . '&body=' . urlencode($url),
+            default => $url,
+        };
+
+        return str_starts_with($target, 'http') ? redirect()->away($target) : redirect($target);
     }
 }

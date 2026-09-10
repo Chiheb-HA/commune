@@ -23,6 +23,11 @@
                             <i class="bi bi-calendar"></i>
                             {{ $article->created_at->translatedFormat('d F Y') }}
                         </span>
+                        @if($article->creator)
+                            <span><i class="bi bi-person"></i> {{ $article->creator->name }}</span>
+                        @endif
+                        <span><i class="bi bi-eye"></i> {{ $article->views_count }} {{ __('messages.Views') }}</span>
+                        <span><i class="bi bi-share"></i> {{ $article->shares_count }} {{ __('messages.Shares') }}</span>
                     </div>
                 </header>
                 
@@ -39,18 +44,22 @@
                 <div class="content mb-5">
                     {!! $article->content !!}
                 </div>
+
+                @if($article->tags)
+                    <p class="text-muted"><strong>{{ __('messages.Tags') }}:</strong> {{ $article->tags }}</p>
+                @endif
                 
                 <!-- Share -->
                 <div class="border-top pt-4">
                     <h6 class="mb-3">{{ __('Share this article:') }}</h6>
                     <div class="d-flex gap-2">
-                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('articles.show', $article->slug)) }}" class="btn btn-sm btn-outline-primary" target="_blank">
+                        <a href="{{ route('articles.share', [$article->slug, 'facebook']) }}" class="btn btn-sm btn-outline-primary" target="_blank">
                             <i class="bi bi-facebook"></i> Facebook
                         </a>
-                        <a href="https://twitter.com/intent/tweet?url={{ urlencode(route('articles.show', $article->slug)) }}&text={{ urlencode($article->title) }}" class="btn btn-sm btn-outline-info" target="_blank">
+                        <a href="{{ route('articles.share', [$article->slug, 'x']) }}" class="btn btn-sm btn-outline-info" target="_blank">
                             <i class="bi bi-twitter"></i> Twitter
                         </a>
-                        <a href="mailto:?subject={{ urlencode($article->title) }}&body={{ urlencode(route('articles.show', $article->slug)) }}" class="btn btn-sm btn-outline-secondary">
+                        <a href="{{ route('articles.share', [$article->slug, 'email']) }}" class="btn btn-sm btn-outline-secondary">
                             <i class="bi bi-envelope"></i> Email
                         </a>
                     </div>
