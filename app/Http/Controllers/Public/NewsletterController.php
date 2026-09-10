@@ -16,7 +16,6 @@ class NewsletterController extends Controller
 
         NewsletterSubscriber::create([
             'email' => $validated['email'],
-            'is_confirmed' => true,
             'subscribed_at' => now(),
         ]);
 

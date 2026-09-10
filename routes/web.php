@@ -24,6 +24,7 @@ use App\Http\Controllers\Public\StaffResourceController as PublicStaffResourceCo
 use App\Http\Controllers\Public\NewsletterController as PublicNewsletterController;
 use App\Http\Controllers\Public\FundingSourceController as PublicFundingSourceController;
 use App\Http\Controllers\Public\CompetitionController as PublicCompetitionController;
+use App\Http\Controllers\Public\ProcurementNoticeController as PublicProcurementNoticeController;
 
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
@@ -43,6 +44,7 @@ use App\Http\Controllers\Admin\StaffResourceController;
 use App\Http\Controllers\Admin\NewsletterController;
 use App\Http\Controllers\Admin\FundingSourceController;
 use App\Http\Controllers\Admin\CompetitionController;
+use App\Http\Controllers\Admin\ProcurementNoticeController;
 
 use App\Http\Controllers\Frontend\ComplaintController as FrontendComplaintController;
 use App\Http\Controllers\Frontend\RequestController as FrontendRequestController;
@@ -197,7 +199,7 @@ Route::get('/reglementation', [LegalController::class, 'pau'])
 
 // FAQ
 Route::get('/faq', [PublicFaqController::class, 'index'])
-    ->name('faq.index');
+    ->name('faqs.index');
 
 
 // Partnerships
@@ -228,6 +230,11 @@ Route::prefix('concours')->group(function () {
     Route::get('/{slug}', [PublicCompetitionController::class, 'show'])
         ->name('competitions.show');
 });
+
+
+// Procurement Notices
+Route::get('/avis-appel-concurrence', [PublicProcurementNoticeController::class, 'index'])
+    ->name('procurement-notices.index');
 
 
 // Services
@@ -360,6 +367,12 @@ Route::middleware(['auth', 'role:admin|editor|official'])
 
         // Competitions
         Route::resource('competitions', CompetitionController::class, [
+            'as' => 'admin'
+        ]);
+
+
+        // Procurement Notices
+        Route::resource('procurement-notices', ProcurementNoticeController::class, [
             'as' => 'admin'
         ]);
 
