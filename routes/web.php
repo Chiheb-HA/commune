@@ -155,6 +155,9 @@ Route::get('/contacts-urgence', [EmergencyContactController::class, 'index'])
 
 
 // Sitemap
+Route::get('/sitemap.xml', [SitemapController::class, 'xml'])
+    ->name('sitemap.xml');
+
 Route::get('/plan-du-site', [SitemapController::class, 'index'])
     ->name('sitemap.index');
 
