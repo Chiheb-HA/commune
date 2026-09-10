@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
             GallerySeeder::class,
             AssociationSeeder::class,
             CouncilSessionSeeder::class,
+            FaqSeeder::class,
         ]);
     }
 }
