@@ -66,10 +66,12 @@ class AssociationController extends Controller
             'email' => 'nullable|email|max:255',
             'president_name' => 'nullable|string|max:255',
             'president_phone' => 'nullable|string|max:50',
+            'president_mobile' => 'nullable|string|max:50',
             'president_fax' => 'nullable|string|max:50',
             'contact_person_name' => 'nullable|string|max:255',
             'contact_person_role' => 'nullable|string|max:255',
             'contact_person_phone' => 'nullable|string|max:50',
+            'contact_person_mobile' => 'nullable|string|max:50',
             'member_count' => 'nullable|integer|min:0',
         ]);
     }

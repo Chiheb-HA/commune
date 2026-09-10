@@ -18,10 +18,12 @@ class Association extends BaseModel
         'email',
         'president_name',
         'president_phone',
+        'president_mobile',
         'president_fax',
         'contact_person_name',
         'contact_person_role',
         'contact_person_phone',
+        'contact_person_mobile',
         'member_count',
     ];
 

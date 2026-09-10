@@ -24,10 +24,12 @@
                     ['email', __('messages.email'), 'email'],
                     ['president_name', __('messages.president'), 'text'],
                     ['president_phone', __('messages.phone'), 'text'],
+                    ['president_mobile', __('messages.mobile'), 'text'],
                     ['president_fax', __('messages.president_fax'), 'text'],
                     ['contact_person_name', __('messages.contact_person'), 'text'],
                     ['contact_person_role', __('messages.contact_person_role'), 'text'],
                     ['contact_person_phone', __('messages.phone'), 'text'],
+                    ['contact_person_mobile', __('messages.mobile'), 'text'],
                     ['member_count', __('messages.member_count'), 'number'],
                 ] as [$field, $label, $type])
                     <div class="col-md-6">

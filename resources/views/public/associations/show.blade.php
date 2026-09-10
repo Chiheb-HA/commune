@@ -51,11 +51,17 @@
                     @if($association->president_phone)
                         <p><a href="tel:{{ $association->president_phone }}">{{ $association->president_phone }}</a></p>
                     @endif
+                    @if($association->president_mobile)
+                        <p><strong>{{ __('messages.mobile') }}:</strong> <a href="tel:{{ $association->president_mobile }}">{{ $association->president_mobile }}</a></p>
+                    @endif
                     @if($association->contact_person_name)
                         <p><strong>{{ __('messages.contact_person') }}:</strong> {{ $association->contact_person_name }}</p>
                     @endif
                     @if($association->contact_person_phone)
                         <p><a href="tel:{{ $association->contact_person_phone }}">{{ $association->contact_person_phone }}</a></p>
+                    @endif
+                    @if($association->contact_person_mobile)
+                        <p><strong>{{ __('messages.mobile') }}:</strong> <a href="tel:{{ $association->contact_person_mobile }}">{{ $association->contact_person_mobile }}</a></p>
                     @endif
                 </div>
             </div>
