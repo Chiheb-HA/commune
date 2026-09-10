@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container-lg py-5">
-    <h1 class="mb-4">{{ __('Municipal Events') }}</h1>
+    <h1 class="mb-4">{{ __('Messages.Municipal Events') }}</h1>
     
     <div class="row mb-4">
         <div class="col-md-6">

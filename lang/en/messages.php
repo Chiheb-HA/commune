@@ -781,4 +781,5 @@ return [
     'Total Departments' => 'Total Departments',
     'Total Officials' => 'Total Officials',
     'general_regulations_pau' => 'General regulations',
+    'All types' => 'All types',
 ];

@@ -30,18 +30,6 @@ class DatabaseSeeder extends Seeder
             ComplaintCategorySeeder::class,
             ComplaintSeeder::class,
             SettingsSeeder::class,
-            GallerySeeder::class,
-            AssociationSeeder::class,
-            CouncilSessionSeeder::class,
-            FaqSeeder::class,
-            PartnershipSeeder::class,
-            StaffResourceSeeder::class,
-            FundingSourceSeeder::class,
-            CompetitionSeeder::class,
-            ProcurementNoticeSeeder::class,
-            GovernancePublicationSeeder::class,
-            NewsletterSubscriberSeeder::class,
-            TelephoneDirectorySeeder::class,
         ]);
     }
 }

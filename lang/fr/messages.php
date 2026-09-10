@@ -781,4 +781,5 @@ return [
     'Total Departments' => 'Total des départements',
     'Total Officials' => 'Total des responsables',
     'Search' => 'Rechercher',
+    'All Types' => 'Tous les types',
 ];

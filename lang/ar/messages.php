@@ -777,4 +777,5 @@ return [
     'organization_chart' => 'الهيكل التنظيمي',
     'organization_chart_description' => 'عرض ديناميكي للخدمات البلدية وهيكلها',
     'popular_services' => 'الخدمات الشائعة',
+    'All types'=> 'جميع الأنواع',
 ];
