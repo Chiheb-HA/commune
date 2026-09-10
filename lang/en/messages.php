@@ -681,6 +681,18 @@ return [
     'File Path' => 'File Path',
     'External Link' => 'External Link',
 
+    // Newsletter
+    'Newsletter Subscribers' => 'Newsletter Subscribers',
+    'Manage newsletter subscribers' => 'Manage newsletter subscribers',
+    'No subscribers found.' => 'No subscribers found.',
+    'Subscribe to Newsletter' => 'Subscribe to Newsletter',
+    'newsletter_description' => 'Receive the latest news and updates from the municipality.',
+    'Enter your email' => 'Enter your email',
+    'Subscribe' => 'Subscribe',
+    'newsletter_subscribed' => 'You are now subscribed to the newsletter.',
+    'Confirmed' => 'Confirmed',
+    'Pending' => 'Pending',
+
     // Navbar Categories
     'actualites_menu' => 'News & Updates',
     'governance_menu' => 'Governance & Reference',

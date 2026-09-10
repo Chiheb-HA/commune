@@ -301,6 +301,26 @@
                 </div>
             </div>
             <hr class="bg-secondary">
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ __('messages.Subscribe to Newsletter') }}</h5>
+                            <p class="card-text small">{{ __('messages.newsletter_description') }}</p>
+                            <form action="{{ route('newsletter.store') }}" method="POST" class="row g-2">
+                                @csrf
+                                <div class="col-md-8">
+                                    <input type="email" name="email" class="form-control form-control-sm" placeholder="{{ __('messages.Enter your email') }}" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-primary btn-sm w-100">{{ __('messages.Subscribe') }}</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-secondary">
             <div class="row">
                 <div class="col-md-6">
                     <p class="small">&copy; 2026 Municipality Portal. {{ __('messages.all_rights_reserved') }}</p>

@@ -672,6 +672,18 @@ return [
     'No staff resources found.' => 'Aucune ressource du personnel trouvée.',
     'No staff resources available at the moment.' => 'Aucune ressource du personnel disponible pour le moment.',
     'Guides, training, and technical assistance for staff' => 'Guides, formation et assistance technique pour le personnel',
+
+    // Newsletter
+    'Newsletter Subscribers' => 'Abonnés à la Newsletter',
+    'Manage newsletter subscribers' => 'Gérer les abonnés à la newsletter',
+    'No subscribers found.' => 'Aucun abonné trouvé.',
+    'Subscribe to Newsletter' => 'S\'abonner à la Newsletter',
+    'newsletter_description' => 'Recevez les dernières nouvelles et mises à jour de la commune.',
+    'Enter your email' => 'Entrez votre email',
+    'Subscribe' => 'S\'abonner',
+    'newsletter_subscribed' => 'Vous êtes maintenant abonné à la newsletter.',
+    'Confirmed' => 'Confirmé',
+    'Pending' => 'En attente',
     'Guides' => 'Guides',
     'Training' => 'Formation',
     'Technical Assistance' => 'Assistance Technique',

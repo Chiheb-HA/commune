@@ -672,6 +672,18 @@ return [
     'File Path' => 'مسار الملف',
     'External Link' => 'رابط خارجي',
 
+    // Newsletter
+    'Newsletter Subscribers' => 'مشتركين النشرة البريدية',
+    'Manage newsletter subscribers' => 'إدارة مشتركي النشرة البريدية',
+    'No subscribers found.' => 'لم يتم العثور على مشتركين.',
+    'Subscribe to Newsletter' => 'الاشتراك في النشرة البريدية',
+    'newsletter_description' => 'احصل على آخر الأخبار والتحديثات من البلدية.',
+    'Enter your email' => 'أدخل بريدك الإلكتروني',
+    'Subscribe' => 'اشترك',
+    'newsletter_subscribed' => 'أنت الآن مشترك في النشرة البريدية.',
+    'Confirmed' => 'مؤكد',
+    'Pending' => 'قيد الانتظار',
+
     // Navbar Categories
     'actualites_menu' => 'الأخبار والمستجدات',
     'governance_menu' => 'الحوكمة والمرجع',
