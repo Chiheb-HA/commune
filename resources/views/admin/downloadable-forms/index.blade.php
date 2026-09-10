@@ -1,0 +1,8 @@
+@extends('layouts.admin')
+
+@section('page-title', __('messages.downloadable_forms'))
+@section('title', __('messages.downloadable_forms'))
+
+@section('content')
+<div class="page-header"><h1>{{ __('messages.downloadable_forms') }}</h1><p class="text-muted">{{ __('messages.manage_downloadable_forms') }}</p></div><div class="card mb-4"><div class="card-body"><a href="{{ route('admin.downloadable-forms.create') }}" class="btn btn-primary"><i class="bi bi-plus-circle"></i> {{ __('messages.new_downloadable_form') }}</a></div></div><div class="card"><div class="card-body">@if($forms->count())<div class="table-responsive"><table class="table table-hover"><thead><tr><th>{{ __('messages.name') }}</th><th>{{ __('messages.file') }}</th><th>{{ __('messages.active') }}</th><th>{{ __('messages.order') }}</th><th>{{ __('messages.actions') }}</th></tr></thead><tbody>@foreach($forms as $form)<tr><td>{{ $form->title }}</td><td>{{ basename($form->file_path) }}</td><td>{{ $form->is_active ? __('messages.yes') : __('messages.no') }}</td><td>{{ $form->order }}</td><td><a href="{{ asset('storage/'.$form->file_path) }}" target="_blank" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a> <a href="{{ route('admin.downloadable-forms.edit', $form) }}" class="btn btn-sm btn-primary"><i class="bi bi-pencil"></i></a><form action="{{ route('admin.downloadable-forms.destroy', $form) }}" method="POST" class="d-inline">@csrf @method('DELETE')<button class="btn btn-sm btn-danger" onclick="return confirm('{{ __('messages.Are you sure?') }}')"><i class="bi bi-trash"></i></button></form></td></tr>@endforeach</tbody></table></div>{{ $forms->links() }}@else<p class="text-muted">{{ __('messages.no_downloadable_forms') }}</p>@endif</div></div>
+@endsection

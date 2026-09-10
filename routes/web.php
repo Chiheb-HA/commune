@@ -27,6 +27,7 @@ use App\Http\Controllers\Public\CompetitionController as PublicCompetitionContro
 use App\Http\Controllers\Public\ProcurementNoticeController as PublicProcurementNoticeController;
 use App\Http\Controllers\Public\GovernancePublicationController as PublicGovernancePublicationController;
 use App\Http\Controllers\Public\EstablishmentController as PublicEstablishmentController;
+use App\Http\Controllers\Public\DownloadableFormController as PublicDownloadableFormController;
 
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
@@ -49,6 +50,7 @@ use App\Http\Controllers\Admin\CompetitionController;
 use App\Http\Controllers\Admin\ProcurementNoticeController;
 use App\Http\Controllers\Admin\GovernancePublicationController;
 use App\Http\Controllers\Admin\EstablishmentController;
+use App\Http\Controllers\Admin\DownloadableFormController;
 
 use App\Http\Controllers\Frontend\ComplaintController as FrontendComplaintController;
 use App\Http\Controllers\Frontend\RequestController as FrontendRequestController;
@@ -169,6 +171,9 @@ Route::get('/associations/{association}', [AssociationController::class, 'show']
 
 Route::get('/etablissements', [PublicEstablishmentController::class, 'index'])
     ->name('establishments.index');
+
+Route::get('/imprimes-cahiers-charges', [PublicDownloadableFormController::class, 'index'])
+    ->name('downloadable-forms.index');
 
 // Keep the export route before any future budget slug/catch-all route.
 Route::get('/budget/export', [BudgetController::class, 'exportCsv'])
@@ -430,6 +435,12 @@ Route::middleware(['auth', 'role:admin|editor|official'])
 
         // Establishments
         Route::resource('establishments', EstablishmentController::class, [
+            'as' => 'admin'
+        ]);
+
+
+        // Downloadable Forms
+        Route::resource('downloadable-forms', DownloadableFormController::class, [
             'as' => 'admin'
         ]);
 
