@@ -35,6 +35,7 @@ class DatabaseSeeder extends Seeder
             CouncilSessionSeeder::class,
             FaqSeeder::class,
             PartnershipSeeder::class,
+            StaffResourceSeeder::class,
         ]);
     }
 }
