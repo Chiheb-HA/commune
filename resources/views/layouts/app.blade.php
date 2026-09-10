@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title') - Municipality Portal</title>
+    @php
+        $pageTitle = trim($__env->yieldContent('title')) ?: __('messages.Municipality_Portal');
+        $metaDescription = trim($__env->yieldContent('meta_description')) ?: __('messages.about_desc');
+        $metaImage = trim($__env->yieldContent('meta_image')) ?: asset('logo.png');
+        $canonicalUrl = trim($__env->yieldContent('canonical')) ?: url()->current();
+    @endphp
+    <title>{{ $pageTitle }} - {{ __('messages.Municipality_Portal') }}</title>
+    <meta name="description" content="{{ $metaDescription }}">
+    <meta property="og:title" content="{{ $pageTitle }}">
+    <meta property="og:description" content="{{ $metaDescription }}">
+    <meta property="og:image" content="{{ $metaImage }}">
+    <link rel="canonical" href="{{ $canonicalUrl }}">
     <link rel="icon" type="image/png" href="{{ asset('logo.png') }}">
     @vite(['resources/js/app.js'])
     @if(app()->getLocale() === 'ar')
