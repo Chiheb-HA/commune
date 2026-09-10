@@ -40,6 +40,7 @@ class DatabaseSeeder extends Seeder
             CompetitionSeeder::class,
             ProcurementNoticeSeeder::class,
             GovernancePublicationSeeder::class,
+            NewsletterSubscriberSeeder::class,
         ]);
     }
 }
