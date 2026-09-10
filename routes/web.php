@@ -26,6 +26,7 @@ use App\Http\Controllers\Public\FundingSourceController as PublicFundingSourceCo
 use App\Http\Controllers\Public\CompetitionController as PublicCompetitionController;
 use App\Http\Controllers\Public\ProcurementNoticeController as PublicProcurementNoticeController;
 use App\Http\Controllers\Public\GovernancePublicationController as PublicGovernancePublicationController;
+use App\Http\Controllers\Public\EstablishmentController as PublicEstablishmentController;
 
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
@@ -47,6 +48,7 @@ use App\Http\Controllers\Admin\FundingSourceController;
 use App\Http\Controllers\Admin\CompetitionController;
 use App\Http\Controllers\Admin\ProcurementNoticeController;
 use App\Http\Controllers\Admin\GovernancePublicationController;
+use App\Http\Controllers\Admin\EstablishmentController;
 
 use App\Http\Controllers\Frontend\ComplaintController as FrontendComplaintController;
 use App\Http\Controllers\Frontend\RequestController as FrontendRequestController;
@@ -164,6 +166,9 @@ Route::get('/associations', [AssociationController::class, 'index'])
 
 Route::get('/associations/{association}', [AssociationController::class, 'show'])
     ->name('associations.show');
+
+Route::get('/etablissements', [PublicEstablishmentController::class, 'index'])
+    ->name('establishments.index');
 
 // Keep the export route before any future budget slug/catch-all route.
 Route::get('/budget/export', [BudgetController::class, 'exportCsv'])
@@ -419,6 +424,12 @@ Route::middleware(['auth', 'role:admin|editor|official'])
 
         // Governance Publications
         Route::resource('governance-publications', GovernancePublicationController::class, [
+            'as' => 'admin'
+        ]);
+
+
+        // Establishments
+        Route::resource('establishments', EstablishmentController::class, [
             'as' => 'admin'
         ]);
 
