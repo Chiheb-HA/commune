@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             ComplaintSeeder::class,
             SettingsSeeder::class,
             GallerySeeder::class,
+            AssociationSeeder::class,
         ]);
     }
 }
