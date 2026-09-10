@@ -411,6 +411,33 @@
             <li><a href="{{ route('admin.staff-resources.index') }}" class="nav-link {{ request()->routeIs('admin.staff-resources.*') ? 'active' : '' }}">
                 <i class="bi bi-tools"></i> <span>{{ __('messages.Staff Resources') }}</span>
             </a></li>
+            <li><a href="{{ route('admin.associations.index') }}" class="nav-link {{ request()->routeIs('admin.associations.*') ? 'active' : '' }}">
+                <i class="bi bi-people"></i> <span>{{ __('messages.associations') }}</span>
+            </a></li>
+            <li><a href="{{ route('admin.council-sessions.index') }}" class="nav-link {{ request()->routeIs('admin.council-sessions.*') ? 'active' : '' }}">
+                <i class="bi bi-calendar2-week"></i> <span>{{ __('messages.council_sessions') }}</span>
+            </a></li>
+            <li><a href="{{ route('admin.funding-sources.index') }}" class="nav-link {{ request()->routeIs('admin.funding-sources.*') ? 'active' : '' }}">
+                <i class="bi bi-cash-stack"></i> <span>{{ __('messages.Funding Sources') }}</span>
+            </a></li>
+            <li><a href="{{ route('admin.competitions.index') }}" class="nav-link {{ request()->routeIs('admin.competitions.*') ? 'active' : '' }}">
+                <i class="bi bi-trophy"></i> <span>{{ __('messages.Competitions') }}</span>
+            </a></li>
+            <li><a href="{{ route('admin.procurement-notices.index') }}" class="nav-link {{ request()->routeIs('admin.procurement-notices.*') ? 'active' : '' }}">
+                <i class="bi bi-megaphone"></i> <span>{{ __('messages.Procurement Notices') }}</span>
+            </a></li>
+            <li><a href="{{ route('admin.governance-publications.index') }}" class="nav-link {{ request()->routeIs('admin.governance-publications.*') ? 'active' : '' }}">
+                <i class="bi bi-journal-text"></i> <span>{{ __('messages.Governance Publications') }}</span>
+            </a></li>
+            <li><a href="{{ route('admin.establishments.index') }}" class="nav-link {{ request()->routeIs('admin.establishments.*') ? 'active' : '' }}">
+                <i class="bi bi-building"></i> <span>{{ __('messages.establishments') }}</span>
+            </a></li>
+            <li><a href="{{ route('admin.downloadable-forms.index') }}" class="nav-link {{ request()->routeIs('admin.downloadable-forms.*') ? 'active' : '' }}">
+                <i class="bi bi-file-earmark-arrow-down"></i> <span>{{ __('messages.downloadable_forms') }}</span>
+            </a></li>
+            <li><a href="{{ route('admin.newsletter.index') }}" class="nav-link {{ request()->routeIs('admin.newsletter.*') ? 'active' : '' }}">
+                <i class="bi bi-envelope-paper"></i> <span>{{ __('messages.Newsletter Subscribers') }}</span>
+            </a></li>
 
             <li class="mt-4 px-3"><small class="text-uppercase fw-bold">{{ __('messages.Services') }}</small></li>
             <li><a href="{{ route('admin.requests.index') }}" class="nav-link {{ request()->routeIs('admin.requests.*') ? 'active' : '' }}">

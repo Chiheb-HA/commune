@@ -12,6 +12,13 @@ use App\Models\CitizenRequest;
 use App\Models\MunicipalService;
 use App\Models\Department;
 use App\Models\Official;
+use App\Models\Association;
+use App\Models\CouncilSession;
+use App\Models\FundingSource;
+use App\Models\Competition;
+use App\Models\ProcurementNotice;
+use App\Models\GovernancePublication;
+use App\Models\NewsletterSubscriber;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -29,6 +36,13 @@ class DashboardController extends Controller
             'total_services' => MunicipalService::count(),
             'total_departments' => Department::count(),
             'total_officials' => Official::count(),
+            'total_associations' => Association::count(),
+            'total_council_sessions' => CouncilSession::count(),
+            'total_funding_sources' => FundingSource::count(),
+            'total_competitions' => Competition::count(),
+            'total_procurement_notices' => ProcurementNotice::count(),
+            'total_governance_publications' => GovernancePublication::count(),
+            'total_newsletter_subscribers' => NewsletterSubscriber::count(),
             'active_services' => MunicipalService::where('is_active', true)->count(),
             'pending_complaints' => Complaint::where('status', 'new')->count(),
             'pending_requests' => CitizenRequest::where('status', 'pending')->count(),

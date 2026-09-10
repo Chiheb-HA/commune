@@ -137,6 +137,33 @@
 </div>
 
 <div class="row g-4">
+    <div class="col-md-3">
+        <div class="card"><div class="card-body"><div class="d-flex justify-content-between align-items-start"><div><h6 class="text-muted mb-2">{{ __('messages.Total Associations') }}</h6><h3 class="mb-0">{{ $stats['total_associations'] ?? 0 }}</h3></div><i class="bi bi-people" style="font-size: 2rem; color: #14b8a6;"></i></div></div></div>
+    </div>
+    <div class="col-md-3">
+        <div class="card"><div class="card-body"><div class="d-flex justify-content-between align-items-start"><div><h6 class="text-muted mb-2">{{ __('messages.Total Council Sessions') }}</h6><h3 class="mb-0">{{ $stats['total_council_sessions'] ?? 0 }}</h3></div><i class="bi bi-calendar2-week" style="font-size: 2rem; color: #0ea5e9;"></i></div></div></div>
+    </div>
+    <div class="col-md-3">
+        <div class="card"><div class="card-body"><div class="d-flex justify-content-between align-items-start"><div><h6 class="text-muted mb-2">{{ __('messages.Total Funding Sources') }}</h6><h3 class="mb-0">{{ $stats['total_funding_sources'] ?? 0 }}</h3></div><i class="bi bi-cash-stack" style="font-size: 2rem; color: #22c55e;"></i></div></div></div>
+    </div>
+    <div class="col-md-3">
+        <div class="card"><div class="card-body"><div class="d-flex justify-content-between align-items-start"><div><h6 class="text-muted mb-2">{{ __('messages.Total Competitions') }}</h6><h3 class="mb-0">{{ $stats['total_competitions'] ?? 0 }}</h3></div><i class="bi bi-trophy" style="font-size: 2rem; color: #eab308;"></i></div></div></div>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        <div class="card"><div class="card-body"><div class="d-flex justify-content-between align-items-start"><div><h6 class="text-muted mb-2">{{ __('messages.Total Procurement Notices') }}</h6><h3 class="mb-0">{{ $stats['total_procurement_notices'] ?? 0 }}</h3></div><i class="bi bi-megaphone" style="font-size: 2rem; color: #f97316;"></i></div></div></div>
+    </div>
+    <div class="col-md-4">
+        <div class="card"><div class="card-body"><div class="d-flex justify-content-between align-items-start"><div><h6 class="text-muted mb-2">{{ __('messages.Total Governance Publications') }}</h6><h3 class="mb-0">{{ $stats['total_governance_publications'] ?? 0 }}</h3></div><i class="bi bi-journal-text" style="font-size: 2rem; color: #6366f1;"></i></div></div></div>
+    </div>
+    <div class="col-md-4">
+        <div class="card"><div class="card-body"><div class="d-flex justify-content-between align-items-start"><div><h6 class="text-muted mb-2">{{ __('messages.Total Newsletter Subscribers') }}</h6><h3 class="mb-0">{{ $stats['total_newsletter_subscribers'] ?? 0 }}</h3></div><i class="bi bi-envelope-paper" style="font-size: 2rem; color: #ec4899;"></i></div></div></div>
+    </div>
+</div>
+
+<div class="row g-4">
     <!-- Recent Articles -->
     <div class="col-lg-6">
         <div class="card">
