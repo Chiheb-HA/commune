@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
             AssociationSeeder::class,
             CouncilSessionSeeder::class,
             FaqSeeder::class,
+            PartnershipSeeder::class,
         ]);
     }
 }
