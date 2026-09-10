@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
             ComplaintCategorySeeder::class,
             ComplaintSeeder::class,
             SettingsSeeder::class,
+            GallerySeeder::class,
         ]);
     }
 }
