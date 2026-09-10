@@ -25,6 +25,9 @@ class News extends BaseModel
         'status',
         'published_at',
         'views',
+        'views_count',
+        'shares_count',
+        'tags',
         'created_by',
     ];
 

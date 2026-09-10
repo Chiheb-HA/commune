@@ -48,6 +48,8 @@ class ArticleController extends Controller
             abort(404);
         }
 
+        $article->increment('views_count');
+
         $relatedArticles = Article::published()
             ->where('id', '!=', $article->id)
             ->orderBy('created_at', 'desc')

@@ -32,6 +32,9 @@ class Article extends BaseModel
         'views',
         'seo_keywords',
         'seo_meta_description',
+        'views_count',
+        'shares_count',
+        'tags',
     ];
 
     protected $casts = [

@@ -29,6 +29,7 @@ class NewsController extends Controller
 
         // Increment view count
         $newsItem->increment('views');
+        $newsItem->increment('views_count');
 
         return view('public.news.show', compact('newsItem'));
     }
