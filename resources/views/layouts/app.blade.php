@@ -134,6 +134,34 @@
         footer a:hover {
             color: white;
         }
+
+        .news-ticker {
+            overflow: hidden;
+            background: #1f2937;
+            color: white;
+        }
+
+        .news-ticker__track {
+            display: inline-flex;
+            gap: 2rem;
+            white-space: nowrap;
+            padding: .65rem 0;
+            animation: news-ticker-scroll 28s linear infinite;
+        }
+
+        .news-ticker__track a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .news-ticker__track a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes news-ticker-scroll {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
         
         [dir="ltr"] .navbar-brand img {
             margin-right: 10px;
@@ -273,6 +301,26 @@
             </div>
         </div>
     </nav>
+
+    @php
+        $tickerNews = \App\Models\News::published()
+            ->latest('published_at')
+            ->limit(5)
+            ->get();
+    @endphp
+    @if($tickerNews->isNotEmpty())
+        <div class="news-ticker" aria-label="{{ __('messages.latest_news') }}">
+            <div class="container-fluid">
+                <div class="news-ticker__track">
+                    @foreach($tickerNews as $tickerItem)
+                        <a href="{{ route('news.show', $tickerItem->slug) }}">
+                            <i class="bi bi-newspaper me-1" aria-hidden="true"></i>{{ $tickerItem->title }}
+                        </a>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    @endif
 
     <!-- Main Content -->
     <main id="main-content">
