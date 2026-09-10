@@ -38,6 +38,7 @@ class DatabaseSeeder extends Seeder
             StaffResourceSeeder::class,
             FundingSourceSeeder::class,
             CompetitionSeeder::class,
+            ProcurementNoticeSeeder::class,
         ]);
     }
 }
