@@ -67,7 +67,7 @@
                         @foreach($complaints as $complaint)
                             <tr>
                                 <td>{{ $complaint->complaint_number }}</td>
-                                <td>{{ ucfirst($complaint->category) }}</td>
+                                <td>{{ $complaint->category?->name ?? ucfirst($complaint->getRawOriginal('category') ?? 'other') }}</td>
                                 <td>{{ Str::limit($complaint->description_fr ?? 'N/A', 40) }}</td>
                                 <td>
                                     <span class="badge {{ $complaint->status === 'new' ? 'bg-danger' : ($complaint->status === 'resolved' ? 'bg-success' : 'bg-warning') }}">
