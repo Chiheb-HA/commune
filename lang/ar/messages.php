@@ -693,6 +693,21 @@ return [
     'funding_sources_description' => 'اكتشف مصادر التمويل المختلفة للبلدية.',
     'Fiscal Year' => 'السنة المالية',
 
+    // Competitions
+    'Competitions' => 'مسابقات',
+    'Manage competitions' => 'إدارة المسابقات',
+    'New Competition' => 'مسابقة جديدة',
+    'No competitions found.' => 'لم يتم العثور على مسابقات.',
+    'No competitions available at the moment.' => 'لا توجد مسابقات متاحة في الوقت الحالي.',
+    'competitions_description' => 'اكتشف المسابقات والمنافسات التي تنظمها البلدية.',
+    'Start Date' => 'تاريخ البدء',
+    'End Date' => 'تاريخ الانتهاء',
+    'Attachment' => 'مرفق',
+    'Competition Details' => 'تفاصيل المسابقة',
+    'Slug' => 'Slug',
+    'Auto-generated from title' => 'يتم إنشاؤه تلقائيًا من العنوان',
+    'Download' => 'تحميل',
+
     // Navbar Categories
     'actualites_menu' => 'الأخبار والمستجدات',
     'governance_menu' => 'الحوكمة والمرجع',

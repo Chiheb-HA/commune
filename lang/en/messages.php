@@ -702,6 +702,21 @@ return [
     'funding_sources_description' => 'Discover the various funding sources of the municipality.',
     'Fiscal Year' => 'Fiscal Year',
 
+    // Competitions
+    'Competitions' => 'Competitions',
+    'Manage competitions' => 'Manage competitions',
+    'New Competition' => 'New Competition',
+    'No competitions found.' => 'No competitions found.',
+    'No competitions available at the moment.' => 'No competitions available at the moment.',
+    'competitions_description' => 'Discover the competitions and contests organized by the municipality.',
+    'Start Date' => 'Start Date',
+    'End Date' => 'End Date',
+    'Attachment' => 'Attachment',
+    'Competition Details' => 'Competition Details',
+    'Slug' => 'Slug',
+    'Auto-generated from title' => 'Auto-generated from title',
+    'Download' => 'Download',
+
     // Navbar Categories
     'actualites_menu' => 'News & Updates',
     'governance_menu' => 'Governance & Reference',

@@ -23,6 +23,7 @@ use App\Http\Controllers\Public\PartnershipController as PublicPartnershipContro
 use App\Http\Controllers\Public\StaffResourceController as PublicStaffResourceController;
 use App\Http\Controllers\Public\NewsletterController as PublicNewsletterController;
 use App\Http\Controllers\Public\FundingSourceController as PublicFundingSourceController;
+use App\Http\Controllers\Public\CompetitionController as PublicCompetitionController;
 
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
@@ -41,6 +42,7 @@ use App\Http\Controllers\Admin\PartnershipController;
 use App\Http\Controllers\Admin\StaffResourceController;
 use App\Http\Controllers\Admin\NewsletterController;
 use App\Http\Controllers\Admin\FundingSourceController;
+use App\Http\Controllers\Admin\CompetitionController;
 
 use App\Http\Controllers\Frontend\ComplaintController as FrontendComplaintController;
 use App\Http\Controllers\Frontend\RequestController as FrontendRequestController;
@@ -218,6 +220,16 @@ Route::get('/financement', [PublicFundingSourceController::class, 'index'])
     ->name('funding-sources.index');
 
 
+// Competitions
+Route::prefix('concours')->group(function () {
+    Route::get('/', [PublicCompetitionController::class, 'index'])
+        ->name('competitions.index');
+
+    Route::get('/{slug}', [PublicCompetitionController::class, 'show'])
+        ->name('competitions.show');
+});
+
+
 // Services
 Route::prefix('services')->group(function () {
 
@@ -342,6 +354,12 @@ Route::middleware(['auth', 'role:admin|editor|official'])
 
         // Funding Sources
         Route::resource('funding-sources', FundingSourceController::class, [
+            'as' => 'admin'
+        ]);
+
+
+        // Competitions
+        Route::resource('competitions', CompetitionController::class, [
             'as' => 'admin'
         ]);
 
