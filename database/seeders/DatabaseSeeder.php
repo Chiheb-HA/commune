@@ -36,6 +36,7 @@ class DatabaseSeeder extends Seeder
             FaqSeeder::class,
             PartnershipSeeder::class,
             StaffResourceSeeder::class,
+            FundingSourceSeeder::class,
         ]);
     }
 }
