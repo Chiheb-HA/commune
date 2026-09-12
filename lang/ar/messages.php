@@ -835,4 +835,18 @@ return [
     'permit_committee_meeting_deleted' => 'تم حذف الاجتماع بنجاح.',
     'no_meetings_found' => 'لم يتم العثور على اجتماعات.',
     'meeting_date' => 'تاريخ ووقت الاجتماع',
+
+    // Task 4: Espace citoyen homepage panel
+    'espace_citoyen_title' => 'فضاء المواطن',
+    'espace_citoyen_subtitle' => 'الوصول السريع إلى إجراءاتك ومتابعتك والخدمات البلدية',
+    'my_space' => 'فضائي الخاص',
+    'espace_citoyen_services_desc' => 'تصفح الكتالوج الكامل للخدمات العمومية البلدية',
+    'active_services_count' => 'خدمة متاحة',
+    'espace_citoyen_requests_desc' => 'تتبع تقدم معالجة طلباتك الإدارية',
+    'requests_this_month' => 'طلب هذا الشهر',
+    'espace_citoyen_complaints_desc' => 'أبلغ عن إشكال أو تابع تقدم الشكاوى الخاصة بك',
+    'complaints_this_month' => 'شكوى هذا الشهر',
+    'espace_citoyen_associations_desc' => 'اكتشف النسيج الجمعياتي المحلي وقدّم الطلبات',
+    'civil_society' => 'المجتمع المدني',
+    'view_associations' => 'عرض الجمعيات',
 ];

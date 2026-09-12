@@ -845,4 +845,18 @@ return [
     'permit_committee_meeting_deleted' => 'Réunion supprimée avec succès.',
     'no_meetings_found' => 'Aucune réunion trouvée.',
     'meeting_date' => 'Date et heure de la réunion',
+
+    // Task 4: Espace citoyen homepage panel
+    'espace_citoyen_title' => 'Espace Citoyen',
+    'espace_citoyen_subtitle' => 'Accédez rapidement à vos démarches, suivis et services municipaux',
+    'my_space' => 'Mon Espace Citoyen',
+    'espace_citoyen_services_desc' => 'Consultez le catalogue complet des services publics municipaux',
+    'active_services_count' => 'services disponibles',
+    'espace_citoyen_requests_desc' => 'Suivez l’état d’avancement de vos demandes administratives',
+    'requests_this_month' => 'demandes ce mois-ci',
+    'espace_citoyen_complaints_desc' => 'Signalez un problème ou suivez l’avancement de vos plaintes',
+    'complaints_this_month' => 'plaintes ce mois-ci',
+    'espace_citoyen_associations_desc' => 'Découvrez le tissu associatif local et soumettez des requêtes',
+    'civil_society' => 'Société civile',
+    'view_associations' => 'Consulter les associations',
 ];

@@ -839,4 +839,18 @@ return [
     'permit_committee_meeting_deleted' => 'Meeting deleted successfully.',
     'no_meetings_found' => 'No meetings found.',
     'meeting_date' => 'Meeting Date & Time',
+
+    // Task 4: Espace citoyen homepage panel
+    'espace_citoyen_title' => 'Citizen Portal',
+    'espace_citoyen_subtitle' => 'Quickly access your procedures, tracking, and municipal services',
+    'my_space' => 'My Citizen Space',
+    'espace_citoyen_services_desc' => 'Browse the full catalog of municipal public services',
+    'active_services_count' => 'active services',
+    'espace_citoyen_requests_desc' => 'Track the progress of your administrative requests',
+    'requests_this_month' => 'requests this month',
+    'espace_citoyen_complaints_desc' => 'Report an issue or track the status of your complaints',
+    'complaints_this_month' => 'complaints this month',
+    'espace_citoyen_associations_desc' => 'Discover local civil associations and submit requests',
+    'civil_society' => 'Civil Society',
+    'view_associations' => 'View Associations',
 ];

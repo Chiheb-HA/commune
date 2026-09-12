@@ -22,6 +22,9 @@
     </div>
 </section>
 
+<!-- Espace Citoyen Panel -->
+@include('public.partials.espace-citoyen-panel')
+
 <!-- Features Section -->
 <section class="py-5">
     <div class="container-lg">

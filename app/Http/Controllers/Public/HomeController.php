@@ -12,7 +12,8 @@ use App\Models\Department;
 use App\Models\Official;
 use App\Models\CouncilSession;
 use App\Models\Association;
-use App\Models\TelephoneDirectory;
+use App\Models\CitizenRequest;
+use App\Models\Complaint;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -35,10 +36,17 @@ class HomeController extends Controller
             ->limit(4)
             ->get();
 
+        $espaceCitoyenStats = [
+            'total_services' => MunicipalService::where('is_active', true)->count(),
+            'total_requests_month' => CitizenRequest::whereMonth('created_at', now()->month)->whereYear('created_at', now()->year)->count(),
+            'total_complaints_month' => Complaint::whereMonth('created_at', now()->month)->whereYear('created_at', now()->year)->count(),
+        ];
+
         return view('public.home', compact(
             'recentArticles',
             'recentNews',
-            'upcomingEvents'
+            'upcomingEvents',
+            'espaceCitoyenStats'
         ));
     }
 
