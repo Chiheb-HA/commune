@@ -96,6 +96,7 @@
                             </div>
                             <div class="card-footer bg-transparent">
                                 <a href="{{ route('services.request') }}" class="btn btn-sm btn-primary">{{ __('messages.submit_request') }}</a>
+                                <a href="{{ route('services.complaint') }}" class="btn btn-sm btn-primary">{{ __('messages.file_complaint') }}</a>
                             </div>
                         </div>
                     </div>
