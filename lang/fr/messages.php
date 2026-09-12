@@ -805,4 +805,7 @@ return [
     'Privacy Policy' => 'Politique de confidentialité',
     'Terms of Service' => 'Conditions d\'utilisation',
     'Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.' => 'Une fois votre compte supprimé, toutes ses ressources et données seront définitivement supprimées. Veuillez saisir votre mot de passe pour confirmer la suppression définitive de votre compte.',
+    'Deadline' => 'Date limite',
+    'No procurement notices available.' => 'Aucun avis d\'appel à la concurrence disponible.',
+    'Monday' => 'Lundi',
 ];

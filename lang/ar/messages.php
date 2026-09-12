@@ -795,4 +795,7 @@ return [
     'Privacy Policy' => 'سياسة الخصوصية',
     'Terms of Service' => 'شروط الخدمة',
     'Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.' => 'بمجرد حذف حسابك، سيتم حذف جميع موارده وبياناته بشكل دائم. يرجى إدخال كلمة المرور لتأكيد رغبتك في الحذف النهائي لحسابك.',
+    'Deadline' => 'الموعد النهائي',
+    'No procurement notices available.' => 'لا توجد إعلانات طلبات منافسة متاحة.',
+    'Monday' => 'الاثنين',
 ];

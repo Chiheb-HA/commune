@@ -800,4 +800,6 @@ return [
     'Privacy Policy' => 'Privacy Policy',
     'Terms of Service' => 'Terms of Service',
     'Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.' => 'Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.',
+    'Deadline' => 'Deadline',
+    'No procurement notices available.' => 'No procurement notices available.',
 ];
