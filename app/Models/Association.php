@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
 class Association extends BaseModel
 {
     use HasFactory;
@@ -31,4 +33,9 @@ class Association extends BaseModel
         'authorization_date' => 'date',
         'member_count' => 'integer',
     ];
+
+    public function requests(): HasMany
+    {
+        return $this->hasMany(AssociationRequest::class);
+    }
 }

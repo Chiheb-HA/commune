@@ -414,6 +414,9 @@
             <li><a href="{{ route('admin.associations.index') }}" class="nav-link {{ request()->routeIs('admin.associations.*') ? 'active' : '' }}">
                 <i class="bi bi-people"></i> <span>{{ __('messages.associations') }}</span>
             </a></li>
+            <li><a href="{{ route('admin.association-requests.index') }}" class="nav-link {{ request()->routeIs('admin.association-requests.*') ? 'active' : '' }}">
+                <i class="bi bi-inbox-fill"></i> <span>{{ __('messages.association_requests') }}</span>
+            </a></li>
             <li><a href="{{ route('admin.council-sessions.index') }}" class="nav-link {{ request()->routeIs('admin.council-sessions.*') ? 'active' : '' }}">
                 <i class="bi bi-calendar2-week"></i> <span>{{ __('messages.council_sessions') }}</span>
             </a></li>

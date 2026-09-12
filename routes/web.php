@@ -51,6 +51,7 @@ use App\Http\Controllers\Admin\ProcurementNoticeController;
 use App\Http\Controllers\Admin\GovernancePublicationController;
 use App\Http\Controllers\Admin\EstablishmentController;
 use App\Http\Controllers\Admin\DownloadableFormController;
+use App\Http\Controllers\Admin\AssociationRequestController as AdminAssociationRequestController;
 
 use App\Http\Controllers\Frontend\ComplaintController as FrontendComplaintController;
 use App\Http\Controllers\Frontend\RequestController as FrontendRequestController;
@@ -183,6 +184,9 @@ Route::get('/associations/export', [AssociationController::class, 'exportCsv'])
 
 Route::get('/associations/{association}', [AssociationController::class, 'show'])
     ->name('associations.show');
+
+Route::post('/associations/{association}/requests', [AssociationController::class, 'storeRequest'])
+    ->name('associations.requests.store');
 
 Route::get('/etablissements', [PublicEstablishmentController::class, 'index'])
     ->name('establishments.index');
@@ -504,6 +508,10 @@ Route::middleware(['auth', 'role:admin|editor|official'])
         Route::resource('associations', AdminAssociationController::class, [
             'as' => 'admin'
         ])->except(['show']);
+
+        Route::resource('association-requests', AdminAssociationRequestController::class, [
+            'as' => 'admin'
+        ])->only(['index', 'show', 'update', 'destroy']);
 
 
         // Departments
