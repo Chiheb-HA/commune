@@ -25,7 +25,8 @@ class CouncilSessionController extends Controller
 
     public function store(Request $request)
     {
-        CouncilSession::create($this->validatedData($request));
+        $session = CouncilSession::create($this->validatedData($request));
+        $this->notifyConseillers($session);
 
         return redirect()->route('admin.council-sessions.index')
             ->with('success', __('messages.council_session_created'));
@@ -38,7 +39,16 @@ class CouncilSessionController extends Controller
 
     public function update(Request $request, CouncilSession $councilSession)
     {
-        $councilSession->update($this->validatedData($request));
+        $oldDate = $councilSession->session_date ? $councilSession->session_date->format('Y-m-d H:i:s') : null;
+        $validated = $this->validatedData($request);
+
+        $councilSession->update($validated);
+
+        $newDate = $councilSession->session_date ? $councilSession->session_date->format('Y-m-d H:i:s') : null;
+
+        if ($oldDate !== $newDate) {
+            $this->notifyConseillers($councilSession);
+        }
 
         return redirect()->route('admin.council-sessions.index')
             ->with('success', __('messages.council_session_updated'));
@@ -66,6 +76,17 @@ class CouncilSessionController extends Controller
 
         return redirect()->back()
             ->with('success', __('messages.council_members_notified', ['count' => $officials->count()]));
+    }
+
+    private function notifyConseillers(CouncilSession $session): void
+    {
+        $conseillers = User::whereHas('roles', function ($query) {
+            $query->where('name', 'conseiller');
+        })->whereNotNull('email')->get();
+
+        foreach ($conseillers as $conseiller) {
+            Mail::to($conseiller->email)->queue(new CouncilSessionNotification($session));
+        }
     }
 
     private function validatedData(Request $request): array
