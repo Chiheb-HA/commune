@@ -452,6 +452,9 @@
             <li><a href="{{ route('admin.complaints.index') }}" class="nav-link {{ request()->routeIs('admin.complaints.*') ? 'active' : '' }}">
                 <i class="bi bi-exclamation-circle"></i> <span>{{ __('messages.Complaints') }}</span>
             </a></li>
+            <li><a href="{{ route('admin.facility-reservations.index') }}" class="nav-link {{ request()->routeIs('admin.facility-reservations.*') ? 'active' : '' }}">
+                <i class="bi bi-calendar-plus"></i> <span>{{ __('messages.facility_reservations') }}</span>
+            </a></li>
 
             <li class="mt-4 px-3"><small class="text-uppercase fw-bold">{{ __('messages.Directory') }}</small></li>
             @if(Route::has('admin.municipal-services.index'))

@@ -252,6 +252,7 @@
                             <li><a class="dropdown-item" href="{{ route('services.complaint') }}">{{ __('messages.file_complaint') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('permit-consultation.index') }}">{{ __('messages.building_permit_status') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('permit-committee-meetings.index') }}">{{ __('messages.permit_committee_meetings') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('facility-reservations.index') }}">{{ __('messages.facility_reservations') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('downloadable-forms.index') }}">{{ __('messages.downloadable_forms') }}</a></li>
                         </ul>
                     </li>
