@@ -820,4 +820,19 @@ return [
     'association_request_deleted_successfully' => 'تم حذف الطلب بنجاح.',
     'no_requests_found' => 'لم يتم العثور على أي طلبات.',
     'all_statuses' => 'جميع الحالات',
+
+    // Task 2: Building-permit committee calendar
+    'permit_committee_meetings' => 'اجتماعات لجنة رخص البناء',
+    'permit_committee_meetings_desc' => 'جدول اجتماعات لجنة رخص البناء',
+    'agenda' => 'جدول الأعمال',
+    'building_permit_committee' => 'لجنة رخص البناء',
+    'no_permit_committee_meetings' => 'لا توجد اجتماعات مجدولة للجنة رخص البناء في الوقت الحالي.',
+    'manage_permit_committee_meetings_desc' => 'إدارة مواعيد وجداول أعمال اجتماعات لجنة رخص البناء',
+    'new_permit_committee_meeting' => 'اجتماع لجنة جديد',
+    'edit_permit_committee_meeting' => 'تعديل اجتماع اللجنة',
+    'permit_committee_meeting_created' => 'تم إنشاء الاجتماع بنجاح.',
+    'permit_committee_meeting_updated' => 'تم تحديث الاجتماع بنجاح.',
+    'permit_committee_meeting_deleted' => 'تم حذف الاجتماع بنجاح.',
+    'no_meetings_found' => 'لم يتم العثور على اجتماعات.',
+    'meeting_date' => 'تاريخ ووقت الاجتماع',
 ];

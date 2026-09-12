@@ -824,4 +824,19 @@ return [
     'association_request_deleted_successfully' => 'Request deleted successfully.',
     'no_requests_found' => 'No requests found.',
     'all_statuses' => 'All Statuses',
+
+    // Task 2: Building-permit committee calendar
+    'permit_committee_meetings' => 'Permit Committee Meetings',
+    'permit_committee_meetings_desc' => 'Building permit committee meetings calendar',
+    'agenda' => 'Agenda',
+    'building_permit_committee' => 'Building Permit Committee',
+    'no_permit_committee_meetings' => 'No permit committee meetings scheduled at the moment.',
+    'manage_permit_committee_meetings_desc' => 'Manage building permit committee meeting schedules and agendas',
+    'new_permit_committee_meeting' => 'New Committee Meeting',
+    'edit_permit_committee_meeting' => 'Edit Committee Meeting',
+    'permit_committee_meeting_created' => 'Meeting created successfully.',
+    'permit_committee_meeting_updated' => 'Meeting updated successfully.',
+    'permit_committee_meeting_deleted' => 'Meeting deleted successfully.',
+    'no_meetings_found' => 'No meetings found.',
+    'meeting_date' => 'Meeting Date & Time',
 ];

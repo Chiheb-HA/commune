@@ -830,4 +830,19 @@ return [
     'association_request_deleted_successfully' => 'La demande a été supprimée avec succès.',
     'no_requests_found' => 'Aucune demande trouvée.',
     'all_statuses' => 'Tous les statuts',
+
+    // Task 2: Building-permit committee calendar
+    'permit_committee_meetings' => 'Réunions de la commission des permis',
+    'permit_committee_meetings_desc' => 'Calendrier des réunions de la commission des permis de construire',
+    'agenda' => 'Ordre du jour',
+    'building_permit_committee' => 'Commission des permis de construire',
+    'no_permit_committee_meetings' => 'Aucune réunion de la commission des permis prévue pour le moment.',
+    'manage_permit_committee_meetings_desc' => 'Gérer le calendrier et l’ordre du jour des réunions de la commission des permis',
+    'new_permit_committee_meeting' => 'Nouvelle réunion de commission',
+    'edit_permit_committee_meeting' => 'Modifier la réunion de commission',
+    'permit_committee_meeting_created' => 'Réunion créée avec succès.',
+    'permit_committee_meeting_updated' => 'Réunion mise à jour avec succès.',
+    'permit_committee_meeting_deleted' => 'Réunion supprimée avec succès.',
+    'no_meetings_found' => 'Aucune réunion trouvée.',
+    'meeting_date' => 'Date et heure de la réunion',
 ];

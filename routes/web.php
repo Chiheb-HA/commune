@@ -28,6 +28,7 @@ use App\Http\Controllers\Public\ProcurementNoticeController as PublicProcurement
 use App\Http\Controllers\Public\GovernancePublicationController as PublicGovernancePublicationController;
 use App\Http\Controllers\Public\EstablishmentController as PublicEstablishmentController;
 use App\Http\Controllers\Public\DownloadableFormController as PublicDownloadableFormController;
+use App\Http\Controllers\Public\PermitCommitteeMeetingController as PublicPermitCommitteeMeetingController;
 
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\NewsController;
@@ -52,6 +53,7 @@ use App\Http\Controllers\Admin\GovernancePublicationController;
 use App\Http\Controllers\Admin\EstablishmentController;
 use App\Http\Controllers\Admin\DownloadableFormController;
 use App\Http\Controllers\Admin\AssociationRequestController as AdminAssociationRequestController;
+use App\Http\Controllers\Admin\PermitCommitteeMeetingController as AdminPermitCommitteeMeetingController;
 
 use App\Http\Controllers\Frontend\ComplaintController as FrontendComplaintController;
 use App\Http\Controllers\Frontend\RequestController as FrontendRequestController;
@@ -220,6 +222,9 @@ Route::get('/consultation-permis', [RequestTrackingController::class, 'permit'])
 
 Route::post('/consultation-permis', [RequestTrackingController::class, 'permit'])
     ->name('permit-consultation.search');
+
+Route::get('/reunions-commission-permis', [PublicPermitCommitteeMeetingController::class, 'index'])
+    ->name('permit-committee-meetings.index');
 
 
 // Legal
@@ -512,6 +517,10 @@ Route::middleware(['auth', 'role:admin|editor|official'])
         Route::resource('association-requests', AdminAssociationRequestController::class, [
             'as' => 'admin'
         ])->only(['index', 'show', 'update', 'destroy']);
+
+        Route::resource('permit-committee-meetings', AdminPermitCommitteeMeetingController::class, [
+            'as' => 'admin'
+        ]);
 
 
         // Departments

@@ -242,7 +242,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{ (request()->routeIs('services.*') && !request()->routeIs('services.contact*')) || request()->routeIs('permit-consultation.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle {{ (request()->routeIs('services.*') && !request()->routeIs('services.contact*')) || request()->routeIs('permit-consultation.*') || request()->routeIs('permit-committee-meetings.*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
                             {{ __('messages.services_menu') }}
                         </a>
                         <ul class="dropdown-menu">
@@ -251,6 +251,7 @@
                             <li><a class="dropdown-item" href="{{ route('services.request') }}">{{ __('messages.submit_request') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('services.complaint') }}">{{ __('messages.file_complaint') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('permit-consultation.index') }}">{{ __('messages.building_permit_status') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('permit-committee-meetings.index') }}">{{ __('messages.permit_committee_meetings') }}</a></li>
                             <li><a class="dropdown-item" href="{{ route('downloadable-forms.index') }}">{{ __('messages.downloadable_forms') }}</a></li>
                         </ul>
                     </li>

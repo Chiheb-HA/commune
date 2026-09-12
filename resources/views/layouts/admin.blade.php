@@ -420,6 +420,9 @@
             <li><a href="{{ route('admin.council-sessions.index') }}" class="nav-link {{ request()->routeIs('admin.council-sessions.*') ? 'active' : '' }}">
                 <i class="bi bi-calendar2-week"></i> <span>{{ __('messages.council_sessions') }}</span>
             </a></li>
+            <li><a href="{{ route('admin.permit-committee-meetings.index') }}" class="nav-link {{ request()->routeIs('admin.permit-committee-meetings.*') ? 'active' : '' }}">
+                <i class="bi bi-building-check"></i> <span>{{ __('messages.permit_committee_meetings') }}</span>
+            </a></li>
             <li><a href="{{ route('admin.funding-sources.index') }}" class="nav-link {{ request()->routeIs('admin.funding-sources.*') ? 'active' : '' }}">
                 <i class="bi bi-cash-stack"></i> <span>{{ __('messages.Funding Sources') }}</span>
             </a></li>
